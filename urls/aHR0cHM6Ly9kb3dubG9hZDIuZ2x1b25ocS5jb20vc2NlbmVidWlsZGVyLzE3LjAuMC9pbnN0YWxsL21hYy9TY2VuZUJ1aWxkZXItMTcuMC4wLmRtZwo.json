@@ -1,18 +1,11 @@
 {
     "data": {
         "attributes": {
-            "last_http_response_content_sha256": "5b28a510f557e57e5cf48490e982aadaba1676c34192e7d650da110a88d233bd",
-            "last_http_response_code": 200,
-            "last_final_url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/18766606/c6dfb396-ef8c-11e6-9be9-9cbda60a79b5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A/20220301/us-east-1/s3/aws4_request&X-Amz-Date=20220301T081150Z&X-Amz-Expires=300&X-Amz-Signature=a14be4a7915c068c94901e563a81895b2be528c21feb43f9343cf04b42b5975a&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=18766606&response-content-disposition=attachment;%20filename=Beacon.Scanner.zip&response-content-type=application/octet-stream",
-            "last_http_response_content_length": 1531930,
-            "url": "https://github.com/mlwelles/BeaconScanner/releases/download/1.1.13/Beacon.Scanner.zip",
-            "redirection_chain": [
-                "https://github.com/mlwelles/BeaconScanner/releases/download/1.1.13/Beacon.Scanner.zip"
-            ],
-            "last_analysis_date": 1646122305,
-            "tags": [
-                "downloads-zip"
-            ],
+            "last_http_response_code": 206,
+            "last_final_url": "https://download2.gluonhq.com/scenebuilder/17.0.0/install/mac/SceneBuilder-17.0.0.dmg",
+            "tags": [],
+            "url": "https://download2.gluonhq.com/scenebuilder/17.0.0/install/mac/SceneBuilder-17.0.0.dmg",
+            "last_analysis_date": 1634260613,
             "last_analysis_results": {
                 "CMC Threat Intelligence": {
                     "category": "harmless",
@@ -26,23 +19,17 @@
                     "method": "blacklist",
                     "engine_name": "Snort IP sample list"
                 },
-                "0xSI_f33d": {
-                    "category": "undetected",
-                    "result": "unrated",
+                "VX Vault": {
+                    "category": "harmless",
+                    "result": "clean",
                     "method": "blacklist",
-                    "engine_name": "0xSI_f33d"
+                    "engine_name": "VX Vault"
                 },
                 "Armis": {
                     "category": "harmless",
                     "result": "clean",
                     "method": "blacklist",
                     "engine_name": "Armis"
-                },
-                "ViriBack": {
-                    "category": "harmless",
-                    "result": "clean",
-                    "method": "blacklist",
-                    "engine_name": "ViriBack"
                 },
                 "Comodo Valkyrie Verdict": {
                     "category": "harmless",
@@ -92,11 +79,11 @@
                     "method": "blacklist",
                     "engine_name": "OpenPhish"
                 },
-                "VX Vault": {
-                    "category": "harmless",
-                    "result": "clean",
+                "0xSI_f33d": {
+                    "category": "undetected",
+                    "result": "unrated",
                     "method": "blacklist",
-                    "engine_name": "VX Vault"
+                    "engine_name": "0xSI_f33d"
                 },
                 "Feodo Tracker": {
                     "category": "harmless",
@@ -302,12 +289,6 @@
                     "method": "blacklist",
                     "engine_name": "Antiy-AVL"
                 },
-                "Acronis": {
-                    "category": "harmless",
-                    "result": "clean",
-                    "method": "blacklist",
-                    "engine_name": "Acronis"
-                },
                 "Quick Heal": {
                     "category": "harmless",
                     "result": "clean",
@@ -331,12 +312,6 @@
                     "result": "clean",
                     "method": "blacklist",
                     "engine_name": "EmergingThreats"
-                },
-                "Chong Lua Dao": {
-                    "category": "harmless",
-                    "result": "clean",
-                    "method": "blacklist",
-                    "engine_name": "Chong Lua Dao"
                 },
                 "Yandex Safebrowsing": {
                     "category": "harmless",
@@ -573,61 +548,43 @@
                     "engine_name": "Baidu-International"
                 }
             },
-            "last_submission_date": 1646122305,
+            "last_submission_date": 1634260613,
             "threat_names": [],
             "last_http_response_headers": {
-                "content-length": "1531930",
-                "via": "1.1 varnish",
-                "x-cache": "MISS",
-                "accept-ranges": "bytes",
-                "x-ms-version": "2020-04-08",
-                "content-md5": "zFDokKaNPstZ5iupEFA4ZA==",
-                "last-modified": "Tue, 07 Dec 2021 04:47:00 GMT",
-                "x-served-by": "cache-pwk4930-PWK",
-                "x-ms-lease-state": "available",
-                "date": "Tue, 01 Mar 2022 08:11:50 GMT",
-                "x-ms-lease-status": "unlocked",
-                "content-disposition": "attachment; filename=Beacon.Scanner.zip",
-                "x-ms-blob-type": "BlockBlob",
-                "x-ms-request-id": "b20bc070-b01e-000e-5544-2d0bd5000000",
-                "x-timer": "S1646122310.149703,VS0,VE440",
-                "server": "Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0",
+                "content-length": "2",
                 "connection": "keep-alive",
-                "etag": "\"0x8D9B93C9B4C05FE\"",
-                "x-cache-hits": "0",
-                "fastly-restarts": "1",
-                "x-ms-server-encrypted": "true",
-                "content-type": "application/octet-stream",
-                "age": "0",
-                "x-ms-creation-time": "Tue, 17 Aug 2021 03:23:21 GMT"
+                "server": "nginx/1.10.3 (Ubuntu)",
+                "last-modified": "Wed, 29 Sep 2021 13:46:21 GMT",
+                "content-range": "bytes 0-1/82860842",
+                "etag": "\"61546e2d-4f05b2a\"",
+                "date": "Fri, 15 Oct 2021 01:16:54 GMT",
+                "content-type": "application/octet-stream"
             },
             "reputation": 0,
             "categories": {
-                "Dr.Web": "social networks",
                 "Forcepoint ThreatSeeker": "information technology",
-                "Sophos": "information technology",
-                "Comodo Valkyrie Verdict": "mobile communications",
+                "Sophos": "general business",
                 "BitDefender": "computersandsoftware"
             },
-            "last_modification_date": 1646122312,
+            "last_modification_date": 1634260624,
             "last_analysis_stats": {
-                "harmless": 84,
+                "harmless": 81,
                 "malicious": 0,
                 "suspicious": 0,
                 "undetected": 9,
                 "timeout": 0
             },
             "times_submitted": 1,
-            "first_submission_date": 1646122305,
+            "first_submission_date": 1634260613,
             "total_votes": {
                 "harmless": 0,
                 "malicious": 0
             }
         },
         "type": "url",
-        "id": "1fb8aff398e858e2b26e4e2c99374ee22cb50c54a931f493cef60c3908c838b5",
+        "id": "0913d800e1c7ab1d82e2e946af35f128c5e0acbd2891ca129d0e478b7f02ef0b",
         "links": {
-            "self": "https://www.virustotal.com/api/v3/urls/1fb8aff398e858e2b26e4e2c99374ee22cb50c54a931f493cef60c3908c838b5"
+            "self": "https://www.virustotal.com/api/v3/urls/0913d800e1c7ab1d82e2e946af35f128c5e0acbd2891ca129d0e478b7f02ef0b"
         }
     }
 }
