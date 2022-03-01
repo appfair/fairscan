@@ -33,6 +33,7 @@ jobs:
           scripts/scanurls.sh
           scripts/scanhashes.sh
       - name: Commit hashes
+        if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.APP_FAIR_BOT_TOKEN }}
         run: |
