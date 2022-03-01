@@ -23,7 +23,7 @@ for urlraw in `jq -r '.[].url' cask.json | sort --sort=random`; do
         #cat ${DIR}/"${url64}.json" | jq '.data.attributes.total_votes'
 
         # backoff if we hit a QuotaExceededError error code
-        cat ${DIR}/"${url64}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${url64}.json" && echo "QuotaExceededError: backing off…" && sleep 100
+        cat ${DIR}/"${url64}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${url64}.json" && echo "QuotaExceededError: exiting" && exit 6
 
         # any URLs that are not found get a scan request
         cat ${DIR}/"${url64}.json" | jq -e '.error.code == "NotFoundError"' && echo "Requesting scan for ${urlraw}…" && curl -o ${DIR}/"${url64}.json" -sSL --request POST --url "https://www.virustotal.com/api/v3/urls" --header "x-apikey: ${VTAPIKEY}" --form url="${urlraw}"

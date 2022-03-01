@@ -20,7 +20,7 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
         #cat ${DIR}/"${hash}.json" | jq '.data.attributes.total_votes'
 
         # backoff if we hit a QuotaExceededError error code
-        cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && sleep 100
+        cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
 
         scancount=$((scancount + 1))
         if [ ${scancount} -gt ${scancountmax} ]; then
