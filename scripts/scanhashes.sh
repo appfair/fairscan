@@ -26,7 +26,7 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
         # backoff if we hit a QuotaExceededError error code
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && sleep 100
 
-        scancount=$[scancount + 1]
+        scancount=$[${scancount} + 1]
         if [ ${scancount} -gt ${scancountmax} ]; then
             break;
         fi
