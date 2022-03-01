@@ -2,7 +2,7 @@
 # Downloads the latest cask list and fetches the scanner reports
 
 scancount=0
-scancountmax=50 # the maximum number of scans per run
+scancountmax=25 # the maximum number of scans per run
 
 DIR=files/
 
