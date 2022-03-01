@@ -4,6 +4,9 @@
 scancount=0
 scancountmax=100 # the maximum number of scans per run
 
+# the wrap arg is "break" on macOS and "wrap" on Linux
+echo wraptest | base64 --break=0 >/dev/null 2>&1 && WRAP=break || WRAP=wrap
+
 DIR=urls
 curl -O -fsSL http://formulae.brew.sh/api/cask.json
 
@@ -11,7 +14,7 @@ mkdir -p ${DIR}/
 
 # walk through each element, get the checksum, and check it against VT
 for urlraw in `jq -r '.[].url' cask.json | sort --sort=random`; do
-    url64=`echo "${urlraw}" | base64 | tr -d '='`
+    url64=`echo "${urlraw}" | base64 --${WRAP}=0 | tr -d '='`
     echo "${urlraw}" 
     if [ ! -s "${DIR}/${url64}.json" ]; then
         curl -o ${DIR}/"${url64}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/urls/${url64}" --header "x-apikey: ${VTAPIKEY}"
