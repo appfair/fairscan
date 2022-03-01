@@ -12,7 +12,7 @@ mkdir -p ${DIR}/
 rm -fv EMPTY_ARG `jq -r 'select(.error.code != null) | input_filename' ${DIR}/*.json`
 
 scancount=0
-scancountmax=5 # the maximum number of files to scan
+scancountmax=5 # the maximum number of scans per run
 
 # walk through each element, get the checksum, and check it against VT
 for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=random`; do
@@ -25,6 +25,7 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
 
         # backoff if we hit a QuotaExceededError error code
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && sleep 100
+
 
         scancount=$[${scancount} + 1]
         if [ ${scancount} -gt ${scancountmax} ]; then
