@@ -26,17 +26,20 @@ jobs:
           git config credential.password "${{ secrets.APP_FAIR_BOT_TOKEN }}"
           git config user.name "appfairbot"
           git config user.email "appfairbot@appfair.net"
-      - name: Scan Hashes
+      - name: Scan Artifacts
         env:
           VTAPIKEY: ${{ secrets.VTAPIKEY }}
         run: |
+          scripts/scanurls.sh
           scripts/scanhashes.sh
       - name: Commit hashes
         env:
           GITHUB_TOKEN: ${{ secrets.APP_FAIR_BOT_TOKEN }}
         run: |
-          git add files
           git pull -ff
-          git commit -m "Scan Hashes" || echo "nothing to commit"
+          git add files
+          git commit -m "Scan Hashes" files || echo "nothing to commit"
+          git add urls
+          git commit -m "Scan URLs" urls || echo "nothing to commit"
           git push
 

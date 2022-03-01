@@ -1,18 +1,14 @@
 #!/bin/bash
 # Downloads the latest cask list and fetches the scanner reports
 
+scancount=0
+scancountmax=100 # the maximum number of scans per run
+
 DIR=files/
 
 curl -O -fsSL http://formulae.brew.sh/api/cask.json
 
 mkdir -p ${DIR}/
-
-# clear out quota exceeded errors
-# rm -fv EMPTY_ARG `jq -r 'select(.error.code == "QuotaExceededError") | input_filename' ${DIR}/*.json`
-rm -fv EMPTY_ARG `jq -r 'select(.error.code != null) | input_filename' ${DIR}/*.json`
-
-scancount=0
-scancountmax=5 # the maximum number of scans per run
 
 # walk through each element, get the checksum, and check it against VT
 for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=random`; do
@@ -36,4 +32,8 @@ done
 
 # show a report of files and errors
 cat ${DIR}/*.json | jq '.error.code' | sort | uniq -c | sort -n
+
+# clear out quota exceeded errors
+# rm -fv EMPTY_ARG `jq -r 'select(.error.code == "QuotaExceededError") | input_filename' ${DIR}/*.json`
+rm -fv EMPTY_ARG `jq -r 'select(.error.code != null) | input_filename' ${DIR}/*.json`
 
