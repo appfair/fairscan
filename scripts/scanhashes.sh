@@ -11,12 +11,13 @@ mkdir -p ${DIR}/
 # rm -fv EMPTY_ARG `jq -r 'select(.error.code == "QuotaExceededError") | input_filename' ${DIR}/*.json`
 rm -fv EMPTY_ARG `jq -r 'select(.error.code != null) | input_filename' ${DIR}/*.json`
 
+scancount=0
+scancountmax=5 # the maximum number of files to scan
 
 # walk through each element, get the checksum, and check it against VT
 for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=random`; do
     #echo "${hash}"
     if [ ! -s "${DIR}/${hash}.json" ]; then
-        sleep 15 # public api request quota: 4/min, 500/day
         curl -o ${DIR}/"${hash}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/files/${shasum}" --header "x-apikey: ${VTAPIKEY}"
 
         cat ${DIR}/"${hash}.json" | jq '.data.attributes.names'
@@ -24,6 +25,12 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
 
         # backoff if we hit a QuotaExceededError error code
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && sleep 100
+
+        scancount=$[scancount + 1]
+        if [ ${scancount} -gt ${scancountmax} ]; then
+            break;
+        fi
+        sleep 15 # public api request quota: 4/min, 500/day
     fi
 done
 
