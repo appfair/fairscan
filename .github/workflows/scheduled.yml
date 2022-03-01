@@ -1,0 +1,24 @@
+name: Scheduled scanning
+on:
+  push:
+    paths:
+      - .github/workflows/scheduled.yml
+  schedule:
+    # once per hour
+    - cron: "0 * * * *"
+
+concurrency:
+  group: scheduled
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    if: startsWith( github.repository, 'appfair/' )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
