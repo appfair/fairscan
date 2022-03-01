@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Downloads the latest cask list and fetches the scanner reports
 
 DIR=urls
