@@ -11,9 +11,20 @@ curl -O -fsSL http://formulae.brew.sh/api/cask.json
 mkdir -p ${DIR}/
 
 # walk through each element, get the checksum, and check it against VT
-for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=random`; do
-    #echo "${hash}"
+for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json`; do
+
+    hash=`echo "${shaurl}" | cut -f 1 -d '|'`
+    url=`echo "${shaurl}" | cut -f 2- -d '|'`
+
     if [ ! -s "${DIR}/${hash}.json" ]; then
+        echo "HASH: ${hash}"
+        echo "URL: ${url}"
+        if [ "${hash}" == "no_hash" ]; then
+            continue
+        fi
+
+        dlpath="/tmp/${hash}.download"
+
         curl -o ${DIR}/"${hash}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/files/${shasum}" --header "x-apikey: ${VTAPIKEY}"
 
         cat ${DIR}/"${hash}.json" | jq '.data.attributes.names'
@@ -21,6 +32,9 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
 
         # backoff if we hit a QuotaExceededError error code
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
+
+        # any URLs that are not found get a scan request
+        cat ${DIR}/"${hash}.json" | jq -e '.error.code == "NotFoundError"' && echo "Requesting scan for ${url}…" && curl -fsSL -o "${dlpath}" "${url}" && ulurl=`curl -fsSL "https://www.virustotal.com/api/v3/files/upload_url" --header "x-apikey: ${VTAPIKEY}" | jq -r '.data'` && curl --sSL --request POST --url "${ulurl}" --header "x-apikey: ${VTAPIKEY}" --header 'Accept: application/json' --header 'Content-Type: multipart/form-data' --form "file=@${dlpath}"
 
         scancount=$((scancount + 1))
         if [ ${scancount} -gt ${scancountmax} ]; then
