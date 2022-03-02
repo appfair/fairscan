@@ -14,10 +14,10 @@ mkdir -p ${DIR}/
 
 # walk through each element, get the checksum, and check it against VT
 for urlraw in `jq -r '.[].url' cask.json | sort --sort=random`; do
-    # base64 the url, trim equals (expeced by the virtustotal api)
+    # the virustotal api expects a base64 of the url with padding equals stripped
     url64=`echo "${urlraw}" | base64 --${WRAP}=0 | tr -d '='`
-    # convert slash to underscore so it can be used as a file name
-    urlpath=`echo "${url64}" | tr '/' '_'`
+    # the output file name is the sha256 of the URL itself
+    urlpath=`echo "${urlraw}" | shasum -a 256 | cut -f 1 -d ' '`
     if [ ! -s "${DIR}/${urlpath}.json" ]; then
         echo "Scanning ${urlraw} -> ${DIR}/${urlpath}.json" 
         curl -o ${DIR}/"${urlpath}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/urls/${url64}" --header "x-apikey: ${VTAPIKEY}"
