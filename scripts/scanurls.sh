@@ -2,7 +2,7 @@
 # Downloads the latest cask list and fetches the scanner reports
 
 scancount=0
-scancountmax=50 # the maximum number of scans per run
+scancountmax=25 # the maximum number of scans per run
 
 # the wrap arg is "break" on macOS and "wrap" on Linux
 echo wraptest | base64 --break=0 >/dev/null 2>&1 && WRAP=break || WRAP=wrap
@@ -14,25 +14,28 @@ mkdir -p ${DIR}/
 
 # walk through each element, get the checksum, and check it against VT
 for urlraw in `jq -r '.[].url' cask.json | sort --sort=random`; do
+    # base64 the url, trim equals (expeced by the virtustotal api)
     url64=`echo "${urlraw}" | base64 --${WRAP}=0 | tr -d '='`
-    echo "${urlraw}" 
-    if [ ! -s "${DIR}/${url64}.json" ]; then
-        curl -o ${DIR}/"${url64}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/urls/${url64}" --header "x-apikey: ${VTAPIKEY}"
+    # convert slash to underscore so it can be used as a file name
+    urlpath=`echo "${url64}" | tr '/' '_'`
+    if [ ! -s "${DIR}/${urlpath}.json" ]; then
+        echo "Scanning ${urlraw} -> ${DIR}/${urlpath}.json" 
+        curl -o ${DIR}/"${urlpath}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/urls/${url64}" --header "x-apikey: ${VTAPIKEY}"
 
-        cat ${DIR}/"${url64}.json" | jq '.data.attributes.names'
-        #cat ${DIR}/"${url64}.json" | jq '.data.attributes.total_votes'
+        cat ${DIR}/"${urlpath}.json" | jq '.data.attributes.names'
+        #cat ${DIR}/"${urlpath}.json" | jq '.data.attributes.total_votes'
 
         # backoff if we hit a QuotaExceededError error code
-        cat ${DIR}/"${url64}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${url64}.json" && echo "QuotaExceededError: exiting" && exit 6
+        cat ${DIR}/"${urlpath}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${urlpath}.json" && echo "QuotaExceededError: exiting" && exit 6
 
         # any URLs that are not found get a scan request
-        cat ${DIR}/"${url64}.json" | jq -e '.error.code == "NotFoundError"' && echo "Requesting scan for ${urlraw}…" && curl -o ${DIR}/"${url64}.json" -sSL --request POST --url "https://www.virustotal.com/api/v3/urls" --header "x-apikey: ${VTAPIKEY}" --form url="${urlraw}"
+        cat ${DIR}/"${urlpath}.json" | jq -e '.error.code == "NotFoundError"' && echo "Requesting scan for ${urlraw}…" && curl -o ${DIR}/"${urlpath}.json" -sSL --request POST --url "https://www.virustotal.com/api/v3/urls" --header "x-apikey: ${VTAPIKEY}" --form url="${urlraw}"
 
         scancount=$((scancount + 1))
         if [ ${scancount} -gt ${scancountmax} ]; then
             break;
         fi
-        sleep 15 # public api request quota: 4/min, 500/day
+        sleep ${VTDELAY:-15} # public api request quota: 4/min, 500/day
     fi
 done
 
