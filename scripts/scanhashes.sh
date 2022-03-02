@@ -34,7 +34,7 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
 
         # any URLs that are not found get a scan request
-        cat ${DIR}/"${hash}.json" | jq -e '.error.code == "NotFoundError"' && echo "Downloading ${url}…" && ulurl=`curl -fsSL "https://www.virustotal.com/api/v3/files/upload_url" --header "x-apikey: ${VTAPIKEY}" | jq -r '.data'` && curl -fsSL --max-filesize 200m -o "${dlpath}" "${url}" && echo "Requesting scan for ${url}…" && curl -o ${DIR}/"${hash}.json" -fsSL --request POST --url "${ulurl}" --header "x-apikey: ${VTAPIKEY}" --header 'Accept: application/json' --header 'Content-Type: multipart/form-data' --form "file=@${dlpath}"
+        cat ${DIR}/"${hash}.json" | jq -e '.error.code == "NotFoundError"' && echo "Downloading ${url}…" && ulurl=`curl -fsSL "https://www.virustotal.com/api/v3/files/upload_url" --header "x-apikey: ${VTAPIKEY}" | jq -r '.data'` && curl -fsSL --max-filesize 500m -o "${dlpath}" "${url}" && echo "Requesting scan for ${url}…" && curl -o ${DIR}/"${hash}.json" -fsSL --request POST --url "${ulurl}" --header "x-apikey: ${VTAPIKEY}" --header 'Accept: application/json' --header 'Content-Type: multipart/form-data' --form "file=@${dlpath}"
 
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
 
