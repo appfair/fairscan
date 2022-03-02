@@ -26,7 +26,7 @@ for hash in `jq -r '.[].sha256' cask.json | grep -v 'no_check' | sort --sort=ran
         if [ ${scancount} -gt ${scancountmax} ]; then
             break;
         fi
-        sleep 15 # public api request quota: 4/min, 500/day
+        sleep ${VTDELAY:-15} # public api request quota: 4/min, 500/day
     fi
 done
 
