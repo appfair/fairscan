@@ -19,9 +19,7 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
     if [ ! -s "${DIR}/${hash}.json" ]; then
         echo "HASH: ${hash}"
         echo "URL: ${url}"
-        if [ "${hash}" == "no_check" ]; then
-            continue
-        fi
+        #if [ "${hash}" == "no_check" ]; then continue; fi
 
         dlpath="/tmp/${hash}.download"
 
@@ -35,6 +33,9 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
 
         # any URLs that are not found get a scan request
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "NotFoundError"' && echo "Downloading ${url}…" && ulurl=`curl -fsSL "https://www.virustotal.com/api/v3/files/upload_url" --header "x-apikey: ${VTAPIKEY}" | jq -r '.data'` && curl -fsSL --max-filesize 500m -o "${dlpath}" "${url}" && echo "Requesting scan for ${url}…" && curl -o ${DIR}/"${hash}.json" -sSL --request POST --url "${ulurl}" --header "x-apikey: ${VTAPIKEY}" --header 'Accept: application/json' --header 'Content-Type: multipart/form-data' --form "file=@${dlpath}"
+
+        # for no_check hashes, rename the file to the actual hash of the file
+        if [ "${hash}" == "no_check" ]; then filehash=`shasum -a 256 ${DIR}/"${hash}.json" | cut -f 1 -d ' '; mv ${DIR}/"${hash}.json" ${DIR}/"${newhash}.json"`; hash=${newhash}; fi
 
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
 
