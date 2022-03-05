@@ -1,11 +1,12 @@
 #!/bin/bash
 # Downloads the latest cask list and fetches the scanner reports
 
-scancount=0
-scancountmax=25 # the maximum number of scans per run
-
+MAXSIZE=1g
 DIR=files/
+SCANLIMIT=25 # the maximum number of scans per run
+scancount=0 # the current scan index
 
+# grab the latest cask list
 curl -O -fsSL http://formulae.brew.sh/api/cask.json
 
 mkdir -p ${DIR}/
@@ -17,10 +18,10 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
     hash=`echo "${shaurl}" | cut -f 1 -d '|'`
     url=`echo "${shaurl}" | cut -f 2- -d '|'`
 
-
     if [ ! -s "${DIR}/${hash}.json" ]; then
         echo "HASH: ${hash}"
         echo "URL: ${url}"
+        orig_hash="${hash}"
         #if [ "${hash}" == "no_check" ]; then continue; fi
 
         base=`basename "${url}"`
@@ -28,9 +29,13 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
 
         # when no hash specified, the only option is to download and check the file
         if [ "${hash}" == "no_check" ]; then
-            curl -fL --max-filesize 500m -o "${dlpath}" "${url}" || continue;
+            curl -fL --max-filesize "${MAXSIZE}" -o "${dlpath}" "${url}" || continue;
             hash=`shasum -a 256 "${dlpath}" | cut -f 1 -d ' '`
             echo "HASH2: ${hash}"
+            if [ -s "${DIR}/${hash}.json" ]; then
+                echo "Hash JSON exists for no_check -> ${hash}. Continuing…"
+                continue;
+            fi
         fi
 
         curl -o ${DIR}/"${hash}.json" -sSL --request GET --url "https://www.virustotal.com/api/v3/files/${hash}" --header "x-apikey: ${VTAPIKEY}"
@@ -46,9 +51,9 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
             uploadurl=`curl -fsSL "https://www.virustotal.com/api/v3/files/upload_url" --header "x-apikey: ${VTAPIKEY}" | jq -r '.data'`
 
             # download the file, but only if we haven't already grabbed it for the hash
-            if [ "${hash}" != "no_check" ]; then
+            if [ "${orig_hash}" != "no_check" ]; then
                 echo "Downloading ${url} to ${dlpath}…"
-                curl -fsSL --max-filesize 500m -o "${dlpath}" "${url}"
+                curl -fsSL --max-filesize "${MAXSIZE}" -o "${dlpath}" "${url}"
             fi
 
             echo "Requesting scan for ${url}…"
@@ -58,7 +63,7 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
         cat ${DIR}/"${hash}.json" | jq -e '.error.code == "QuotaExceededError"' && rm ${DIR}/"${hash}.json" && exit 6
 
         scancount=$((scancount + 1))
-        if [ ${scancount} -gt ${scancountmax} ]; then
+        if [ ${scancount} -gt ${SCANLIMIT} ]; then
             break;
         fi
         sleep ${VTDELAY:-15} # public api request quota: 4/min, 500/day
