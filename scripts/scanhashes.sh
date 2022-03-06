@@ -3,7 +3,7 @@
 
 MAXSIZE=1g
 DIR=files/
-SCANLIMIT=25 # the maximum number of scans per run
+SCANLIMIT=10 # the maximum number of scans per run
 scancount=0 # the current scan index
 
 # grab the latest cask list
