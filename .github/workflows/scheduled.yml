@@ -40,5 +40,5 @@ jobs:
           git pull -ff
           git add files
           git commit -m "Scan Hashes" files || echo "nothing to commit"
-          git add urls
+          git push
 
