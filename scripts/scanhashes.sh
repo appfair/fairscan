@@ -22,7 +22,9 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
         echo "HASH: ${hash}"
         echo "URL: ${url}"
         orig_hash="${hash}"
-        #if [ "${hash}" == "no_check" ]; then continue; fi
+
+        # there is no efficient way to track no_check files
+        if [ "${hash}" == "no_check" ]; then continue; fi
 
         base=`basename "${url}"`
         dlpath="/tmp/fairscan/${base}"
