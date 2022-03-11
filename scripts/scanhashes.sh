@@ -19,12 +19,13 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
     url=`echo "${shaurl}" | cut -f 2- -d '|'`
 
     if [ ! -s "${DIR}/${hash}.json" ]; then
-        echo "HASH: ${hash}"
-        echo "URL: ${url}"
         orig_hash="${hash}"
 
         # there is no efficient way to track no_check files
         if [ "${hash}" == "no_check" ]; then continue; fi
+
+        echo "HASH: ${hash}"
+        echo "URL: ${url}"
 
         base=`basename "${url}"`
         dlpath="/tmp/fairscan/${base}"
@@ -81,4 +82,9 @@ rm -fv EMPTY_ARG `jq -r 'select(.error.code != null) | input_filename' ${DIR}/*.
 
 # clear out urls that were queued for analysis
 rm -fv EMPTY_ARG `jq -r 'select(.data.type == "analysis") | input_filename' ${DIR}/*.json`
+
+# clear out files that were downloades as HTML
+rm -vf EMPTY_ARG `grep -rl '^<html>' ${DIR}/`
+
+
 
