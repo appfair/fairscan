@@ -1,7 +1,7 @@
 #!/bin/bash
 # Downloads the latest cask list and fetches the scanner reports
 
-MAXSIZE=1g
+MAXSIZE=500m
 DIR=files/
 SCANLIMIT=10 # the maximum number of scans per run
 scancount=0 # the current scan index
