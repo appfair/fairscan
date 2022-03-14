@@ -3,7 +3,7 @@
 
 MAXSIZE=500m
 DIR=files/
-SCANLIMIT=10 # the maximum number of scans per run
+SCANLIMIT=5 # the maximum number of scans per run; low to stay within quota
 scancount=0 # the current scan index
 
 # grab the latest cask list
@@ -56,7 +56,7 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
             # download the file, but only if we haven't already grabbed it for the hash
             if [ "${orig_hash}" != "no_check" ]; then
                 echo "Downloading ${url} to ${dlpath}…"
-                curl -fsSL --max-filesize "${MAXSIZE}" -o "${dlpath}" "${url}"
+                curl -fsSL --max-filesize "${MAXSIZE}" -o "${dlpath}" "${url}" || continue;
             fi
 
             echo "Requesting scan for ${url}…"
