@@ -3,7 +3,7 @@
 
 MAXSIZE=500m
 DIR=files/
-SCANLIMIT=5 # the maximum number of scans per run; low to stay within quota
+SCANLIMIT=${SCANLIMIT:-5} # the maximum number of scans per run; low to stay within quota
 scancount=0 # the current scan index
 
 # grab the latest cask list
@@ -67,6 +67,7 @@ for shaurl in `jq -r '.[] | "\(.sha256)|\(.url)"' cask.json | sort --sort=random
 
         scancount=$((scancount + 1))
         if [ ${scancount} -gt ${SCANLIMIT} ]; then
+            echo "Reached scan limit of ${SCANLIMIT}. Stopping." 
             break;
         fi
         sleep ${VTDELAY:-15} # public api request quota: 4/min, 500/day
