@@ -1,8 +1,9 @@
 {
     "data": {
         "attributes": {
-            "type_description": "unknown",
-            "tlsh": "T1792833F8F451B31EDFFC0171DA56EC340D6389AB107FC98B19B907A8E982A553A7B412",
+            "type_description": "Macintosh Disk Image",
+            "tlsh": "T1FBD63379806D398AFD68F93A83B239694C27418F17E3601F143519E14C9B5D2B68FE3E",
+            "vhash": "3d04b1248aee1795b32a34d360858a6e",
             "trid": [
                 {
                     "file_type": "Macintosh Disk image (BZlib compressed)",
@@ -14,20 +15,112 @@
                 }
             ],
             "names": [
-                "balenaEtcher-1.7.8.dmg"
+                "TG Pro-2.67.dmg"
             ],
-<<<<<<< Updated upstream
-            "last_modification_date": 1647735923,
-=======
-            "last_modification_date": 1647648423,
->>>>>>> Stashed changes
+            "last_modification_date": 1647776464,
+            "type_tag": "dmg",
             "times_submitted": 1,
-            "size": 97008747,
             "total_votes": {
                 "harmless": 0,
                 "malicious": 0
             },
-            "last_submission_date": 1647630172,
+            "size": 12657300,
+            "type_extension": "dmg",
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Protective Master Boot Record (MBR : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Primary GPT Header : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Primary GPT Table : 2)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 3)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 4)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Backup GPT Table : 5)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Backup GPT Header : 6)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 12635297,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 9520,
+                "data_fork_length": 12635297,
+                "hfs": {
+                    "unreadable_files": 6,
+                    "info_plist": {
+                        "SUFeedURL": "https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml",
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "DTXcodeBuild": "13C100",
+                        "CFBundleSupportedPlatforms": "['MacOSX']",
+                        "CFBundleIdentifier": "com.tunabellysoftware.tgpro",
+                        "DTSDKName": "macosx12.1",
+                        "DTPlatformVersion": "12.1",
+                        "CFBundleShortVersionString": "2.67",
+                        "BuildMachineOSBuild": "21C52",
+                        "SMPrivilegedExecutables": "{'com.tunabellysoftware.TGFanHelper': 'anchor apple generic and identifier \"com.tunabellysoftware.TGFanHelper\" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = \"9525X5D6XV\")'}",
+                        "LSUIElement": "True",
+                        "CFBundleExecutable": "TG Pro",
+                        "LSMinimumSystemVersion": "10.11",
+                        "CFBundleVersion": "13268",
+                        "SUPublicDSAKeyFile": "dsa_pub.pem",
+                        "CFBundleIconFile": "AppIcon",
+                        "DTPlatformBuild": "13C100",
+                        "NSMainNibFile": "MainMenu",
+                        "DTXcode": "1321",
+                        "CFBundleDevelopmentRegion": "en",
+                        "DTPlatformName": "macosx",
+                        "CFBundleIconName": "AppIcon",
+                        "LSApplicationCategoryType": "public.app-category.utilities",
+                        "DTCompiler": "com.apple.compilers.llvm.clang.1_0",
+                        "CFBundleSignature": "????",
+                        "DTSDKBuild": "21C46",
+                        "CFBundleName": "TG Pro",
+                        "SUEnableSystemProfiling": "True",
+                        "CFBundlePackageType": "APPL",
+                        "NSPrincipalClass": "NSApplication"
+                    },
+                    "main_executable": {
+                        "path": "/TG Pro.app/Contents/MacOS/TG Pro",
+                        "sha256": "073a049479556d576151ba45b59c4ed4897abe913ff32966b4f76877ac6aef8f",
+                        "size": 10758288
+                    },
+                    "num_files": 346
+                },
+                "rsrc_fork_length": 0
+            },
+            "last_submission_date": 1647725658,
             "last_analysis_results": {
                 "Bkav": {
                     "category": "undetected",
@@ -35,11 +128,7 @@
                     "engine_version": "1.3.0.9899",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
                     "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "Lionic": {
                     "category": "undetected",
@@ -47,11 +136,7 @@
                     "engine_version": "7.5",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Elastic": {
                     "category": "type-unsupported",
@@ -61,7 +146,6 @@
                     "method": "blacklist",
                     "engine_update": "20220302"
                 },
-<<<<<<< Updated upstream
                 "ClamAV": {
                     "category": "undetected",
                     "engine_name": "ClamAV",
@@ -69,15 +153,6 @@
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
-=======
-                "MicroWorld-eScan": {
-                    "category": "undetected",
-                    "engine_name": "MicroWorld-eScan",
-                    "engine_version": "14.0.409.0",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "CMC": {
                     "category": "undetected",
@@ -93,11 +168,7 @@
                     "engine_version": "14.00",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
                     "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "McAfee": {
                     "category": "undetected",
@@ -105,11 +176,7 @@
                     "engine_version": "6.0.6.653",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Malwarebytes": {
                     "category": "undetected",
@@ -117,8 +184,7 @@
                     "engine_version": "4.2.2.27",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Paloalto": {
                     "category": "type-unsupported",
@@ -126,10 +192,7 @@
                     "engine_version": "0.9.0.1003",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Sangfor": {
                     "category": "undetected",
@@ -142,17 +205,10 @@
                 "K7AntiVirus": {
                     "category": "undetected",
                     "engine_name": "K7AntiVirus",
-<<<<<<< Updated upstream
-                    "engine_version": "11.254.41372",
+                    "engine_version": "11.254.41382",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_version": "11.254.41366",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Alibaba": {
                     "category": "type-unsupported",
@@ -165,11 +221,10 @@
                 "K7GW": {
                     "category": "undetected",
                     "engine_name": "K7GW",
-<<<<<<< Updated upstream
-                    "engine_version": "11.254.41372",
+                    "engine_version": "11.254.41383",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Cybereason": {
                     "category": "type-unsupported",
@@ -179,6 +234,14 @@
                     "method": "blacklist",
                     "engine_update": "20210330"
                 },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "1.0.0.889",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220320"
+                },
                 "Baidu": {
                     "category": "undetected",
                     "engine_name": "Baidu",
@@ -186,36 +249,6 @@
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20190318"
-=======
-                    "engine_version": "11.254.41366",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
-                },
-                "Trustlook": {
-                    "category": "type-unsupported",
-                    "engine_name": "Trustlook",
-                    "engine_version": "1.0",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
-                },
-                "Arcabit": {
-                    "category": "undetected",
-                    "engine_name": "Arcabit",
-                    "engine_version": "1.0.0.889",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
-                },
-                "BitDefenderTheta": {
-                    "category": "undetected",
-                    "engine_name": "BitDefenderTheta",
-                    "engine_version": "7.2.37796.0",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "VirIT": {
                     "category": "undetected",
@@ -231,11 +264,7 @@
                     "engine_version": "6.5.1.2",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "SymantecMobileInsight": {
                     "category": "type-unsupported",
@@ -248,26 +277,18 @@
                 "tehtris": {
                     "category": "type-unsupported",
                     "engine_name": "tehtris",
-<<<<<<< Updated upstream
-                    "engine_version": "v0.0.7",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-=======
                     "engine_version": null,
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "ESET-NOD32": {
                     "category": "undetected",
                     "engine_name": "ESET-NOD32",
-<<<<<<< Updated upstream
-                    "engine_version": "24966",
+                    "engine_version": "24969",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "APEX": {
                     "category": "type-unsupported",
@@ -276,20 +297,6 @@
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
-=======
-                    "engine_version": "24961",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
-                },
-                "Baidu": {
-                    "category": "undetected",
-                    "engine_name": "Baidu",
-                    "engine_version": "1.0.0.2",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20190318"
->>>>>>> Stashed changes
                 },
                 "TrendMicro-HouseCall": {
                     "category": "undetected",
@@ -297,11 +304,7 @@
                     "engine_version": "10.0.0.1040",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Avast": {
                     "category": "undetected",
@@ -309,8 +312,7 @@
                     "engine_version": "21.1.5827.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Cynet": {
                     "category": "undetected",
@@ -318,18 +320,7 @@
                     "engine_version": "4.0.0.27",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
-                },
-                "ClamAV": {
-                    "category": "undetected",
-                    "engine_name": "ClamAV",
-                    "engine_version": "0.104.2.0",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Kaspersky": {
                     "category": "undetected",
@@ -337,11 +328,7 @@
                     "engine_version": "21.0.1.45",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "BitDefender": {
                     "category": "undetected",
@@ -349,11 +336,7 @@
                     "engine_version": "7.2",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "NANO-Antivirus": {
                     "category": "undetected",
@@ -361,11 +344,7 @@
                     "engine_version": "1.0.146.25563",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "SUPERAntiSpyware": {
                     "category": "undetected",
@@ -373,16 +352,15 @@
                     "engine_version": "5.6.0.1032",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220312"
+                    "engine_update": "20220319"
                 },
-<<<<<<< Updated upstream
                 "MicroWorld-eScan": {
                     "category": "undetected",
                     "engine_name": "MicroWorld-eScan",
                     "engine_version": "14.0.409.0",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Tencent": {
                     "category": "undetected",
@@ -390,24 +368,7 @@
                     "engine_version": "1.0.0.1",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                "APEX": {
-                    "category": "type-unsupported",
-                    "engine_name": "APEX",
-                    "engine_version": "6.271",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220316"
-                },
-                "Rising": {
-                    "category": "undetected",
-                    "engine_name": "Rising",
-                    "engine_version": "25.0.0.27",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Ad-Aware": {
                     "category": "undetected",
@@ -415,8 +376,7 @@
                     "engine_version": "3.0.21.193",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Trustlook": {
                     "category": "type-unsupported",
@@ -424,10 +384,7 @@
                     "engine_version": "1.0",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Sophos": {
                     "category": "undetected",
@@ -435,26 +392,15 @@
                     "engine_version": "1.4.1.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Comodo": {
                     "category": "undetected",
                     "engine_name": "Comodo",
-<<<<<<< Updated upstream
-                    "engine_version": "34452",
+                    "engine_version": "34454",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_version": "34449",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "F-Secure": {
                     "category": "undetected",
@@ -462,11 +408,7 @@
                     "engine_version": "12.0.86.52",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "DrWeb": {
                     "category": "undetected",
@@ -474,19 +416,15 @@
                     "engine_version": "7.0.52.8270",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Zillya": {
                     "category": "undetected",
                     "engine_name": "Zillya",
-                    "engine_version": "2.0.0.4592",
+                    "engine_version": "2.0.0.4593",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220318"
+                    "engine_update": "20220320"
                 },
                 "TrendMicro": {
                     "category": "undetected",
@@ -494,11 +432,7 @@
                     "engine_version": "11.0.0.1006",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "McAfee-GW-Edition": {
                     "category": "undetected",
@@ -506,19 +440,7 @@
                     "engine_version": "v2019.1.2+3728",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
-                },
-                "SentinelOne": {
-                    "category": "type-unsupported",
-                    "engine_name": "SentinelOne",
-                    "engine_version": "7.2.0.1",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220201"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Trapmine": {
                     "category": "type-unsupported",
@@ -534,11 +456,7 @@
                     "engine_version": "32.44.1.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Emsisoft": {
                     "category": "undetected",
@@ -546,11 +464,7 @@
                     "engine_version": "2021.5.0.7597",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Ikarus": {
                     "category": "undetected",
@@ -558,26 +472,15 @@
                     "engine_version": "6.0.9.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
                     "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "Avast-Mobile": {
                     "category": "type-unsupported",
                     "engine_name": "Avast-Mobile",
-<<<<<<< Updated upstream
-                    "engine_version": "220319-00",
+                    "engine_version": "220320-00",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_version": "220318-00",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Jiangmin": {
                     "category": "undetected",
@@ -585,11 +488,7 @@
                     "engine_version": "16.0.100",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220318"
-=======
-                    "engine_update": "20220317"
->>>>>>> Stashed changes
+                    "engine_update": "20220319"
                 },
                 "Webroot": {
                     "category": "type-unsupported",
@@ -597,11 +496,7 @@
                     "engine_version": "1.0.0.403",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Avira": {
                     "category": "undetected",
@@ -609,11 +504,7 @@
                     "engine_version": "8.3.3.14",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Antiy-AVL": {
                     "category": "undetected",
@@ -621,11 +512,7 @@
                     "engine_version": "3.0.0.1",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Kingsoft": {
                     "category": "undetected",
@@ -633,19 +520,7 @@
                     "engine_version": "2017.9.26.565",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-                },
-                "Microsoft": {
-                    "category": "undetected",
-                    "engine_name": "Microsoft",
-                    "engine_version": "1.1.19000.8",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Gridinsoft": {
                     "category": "undetected",
@@ -653,18 +528,7 @@
                     "engine_version": "1.0.74.174",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-                },
-                "Arcabit": {
-                    "category": "undetected",
-                    "engine_name": "Arcabit",
-                    "engine_version": "1.0.0.889",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
+                    "engine_update": "20220320"
                 },
                 "Microsoft": {
                     "category": "undetected",
@@ -672,8 +536,7 @@
                     "engine_version": "1.1.19000.8",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "ViRobot": {
                     "category": "undetected",
@@ -681,11 +544,7 @@
                     "engine_version": "2014.3.20.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
                     "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "ZoneAlarm": {
                     "category": "undetected",
@@ -693,20 +552,15 @@
                     "engine_version": "1.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "GData": {
                     "category": "undetected",
                     "engine_name": "GData",
-<<<<<<< Updated upstream
-                    "engine_version": "A:25.32578B:27.26722",
+                    "engine_version": "A:25.32588B:27.26730",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "SentinelOne": {
                     "category": "type-unsupported",
@@ -715,20 +569,6 @@
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220201"
-=======
-                    "engine_version": "A:25.32570B:27.26713",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
-                },
-                "Cynet": {
-                    "category": "undetected",
-                    "engine_name": "Cynet",
-                    "engine_version": "4.0.0.27",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
                 },
                 "BitDefenderFalx": {
                     "category": "type-unsupported",
@@ -744,11 +584,7 @@
                     "engine_version": "3.21.3.10230",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Acronis": {
                     "category": "type-unsupported",
@@ -758,17 +594,10 @@
                     "method": "blacklist",
                     "engine_update": "20210512"
                 },
-<<<<<<< Updated upstream
                 "BitDefenderTheta": {
                     "category": "undetected",
                     "engine_name": "BitDefenderTheta",
                     "engine_version": "7.2.37796.0",
-=======
-                "VBA32": {
-                    "category": "undetected",
-                    "engine_name": "VBA32",
-                    "engine_version": "5.0.0",
->>>>>>> Stashed changes
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220318"
@@ -779,28 +608,20 @@
                     "engine_version": "1.1.3.1",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "TACHYON": {
                     "category": "undetected",
                     "engine_name": "TACHYON",
-<<<<<<< Updated upstream
-                    "engine_version": "2022-03-19.02",
+                    "engine_version": "2022-03-20.02",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "VBA32": {
                     "category": "undetected",
                     "engine_name": "VBA32",
                     "engine_version": "5.0.0",
-=======
-                    "engine_version": "2022-03-18.02",
->>>>>>> Stashed changes
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220318"
@@ -811,11 +632,7 @@
                     "engine_version": "2.3.1.101",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Zoner": {
                     "category": "undetected",
@@ -823,25 +640,15 @@
                     "engine_version": "2.2.2.0",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220318"
+                    "engine_update": "20220319"
                 },
-<<<<<<< Updated upstream
                 "Rising": {
                     "category": "undetected",
                     "engine_name": "Rising",
                     "engine_version": "25.0.0.27",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                "Tencent": {
-                    "category": "undetected",
-                    "engine_name": "Tencent",
-                    "engine_version": "1.0.0.1",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "Yandex": {
                     "category": "undetected",
@@ -849,11 +656,7 @@
                     "engine_version": "5.5.2.24",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "MAX": {
                     "category": "undetected",
@@ -861,11 +664,7 @@
                     "engine_version": "2019.9.16.1",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "MaxSecure": {
                     "category": "undetected",
@@ -881,8 +680,7 @@
                     "engine_version": "6.2.142.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20220319"
+                    "engine_update": "20220320"
                 },
                 "Panda": {
                     "category": "undetected",
@@ -890,26 +688,7 @@
                     "engine_version": "4.6.4.2",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
-=======
-                    "engine_update": "20220318"
-                },
-                "Cybereason": {
-                    "category": "type-unsupported",
-                    "engine_name": "Cybereason",
-                    "engine_version": "1.2.449",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20210330"
-                },
-                "Paloalto": {
-                    "category": "type-unsupported",
-                    "engine_name": "Paloalto",
-                    "engine_version": "0.9.0.1003",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220318"
->>>>>>> Stashed changes
+                    "engine_update": "20220320"
                 },
                 "CrowdStrike": {
                     "category": "type-unsupported",
@@ -917,35 +696,149 @@
                     "engine_version": "1.0",
                     "result": null,
                     "method": "blacklist",
-<<<<<<< Updated upstream
-                    "engine_update": "20210907"
-=======
                     "engine_update": null
->>>>>>> Stashed changes
                 }
+            },
+            "crowdsourced_ids_stats": {
+                "info": 1,
+                "high": 0,
+                "medium": 0,
+                "low": 6
             },
             "sandbox_verdicts": {
                 "OS X Sandbox": {
                     "category": "harmless",
-                    "confidence": 2,
+                    "confidence": 5,
                     "sandbox_name": "OS X Sandbox",
                     "malware_classification": [
                         "CLEAN"
                     ]
                 }
             },
-            "sha256": "73fb38c9468cd69dd4dd53cce112f2e9ecf36e28dd1d97c89ee8d643be4b73db",
-            "tags": [],
-<<<<<<< Updated upstream
-            "last_analysis_date": 1647708981,
-=======
-            "last_analysis_date": 1647630172,
->>>>>>> Stashed changes
+            "sha256": "fec383b4b8e338daaa1dffeeaf57ab0bc3ee7f0892654e502346f2abcdb204ad",
+            "tags": [
+                "dmg"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "unknown",
+                    "alert_severity": "low",
+                    "rule_msg": "(http_inspect) HTTP Content-Length message body was truncated",
+                    "rule_raw": "alert ( gid:119; sid:260; rev:1; msg:\"(http_inspect) HTTP Content-Length message body was truncated\"; metadata: rule-type preproc; classtype:unknown;)",
+                    "alert_context": [
+                        {
+                            "dest_port": 80,
+                            "dest_ip": "23.40.205.32"
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "119:260"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM ESTABLISHED packet out of window",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM ESTABLISHED packet out of window\"; stream-event:est_packet_out_of_window; classtype:protocol-command-decode; sid:2210020; rev:2;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "34.104.35.123",
+                            "url": "http://edgedl.me.gvt1.com/edgedl/release2/chrome/acvvzzy6z5sn4fgd6kemrykflpaq_99.0.4844.74/GoogleChrome-99.0.4844.74.dmg",
+                            "hostname": "edgedl.me.gvt1.com",
+                            "src_port": 80
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210020"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM ESTABLISHED invalid ack",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM ESTABLISHED invalid ack\"; stream-event:est_invalid_ack; classtype:protocol-command-decode; sid:2210029; rev:2;)",
+                    "alert_context": [
+                        {
+                            "url": "http://edgedl.me.gvt1.com/edgedl/release2/chrome/acvvzzy6z5sn4fgd6kemrykflpaq_99.0.4844.74/GoogleChrome-99.0.4844.74.dmg",
+                            "hostname": "edgedl.me.gvt1.com",
+                            "dest_port": 80,
+                            "dest_ip": "34.104.35.123"
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210029"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM FIN invalid ack",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM FIN invalid ack\"; stream-event:fin_invalid_ack; classtype:protocol-command-decode; sid:2210030; rev:2;)",
+                    "alert_context": [
+                        {
+                            "url": "http://edgedl.me.gvt1.com/edgedl/release2/chrome/acvvzzy6z5sn4fgd6kemrykflpaq_99.0.4844.74/GoogleChrome-99.0.4844.74.dmg",
+                            "hostname": "edgedl.me.gvt1.com",
+                            "dest_port": 80,
+                            "dest_ip": "34.104.35.123"
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210030"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM FIN out of window",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM FIN out of window\"; stream-event:fin_out_of_window; classtype:protocol-command-decode; sid:2210038; rev:2;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "34.104.35.123",
+                            "url": "http://edgedl.me.gvt1.com/edgedl/release2/chrome/acvvzzy6z5sn4fgd6kemrykflpaq_99.0.4844.74/GoogleChrome-99.0.4844.74.dmg",
+                            "hostname": "edgedl.me.gvt1.com",
+                            "src_port": 80
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210038"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM Packet with invalid ack",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM Packet with invalid ack\"; stream-event:pkt_invalid_ack; classtype:protocol-command-decode; sid:2210045; rev:2;)",
+                    "alert_context": [
+                        {
+                            "url": "http://edgedl.me.gvt1.com/edgedl/release2/chrome/acvvzzy6z5sn4fgd6kemrykflpaq_99.0.4844.74/GoogleChrome-99.0.4844.74.dmg",
+                            "hostname": "edgedl.me.gvt1.com",
+                            "dest_port": 80,
+                            "dest_ip": "34.104.35.123"
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210045"
+                },
+                {
+                    "rule_category": "policy-violation",
+                    "alert_severity": "info",
+                    "rule_msg": "APP-DETECT Apple Messages push.apple.com DNS TXT request attempt",
+                    "rule_raw": "alert udp $HOME_NET any -> any 53 ( msg:\"APP-DETECT Apple Messages push.apple.com DNS TXT request attempt\"; flow:to_server; byte_test:1,!&,0xF8,2; content:\"|04|push|05|apple|03|com|00 00 10 00 01|\",fast_pattern,nocase; metadata:policy max-detect-ips drop; service:dns; reference:url,www.apple.com/osx/apps/all.html#messages; classtype:policy-violation; sid:25080; rev:2; )",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_references": [
+                        "https://www.apple.com/osx/apps/all.html#messages"
+                    ],
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "1:25080"
+                }
+            ],
+            "last_analysis_date": 1647769224,
             "unique_sources": 1,
-            "first_submission_date": 1647630172,
-            "ssdeep": "1572864:4eHh/8OGtAJW3JOE+6gqx6Iut5si3aihLgKX464a5R+XZzYCcnwkGoO98zRr5Opa:4eh8OJJW3JOE+6lugogDospfSBzR",
-            "md5": "b3829091cacfa075c98062dc7c835660",
-            "sha1": "4a0f6daf994e16f68ee0711c8047915c3ccb44bb",
+            "first_submission_date": 1647725658,
+            "ssdeep": "393216:oYNxUvy5AdUBaPw5RVffgXWOb2fySWNc2wR:XznZffmbarcmR",
+            "md5": "e3b559d5a5104e3a36378b34d47ed632",
+            "sha1": "cadd0baac1c565b3876561dee5ffb19c0864c370",
             "magic": "data",
             "last_analysis_stats": {
                 "harmless": 0,
@@ -955,19 +848,15 @@
                 "timeout": 0,
                 "failure": 0,
                 "malicious": 0,
-<<<<<<< Updated upstream
                 "undetected": 56
-=======
-                "undetected": 55
->>>>>>> Stashed changes
             },
-            "meaningful_name": "balenaEtcher-1.7.8.dmg",
+            "meaningful_name": "TG Pro-2.67.dmg",
             "reputation": 0
         },
         "type": "file",
-        "id": "73fb38c9468cd69dd4dd53cce112f2e9ecf36e28dd1d97c89ee8d643be4b73db",
+        "id": "fec383b4b8e338daaa1dffeeaf57ab0bc3ee7f0892654e502346f2abcdb204ad",
         "links": {
-            "self": "https://www.virustotal.com/api/v3/files/73fb38c9468cd69dd4dd53cce112f2e9ecf36e28dd1d97c89ee8d643be4b73db"
+            "self": "https://www.virustotal.com/api/v3/files/fec383b4b8e338daaa1dffeeaf57ab0bc3ee7f0892654e502346f2abcdb204ad"
         }
     }
 }

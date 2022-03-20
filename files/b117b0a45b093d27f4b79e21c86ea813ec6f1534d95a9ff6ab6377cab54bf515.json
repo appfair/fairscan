@@ -1,101 +1,32 @@
 {
     "data": {
-<<<<<<< Updated upstream
         "attributes": {
             "type_description": "ZIP",
-            "tlsh": "T1BAD733768EFC1A20DF7AD17DE1903003B1B0A657E860D8680EA4516E16FAB60C5BDFDD",
-            "vhash": "7b056a721c627024c0934bdcec12d68d",
+            "tlsh": "T1C00733287321B965F29AFD3BB1F5419DA7F3D014E060E96687D3F2B19093D991AF080B",
+            "vhash": "81977d37b6d0d470652d52e5ddaae2d0",
             "trid": [
                 {
-                    "file_type": "Sweet Home 3D design (generic)",
-                    "probability": 46.6
-                },
-                {
-                    "file_type": "Mozilla Archive Format (gen)",
-                    "probability": 31.1
-                },
-                {
                     "file_type": "ZIP compressed archive",
-                    "probability": 17.7
+                    "probability": 80.0
                 },
                 {
                     "file_type": "PrintFox/Pagefox bitmap (640x800)",
-                    "probability": 4.4
+                    "probability": 20.0
                 }
             ],
             "names": [
-                "Nova 9.1.zip"
+                "xemu-macos-universal-release.zip"
             ],
-            "signature_info": {
-                "VersionMin": "659207",
-                "CDHash": "12d240cbf4b2c1688c1c126956468b12170ef9c8",
-                "signers": "Panic, Inc.; Apple Inc.; Apple Inc.",
-                "Runtime Version": "12.3.0",
-                "TeamIdentifier": "VE8FC488U5",
-                "CandidateCDHash sha256": "12d240cbf4b2c1688c1c126956468b12170ef9c8",
-                "Hash choices": "sha256",
-                "Format": "app bundle with Mach-O universal (x86_64 arm64)",
-                "Timestamp": "Mar 18, 2022 at 2:02:56 PM",
-                "Signature size": "8960",
-                "Executable Segment base": "0",
-                "Page size": "4096",
-                "VersionPlatform": "1",
-                "CMSDigest": "12d240cbf4b2c1688c1c126956468b12170ef9c8450349081d0bdaff2482ad87",
-                "CMSDigestType": "2",
-                "Executable Segment flags": "0x1",
-                "CandidateCDHashFull sha256": "12d240cbf4b2c1688c1c126956468b12170ef9c8450349081d0bdaff2482ad87",
-                "verified": "Valid",
-                "VersionSDK": "787200",
-                "Identifier": "com.panic.Nova",
-                "signers details": [
-                    {
-                        "valid usage": "",
-                        "status": "Valid",
-                        "name": "Panic, Inc.",
-                        "algorithm": "sha256WithRSAEncryption",
-                        "valid from": "05:50 AM 05/16/2017",
-                        "valid to": "05:50 AM 05/17/2022",
-                        "serial number": "57 8C 60 42 C4 FB F6 B4",
-                        "cert issuer": "Apple Inc.",
-                        "thumbprint": "64C2FBB25BE367E0ACD61EF6CA866CFACC740E99"
-                    },
-                    {
-                        "valid usage": "",
-                        "status": "Valid",
-                        "name": "Apple Inc.",
-                        "algorithm": "sha256WithRSAEncryption",
-                        "valid from": "10:12 PM 02/01/2012",
-                        "valid to": "10:12 PM 02/01/2027",
-                        "serial number": "18 7A A9 A8 C2 96 21 0C",
-                        "cert issuer": "Apple Inc.",
-                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
-                    },
-                    {
-                        "valid usage": "",
-                        "status": "Valid",
-                        "name": "Apple Inc.",
-                        "algorithm": "sha1WithRSAEncryption",
-                        "valid from": "09:40 PM 04/25/2006",
-                        "valid to": "09:40 PM 02/09/2035",
-                        "serial number": "2",
-                        "cert issuer": "Apple Inc.",
-                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
-                    }
-                ],
-                "Info.plist entries": "37",
-                "Authority": "Apple Root CA",
-                "Executable Segment limit": "6832128"
-            },
-            "last_modification_date": 1647726743,
+            "last_modification_date": 1647726989,
             "type_tag": "zip",
             "times_submitted": 1,
             "total_votes": {
                 "harmless": 0,
                 "malicious": 0
             },
-            "size": 62512224,
+            "size": 18214299,
             "type_extension": "zip",
-            "last_submission_date": 1647709819,
+            "last_submission_date": 1647719745,
             "last_analysis_results": {
                 "Bkav": {
                     "category": "undetected",
@@ -106,7 +37,7 @@
                     "engine_update": "20220319"
                 },
                 "Lionic": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "Lionic",
                     "engine_version": "7.5",
                     "result": null,
@@ -121,34 +52,34 @@
                     "method": "blacklist",
                     "engine_update": "20220302"
                 },
-                "MicroWorld-eScan": {
+                "DrWeb": {
                     "category": "undetected",
-                    "engine_name": "MicroWorld-eScan",
-                    "engine_version": "14.0.409.0",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.52.8270",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "FireEye": {
+                "ClamAV": {
                     "category": "undetected",
-                    "engine_name": "FireEye",
-                    "engine_version": "32.44.1.0",
+                    "engine_name": "ClamAV",
+                    "engine_version": "0.104.2.0",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.10.2019.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20211026"
                 },
                 "CAT-QuickHeal": {
                     "category": "undetected",
                     "engine_name": "CAT-QuickHeal",
                     "engine_version": "14.00",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-                },
-                "McAfee": {
-                    "category": "timeout",
-                    "engine_name": "McAfee",
-                    "engine_version": "6.0.6.653",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -178,7 +109,7 @@
                     "engine_update": "20220319"
                 },
                 "Sangfor": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "Sangfor",
                     "engine_version": "2.9.0.0",
                     "result": null,
@@ -193,18 +124,18 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "BitDefender": {
-                    "category": "timeout",
-                    "engine_name": "BitDefender",
-                    "engine_version": "7.2",
+                "Alibaba": {
+                    "category": "undetected",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20190527"
                 },
                 "K7GW": {
                     "category": "undetected",
                     "engine_name": "K7GW",
-                    "engine_version": "11.254.41372",
+                    "engine_version": "11.254.41375",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -226,9 +157,9 @@
                     "engine_update": "20220318"
                 },
                 "VirIT": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "VirIT",
-                    "engine_version": null,
+                    "engine_version": "9.5.157",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220318"
@@ -252,7 +183,7 @@
                 "tehtris": {
                     "category": "type-unsupported",
                     "engine_name": "tehtris",
-                    "engine_version": "v0.0.7",
+                    "engine_version": null,
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -260,18 +191,18 @@
                 "ESET-NOD32": {
                     "category": "undetected",
                     "engine_name": "ESET-NOD32",
-                    "engine_version": "24966",
+                    "engine_version": "24967",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "Baidu": {
-                    "category": "timeout",
-                    "engine_name": "Baidu",
-                    "engine_version": "1.0.0.2",
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.272",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20190318"
+                    "engine_update": "20220319"
                 },
                 "TrendMicro-HouseCall": {
                     "category": "undetected",
@@ -282,17 +213,17 @@
                     "engine_update": "20220319"
                 },
                 "Avast": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "Avast",
                     "engine_version": "21.1.5827.0",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "ClamAV": {
+                "Cynet": {
                     "category": "undetected",
-                    "engine_name": "ClamAV",
-                    "engine_version": "0.104.2.0",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -305,13 +236,13 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "Alibaba": {
+                "BitDefender": {
                     "category": "undetected",
-                    "engine_name": "Alibaba",
-                    "engine_version": "0.3.0.5",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20190527"
+                    "engine_update": "20220319"
                 },
                 "NANO-Antivirus": {
                     "category": "undetected",
@@ -329,18 +260,18 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "APEX": {
-                    "category": "type-unsupported",
-                    "engine_name": "APEX",
-                    "engine_version": "6.272",
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "Tencent": {
+                "Rising": {
                     "category": "undetected",
-                    "engine_name": "Tencent",
-                    "engine_version": "1.0.0.1",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -377,13 +308,13 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "DrWeb": {
+                "Baidu": {
                     "category": "undetected",
-                    "engine_name": "DrWeb",
-                    "engine_version": "7.0.52.8270",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20190318"
                 },
                 "Zillya": {
                     "category": "undetected",
@@ -394,7 +325,7 @@
                     "engine_update": "20220318"
                 },
                 "TrendMicro": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "TrendMicro",
                     "engine_version": "11.0.0.1006",
                     "result": null,
@@ -402,9 +333,9 @@
                     "engine_update": "20220319"
                 },
                 "McAfee-GW-Edition": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "McAfee-GW-Edition",
-                    "engine_version": null,
+                    "engine_version": "v2019.1.2+3728",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -417,13 +348,13 @@
                     "method": "blacklist",
                     "engine_update": "20220217"
                 },
-                "CMC": {
+                "FireEye": {
                     "category": "undetected",
-                    "engine_name": "CMC",
-                    "engine_version": "2.10.2019.1",
+                    "engine_name": "FireEye",
+                    "engine_version": "32.44.1.0",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20211026"
+                    "engine_update": "20220319"
                 },
                 "Sophos": {
                     "category": "undetected",
@@ -434,7 +365,7 @@
                     "engine_update": "20220319"
                 },
                 "Ikarus": {
-                    "category": "failure",
+                    "category": "undetected",
                     "engine_name": "Ikarus",
                     "engine_version": "6.0.9.0",
                     "result": null,
@@ -442,9 +373,9 @@
                     "engine_update": "20220319"
                 },
                 "GData": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "GData",
-                    "engine_version": null,
+                    "engine_version": "A:25.32579B:27.26724",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -490,7 +421,7 @@
                     "engine_update": "20220319"
                 },
                 "Microsoft": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "Microsoft",
                     "engine_version": "1.1.19000.8",
                     "result": null,
@@ -537,13 +468,13 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "TACHYON": {
-                    "category": "undetected",
-                    "engine_name": "TACHYON",
-                    "engine_version": "2022-03-19.02",
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "7.2.0.1",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220319"
+                    "engine_update": "20220201"
                 },
                 "BitDefenderFalx": {
                     "category": "type-unsupported",
@@ -569,6 +500,22 @@
                     "method": "blacklist",
                     "engine_update": "20210512"
                 },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220319"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2022-03-19.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220319"
+                },
                 "VBA32": {
                     "category": "undetected",
                     "engine_name": "VBA32",
@@ -577,16 +524,8 @@
                     "method": "blacklist",
                     "engine_update": "20220318"
                 },
-                "MAX": {
-                    "category": "undetected",
-                    "engine_name": "MAX",
-                    "engine_version": "2019.9.16.1",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-                },
                 "Cylance": {
-                    "category": "timeout",
+                    "category": "type-unsupported",
                     "engine_name": "Cylance",
                     "engine_version": "2.3.1.101",
                     "result": null,
@@ -601,10 +540,10 @@
                     "method": "blacklist",
                     "engine_update": "20220318"
                 },
-                "Rising": {
+                "Tencent": {
                     "category": "undetected",
-                    "engine_name": "Rising",
-                    "engine_version": "25.0.0.27",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -617,16 +556,16 @@
                     "method": "blacklist",
                     "engine_update": "20220319"
                 },
-                "SentinelOne": {
+                "MAX": {
                     "category": "undetected",
-                    "engine_name": "SentinelOne",
-                    "engine_version": "7.2.0.1",
+                    "engine_name": "MAX",
+                    "engine_version": "2019.9.16.1",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20220201"
+                    "engine_update": "20220319"
                 },
                 "MaxSecure": {
-                    "category": "timeout",
+                    "category": "undetected",
                     "engine_name": "MaxSecure",
                     "engine_version": "1.0.0.1",
                     "result": null,
@@ -637,14 +576,6 @@
                     "category": "undetected",
                     "engine_name": "Fortinet",
                     "engine_version": "6.2.142.0",
-                    "result": null,
-                    "method": "blacklist",
-                    "engine_update": "20220319"
-                },
-                "AVG": {
-                    "category": "timeout",
-                    "engine_name": "AVG",
-                    "engine_version": "21.1.5827.0",
                     "result": null,
                     "method": "blacklist",
                     "engine_update": "20220319"
@@ -671,79 +602,55 @@
                     "engine_version": "1.0",
                     "result": null,
                     "method": "blacklist",
-                    "engine_update": "20210907"
+                    "engine_update": null
                 }
             },
-            "sha256": "ef59998e8a5c7c04d434aa5b62d6b85d715a25dffe4756031e411bd4e2f0a825",
+            "sha256": "b117b0a45b093d27f4b79e21c86ea813ec6f1534d95a9ff6ab6377cab54bf515",
             "tags": [
                 "contains-macho",
                 "mac-app",
-                "zip",
-                "signed"
+                "zip"
             ],
-            "last_analysis_date": 1647709819,
+            "last_analysis_date": 1647719745,
             "unique_sources": 1,
-            "first_submission_date": 1647709819,
-            "ssdeep": "1572864:oa1BtvXVTdz6Btlbh4ypHDNT93h8CrZRoG+sL:h1BVlTdz6vlF4ypR93DrZRSsL",
+            "first_submission_date": 1647719745,
+            "ssdeep": "393216:OBIllMdkbw8p98Khip68w0tKQQOvOuxsc8qK2hqsduALL615u:aIllFpp98Kw7w0tfm1cbBhR3L2Lu",
             "bundle_info": {
-                "highest_datetime": "2022-03-18 14:06:40",
-                "lowest_datetime": "2022-03-18 13:51:22",
-                "num_children": 2133,
+                "highest_datetime": "2022-03-19 01:48:12",
+                "lowest_datetime": "2022-03-19 01:37:04",
+                "num_children": 37,
                 "extensions": {
-                    "xml": 7,
-                    "md": 26,
-                    "scn": 1,
-                    "png": 27,
-                    "nib": 239,
-                    "car": 1,
-                    "glb": 1,
-                    "omo": 1,
-                    "otf": 3,
-                    "js": 10,
-                    "sh": 1,
-                    "jpg": 3,
-                    "mom": 1,
-                    "txt": 2,
-                    "css": 9
+                    "txt": 1
                 },
                 "file_types": {
-                    "XML": 14,
-                    "script": 1,
-                    "unknown": 765,
-                    "JavaScript": 1,
-                    "JPG": 3,
-                    "directory": 181,
-                    "HTML": 1,
-                    "Mac OS X Executable": 6,
-                    "PNG": 28
+                    "directory": 8,
+                    "unknown": 2,
+                    "Mac OS X Executable": 25,
+                    "XML": 2
                 },
                 "type": "ZIP",
-                "uncompressed_size": 56175276
+                "uncompressed_size": 45691272
             },
-            "md5": "f2366d5addd2c4f6ab725957dced6df9",
-            "sha1": "50c091575f9fdc058985d7b2bf275cbb87835140",
-            "magic": "Zip archive data, at least v1.0 to extract",
+            "md5": "ed7ce4059a6042774351e173d05afe8a",
+            "sha1": "89b81fc17684cb61eb48d80b68c6a79bedd7d5e0",
+            "magic": "Zip archive data, at least v2.0 to extract",
             "last_analysis_stats": {
                 "harmless": 0,
-                "type-unsupported": 10,
+                "type-unsupported": 12,
                 "suspicious": 0,
                 "confirmed-timeout": 0,
-                "timeout": 14,
-                "failure": 2,
+                "timeout": 0,
+                "failure": 1,
                 "malicious": 0,
-                "undetected": 46
+                "undetected": 59
             },
-            "meaningful_name": "com.panic.Nova",
+            "meaningful_name": "xemu-macos-universal-release.zip",
             "reputation": 0
         },
         "type": "file",
-        "id": "ef59998e8a5c7c04d434aa5b62d6b85d715a25dffe4756031e411bd4e2f0a825",
+        "id": "b117b0a45b093d27f4b79e21c86ea813ec6f1534d95a9ff6ab6377cab54bf515",
         "links": {
-            "self": "https://www.virustotal.com/api/v3/files/ef59998e8a5c7c04d434aa5b62d6b85d715a25dffe4756031e411bd4e2f0a825"
+            "self": "https://www.virustotal.com/api/v3/files/b117b0a45b093d27f4b79e21c86ea813ec6f1534d95a9ff6ab6377cab54bf515"
         }
-=======
-        "type": "analysis",
-        "id": "ZjIzNjZkNWFkZGQyYzRmNmFiNzI1OTU3ZGNlZDZkZjk6MTY0NzcwOTgxOQ=="
->>>>>>> Stashed changes
     }
 }
