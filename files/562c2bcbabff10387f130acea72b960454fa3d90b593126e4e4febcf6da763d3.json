@@ -1,0 +1,772 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Shell script",
+            "tlsh": "T15AE7121AA3A2A46CD086C170139F9733DA30FC7A1A26796B26C4FA343F76CE55719707",
+            "trid": [
+                {
+                    "file_type": "Linux/UNIX shell script",
+                    "probability": 100.0
+                }
+            ],
+            "names": [
+                "f44eefb2-65f4-4481-9d78-d4be79e390d4"
+            ],
+            "last_modification_date": 1658106719,
+            "type_tag": "shell",
+            "times_submitted": 1,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 67695901,
+            "type_extension": "sh",
+            "last_submission_date": 1658022389,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "Disable Microsoft Defender Firewall via Registry",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "13",
+                                "ProcessId": "768",
+                                "EventType": "SetValue",
+                                "Image": "C:\\Windows\\system32\\svchost.exe",
+                                "RuleName": "T1089",
+                                "UtcTime": "2022-06-06 12:19:18.863",
+                                "Details": "DWORD (0x00000000)",
+                                "ProcessGuid": "C784477D-EF7F-629D-1600-000000003000",
+                                "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\DomainProfile\\EnableFirewall"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "13",
+                                "ProcessId": "768",
+                                "EventType": "SetValue",
+                                "Image": "C:\\Windows\\system32\\svchost.exe",
+                                "RuleName": "T1089",
+                                "UtcTime": "2022-06-06 12:19:18.863",
+                                "Details": "DWORD (0x00000000)",
+                                "ProcessGuid": "C784477D-EF7F-629D-1600-000000003000",
+                                "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\EnableFirewall"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "13",
+                                "ProcessId": "768",
+                                "EventType": "SetValue",
+                                "Image": "C:\\Windows\\system32\\svchost.exe",
+                                "RuleName": "T1089",
+                                "UtcTime": "2022-06-06 12:19:18.863",
+                                "Details": "DWORD (0x00000000)",
+                                "ProcessGuid": "C784477D-EF7F-629D-1600-000000003000",
+                                "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\PublicProfile\\EnableFirewall"
+                            }
+                        }
+                    ],
+                    "rule_level": "medium",
+                    "rule_description": "Adversaries may disable or modify system firewalls in order to bypass controls limiting network usage",
+                    "rule_author": "frack113",
+                    "rule_id": "4d91cff1255532aacd25d7b82261d545afc7d30837d1643a0dd2c4617aec5865"
+                },
+                {
+                    "rule_title": "Failed Code Integrity Checks",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "5038",
+                                "param1": "\\Device\\HarddiskVolume4\\Program Files (x86)\\sandbox\\driver\\sandbox-driver.sys"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Code integrity failures may indicate tampered executables.",
+                    "rule_author": "Thomas Patzke",
+                    "rule_id": "134564d292d785dff102940b8a1ee06dba2d462c5fb852124b3771a49d7885f1"
+                },
+                {
+                    "rule_title": "Use Remove-Item to Delete File",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "4104",
+                                "ScriptBlockText": "pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_ComputerSystem \r\n\r\n#Joebox\r\n\r\n#Creating Win32_PnPEntity fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_PnPEntity\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_PnPEntity\"\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"DeviceId\" -or $pr.Name -eq \"Caption\" -or $pr.Name -eq \"Name\" -or $pr.Name -eq \"PNPDeviceID\"  -or $pr.Name -eq \"Service\") -and ($pr.Value -match 'VEN_80EE' -or $pr.Value -match 'VEN_15AD' -or $pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match '82801FB' -or $pr.Value -match '82441FX' -or $pr.Value -match '82371SB' -or $pr.Value -match 'OpenHCD'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VEN_80EE\", $value).replace(\"VEN_15AD\", $value).replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"82801FB\", $value).replace(\"82441FX\", $value).replace(\"82371SB\", $value).replace(\"OpenHCD\", $value)\r\n\t\t\t\r\n\t\t\t# 82801FB 82441FX 82371SB OpenHCD\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\t\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_PnPEntity -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_DiskDrive fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_DiskDrive\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_DiskDrive\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"DeviceId\" -or $pr.Name -eq \"Caption\" -or $pr.Name -eq \"Model\" -or $pr.Name -eq \"PNPDeviceID\") -and ($pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match 'VMware'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"VMware Virtual disk\", $value).replace(\"VMware\", $value).replace(\"HARDDISK\", \"WDC\").replace(\"VIRTUAL_DISK\", $value)\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\r\n\t\t# Change disk size\r\n\t\t} elseif($pr.Name -eq \"Size\" -and $pr.Value -lt 200000000000)\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, 412300001200)\r\n\t\t} elseif(-Not($pr.Name -eq \"Capabilities\"))\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_DiskDrive -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_VideoController fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_VideoController\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_VideoController\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif(($pr.Name -eq \"Caption\" -or $pr.Name -eq \"Name\" -or $pr.Name -eq \"PNPDeviceID\" -or $pr.Name -eq \"AdapterCompatibility\" -or $pr.Name -eq \"Description\" -or $pr.Name -eq \"InfSection\" -or $pr.Name -eq \"VideoProcessor\") -and ($pr.Value -match 'VBOX' -or $pr.Value -match 'VBox' -or $pr.Value -match 'VMWARE' -or $pr.Value -match 'VirtualBox' -or $pr.Value -match 'VMware' -or $pr.Value -match 'Oracle Corporation' -or $pr.Value -match 'Microsoft Basic Display Adapter'))\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789_'\r\n\t\t\t$value = $pr.Value.replace(\"VBOX\", $value).replace(\"VBox\", $value).replace(\"VMWARE\", $value).replace(\"VMware\", $value).replace(\"VirtualBox\", $value).replace(\"Oracle Corporation\", $value).replace(\"Microsoft Basic Display Adapter\", $value)\r\n\t\t\t\t\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t\r\n\r\n\t\t} elseif($pr.Name -eq \"DriverVersion\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 8 -characters '1234567890.'\r\n\t\t\t$args.add($pr.Name, $value)\r\n\t\t} elseif($pr.Name -eq \"AdapterRAM\" -and $pr.Value -lt 1000000000)\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, 1073741824)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_VideoController -Arguments $args\r\n}\r\n\r\n#Joebox\r\n\r\n#Creating Win32_BaseBoard fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_BaseBoard\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_BaseBoard\"\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"Name\")\r\n\t\t{\t$value = Get-RandomCharacters -length 10 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"Product\" -or $pr.Name -eq \"Manufacturer\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 10 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_BaseBoard\r\n\r\n\r\n#Creating Win32_ComputerSystemProduct fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_ComputerSystemProduct\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_ComputerSystemProduct\"\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"Name\")\r\n\t\t{\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.$value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"IdentifyingNumber\")\r\n\t\t{\r\n\t\t\t$value = Get-RandomCharacters -length 6 -characters 'ABCDEFGHKLMNOPRSTUVWXYZ123456789'\r\n\t\t\t$newClass.Properties.Add($pr.Name, $value, $pr.Type)\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_ComputerSystemProduct\r\n\r\n\r\n\r\n#Creating Win32_LogicalDisk fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_LogicalDisk\";\r\n$newClass.Qualifiers.Add(\"Static\", $true);\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_LogicalDisk WHERE DriveType = 3\"\r\n\r\nif(-Not ($objWMi -is [array]))\r\n{\r\n\t$objWMi = @($objWMi)\r\n}\r\n\r\nforeach ($pr in $objWmi[0].Properties)\r\n{\r\n\t$newClass.Properties.Add($pr.Name, $pr.Type, $false)\t\r\n\tif($pr.Name -eq \"DeviceID\")\r\n\t{\r\n\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t}\r\n\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"read\", $true)\r\n}\r\n\r\n$newClass.Put()\r\n\r\nforeach ($obj in $objWmi)\r\n{\t\r\n\t$args = @{}\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\t\r\n\t\tif($pr.Name -eq \"Size\")\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, \"223496729601\")\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$args.add($pr.Name, $pr.Value)\r\n\t\t}\r\n\t}\r\n\t\r\n\tSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_LogicalDisk -Arguments $args\r\n}\r\n\r\n\r\n#Creating Win32_ComputerSystemProduct fake class\r\n$newClass = New-Object System.Management.ManagementClass(\"root\\cimv2\", [String]::Empty, $null); \r\n$newClass[\"__CLASS\"] = \"Win32_OperatingSystem\";\r\n$newClass.Qualifiers.Add(\"Static\", $true)\r\n\r\n$objWMi = get-wmiobject -computername localhost -Namespace root\\CIMV2 -Query \"Select * from Win32_OperatingSystem\"\r\n\r\n\r\nforeach ($obj in $objWmi)\r\n{\r\n\tforeach ($pr in $obj.Properties)\r\n\t{\r\n\t\tif($pr.Name -eq \"CreationClassName\")\r\n\t\t{\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.$value, $pr.Type)\r\n\t\t\t$newClass.Properties[$pr.Name].Qualifiers.Add(\"Key\", $true)\r\n\t\t} elseif($pr.Name -eq \"LastBootUpTime\")\r\n\t\t{\r\n\t\t\t$d = [System.Management.ManagementDateTimeConverter]::ToDateTime($pr.Value)\r\n\t\t\t$d = $d.addDays(-10)\r\n\t\t\t$d = [System.Management.ManagementDateTimeConverter]::ToDmtfDateTime($d)\r\n\t\t\t\r\n\t\t\t$newClass.Properties.Add($pr.Name, $d, $pr.Type)\r\n\t\t\t\r\n\t\t} else\r\n\t\t{\r\n\t\t\t$newClass.Properties.Add($pr.Name, $pr.Value, $pr.Type)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n$newClass.Put()\r\nSet-WmiInstance -Path \\\\.\\root\\cimv2:Win32_OperatingSystem\r\n\r\n\r\nfunction Delete() {\r\n    $Invocation = (Get-Variable MyInvocation -Scope 1).Value\r\n    $Path =  $Invocation.MyCommand.Path \r\n    Write-Host $Path\r\n    Remove-Item $Path -force\r\n} \r\n     \r\nDelete \r\n",
+                                "ScriptBlockId": "1000b1a1-6da7-4e3c-b525-02c845d4e72e",
+                                "MessageNumber": "\u0002",
+                                "MessageTotal": "\u0002",
+                                "Path": "C:\\Program Files (x86)\\Joebox\\unpack\\wmievasions.ps1"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Powershell Remove-Item  with -Path to delete a file or a folder with \"-Recurse\"",
+                    "rule_author": "frack113",
+                    "rule_id": "d9b2eb00753c3049fbb4ed4f7d88f29b65a0c50bec45ff4723b95bb637f8f83d"
+                }
+            ],
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "1.3.0.9899",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Elastic": {
+                    "category": "type-unsupported",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.40",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220623"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.56.4040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "14.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.3.3.37",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.14.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220602"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.25.43367",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Alibaba": {
+                    "category": "type-unsupported",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.25.43369",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220705"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.239",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220715"
+                },
+                "Cyren": {
+                    "category": "undetected",
+                    "engine_name": "Cyren",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220208"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.18.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": "v0.1.4",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "25603",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.313",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "21.1.5827.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "0.105.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "21.0.1.45",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25618",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Ad-Aware": {
+                    "category": "undetected",
+                    "engine_name": "Ad-Aware",
+                    "engine_version": "3.0.21.193",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "1.4.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Comodo": {
+                    "category": "undetected",
+                    "engine_name": "Comodo",
+                    "engine_version": "34810",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.978.51",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4671",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "McAfee-GW-Edition": {
+                    "category": "undetected",
+                    "engine_name": "McAfee-GW-Edition",
+                    "engine_version": "v2019.1.2+3728",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "22.2.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220330"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "3.5.48.101",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220707"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2021.5.0.7597",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.0.24.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "220716-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.14",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "2017.9.26.565",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Microsoft": {
+                    "category": "undetected",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.19400.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.85.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "1.0.0.889",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.33516B:27.28101",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Cynet": {
+                    "category": "undetected",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220103"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.22.1.10283",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.108",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220426"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220715"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2019.9.16.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.3.1.101",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Rising": {
+                    "category": "undetected",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2022-07-16.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "6.2.142.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220717"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20210330"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220716"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220418"
+                }
+            },
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 1,
+                "medium": 0,
+                "low": 0
+            },
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 0,
+                    "medium": 1,
+                    "critical": 0,
+                    "low": 2
+                }
+            },
+            "sandbox_verdicts": {
+                "Zenbox": {
+                    "category": "harmless",
+                    "sandbox_name": "Zenbox",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "562c2bcbabff10387f130acea72b960454fa3d90b593126e4e4febcf6da763d3",
+            "tags": [
+                "shell",
+                "direct-cpu-clock-access"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "policy-violation",
+                    "alert_severity": "info",
+                    "rule_msg": "APP-DETECT Apple Messages push.apple.com DNS TXT request attempt",
+                    "rule_raw": "alert udp $HOME_NET any -> any 53 ( msg:\"APP-DETECT Apple Messages push.apple.com DNS TXT request attempt\"; flow:to_server; byte_test:1,!&,0xF8,2; content:\"|04|push|05|apple|03|com|00 00 10 00 01|\",fast_pattern,nocase; metadata:policy max-detect-ips drop; service:dns; reference:url,www.apple.com/osx/apps/all.html#messages; classtype:policy-violation; sid:25080; rev:2; )",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_references": [
+                        "https://www.apple.com/osx/apps/all.html#messages"
+                    ],
+                    "rule_id": "1:25080"
+                }
+            ],
+            "last_analysis_date": 1658022389,
+            "unique_sources": 1,
+            "first_submission_date": 1658022389,
+            "ssdeep": "1572864:nNxsTgJdDsfMmxsJSDZ8L+vJODxQH/Hj9+0rw//i3Af:D59swJ0HvxH/DXUHiY",
+            "md5": "9614d6f3804305430e17c066e95c85a7",
+            "sha1": "7027e500260d209e883699b2ee4588ba1ed871e1",
+            "magic": "POSIX shell script text executable",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 15,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 0,
+                "failure": 0,
+                "malicious": 0,
+                "undetected": 58
+            },
+            "meaningful_name": "f44eefb2-65f4-4481-9d78-d4be79e390d4",
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 0,
+                "medium": 1,
+                "critical": 0,
+                "low": 2
+            }
+        },
+        "type": "file",
+        "id": "562c2bcbabff10387f130acea72b960454fa3d90b593126e4e4febcf6da763d3",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/562c2bcbabff10387f130acea72b960454fa3d90b593126e4e4febcf6da763d3"
+        }
+    }
+}
