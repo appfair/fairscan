@@ -1,0 +1,740 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Macintosh Disk Image",
+            "tlsh": "T195A8C00BB26DA46DC1C7D07C6799C772BA3974240130766B35E0EB267FB2AE05B39B11",
+            "vhash": "e8dd1539961478dcefbf986bb52df26b",
+            "trid": [
+                {
+                    "file_type": "Apple ISO9660/HFS hybrid CD image",
+                    "probability": 99.0
+                },
+                {
+                    "file_type": "VXD Driver",
+                    "probability": 0.5
+                },
+                {
+                    "file_type": "Sybase iAnywhere database files",
+                    "probability": 0.3
+                }
+            ],
+            "crowdsourced_yara_results": [
+                {
+                    "description": "This signature detects the presence of a number of Windows API functionality often seen within embedded executables. When this signature alerts on an executable, it is not an indication of malicious behavior. However, if seen firing in other file types, deeper investigation may be warranted.",
+                    "source": "https://github.com/InQuest/yara-rules-vt",
+                    "author": "InQuest Labs",
+                    "ruleset_name": "Windows_API_Function",
+                    "rule_name": "Windows_API_Function",
+                    "ruleset_id": "0122a7f913"
+                }
+            ],
+            "names": [
+                "PYMPlayer8A181.dmg"
+            ],
+            "last_modification_date": 1663273638,
+            "type_tag": "dmg",
+            "times_submitted": 1,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 208181910,
+            "type_extension": "dmg",
+            "last_submission_date": 1663266212,
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Driver Descriptor Map (DDM : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "Apple (Apple_partition_map : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 2)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 208163328,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 4650,
+                "data_fork_length": 208163328,
+                "hfs": {
+                    "unreadable_files": 2,
+                    "info_plist": {
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "NSHumanReadableCopyright": "Copyright \u00a9 2022 Grzegorz Pawlik\nAll rights reserved",
+                        "OWARPublisherName": "Grzegorz Pawlik",
+                        "UTImportedTypeDeclarations": "[{'UTTypeConformsTo': ['public.image', 'public.data', 'public.item', 'public.content'], 'UTTypeDescription': 'obrazek JPEG', 'UTTypeIdentifier': 'public.jpeg', 'UTTypeTagSpecification': {'public.filename-extension': ['jpg']}}, {'UTTypeConformsTo': ['public.image', 'public.data', 'public.item', 'public.content'], 'UTTypeDescription': 'obrazek PNG', 'UTTypeIdentifier': 'public.png', 'UTTypeTagSpecification': {'public.filename-extension': ['png']}}, {'UTTypeConformsTo': ['public.item', 'public.audiovisual-content', 'public.content'], 'UTTypeDescription': 'film ASF', 'UTTypeIdentifier': 'com.microsoft.advanced-systems-format', 'UTTypeTagSpecification': {'public.filename-extension': ['asf']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film FLV', 'UTTypeIdentifier': 'com.adobe.flash.video', 'UTTypeTagSpecification': {'public.filename-extension': ['flv']}}, {'UTTypeConformsTo': ['public.item', 'public.movie', 'public.content', 'org.matroska.mkv', 'public.audiovisual-content'], 'UTTypeDescription': 'film WebM', 'UTTypeIdentifier': 'org.videolan.webm', 'UTTypeTagSpecification': {'public.filename-extension': ['webm']}}, {'UTTypeConformsTo': ['public.item', 'public.movie', 'public.audiovisual-content', 'public.content'], 'UTTypeDescription': 'film MKV', 'UTTypeIdentifier': 'org.matroska.mkv', 'UTTypeTagSpecification': {'public.filename-extension': ['mkv']}}, {'UTTypeDescription': 'plik MPEG-2 Transport Stream', 'UTTypeIdentifier': 'public.avchd-mpeg-2-transport-stream', 'UTTypeTagSpecification': {'public.filename-extension': ['mts']}}, {'UTTypeConformsTo': ['com.apple.m4v-video', 'public.item', 'public.movie', 'public.mpeg-4', 'public.content', 'public.audiovisual-content'], 'UTTypeDescription': 'film MPEG-4', 'UTTypeIdentifier': 'com.apple.m4v-video', 'UTTypeTagSpecification': {'public.filename-extension': ['m4v']}}, {'UTTypeDescription': 'film RMVB', 'UTTypeIdentifier': 'com.real.realmedia-vbr', 'UTTypeTagSpecification': {'public.filename-extension': ['rmvb']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film AVI', 'UTTypeIdentifier': 'public.avi', 'UTTypeTagSpecification': {'com.apple.ostype': ['VfW '], 'public.filename-extension': ['avi', 'vfw', 'avi'], 'public.mime-type': ['video/avi;video/msvideo;video/x-msvideo']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film DivX', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer.divx', 'UTTypeTagSpecification': {'com.apple.ostype': ['DivX'], 'public.filename-extension': ['divx'], 'public.mime-type': ['video/divx']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film FLV', 'UTTypeIdentifier': 'public.flv', 'UTTypeTagSpecification': {'com.apple.ostype': ['flv'], 'public.filename-extension': ['flv'], 'public.mime-type': ['video/x-flv']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film MKV', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer.mkv', 'UTTypeTagSpecification': {'com.apple.ostype': ['VfW '], 'public.filename-extension': ['mkv'], 'public.mime-type': ['video/x-matroska']}}, {'UTTypeConformsTo': ['public.item', 'public.movie', 'public.audiovisual-content', 'public.mpeg-4', 'public.content'], 'UTTypeDescription': 'film MP4', 'UTTypeIdentifier': 'public.mpeg-4', 'UTTypeTagSpecification': {'com.apple.ostype': ['mpg4'], 'public.filename-extension': ['mp4'], 'public.mime-type': ['video/mp4']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film MPEG', 'UTTypeIdentifier': 'public.mpeg', 'UTTypeTagSpecification': {'com.apple.ostype': ['MPEG'], 'public.filename-extension': ['mpe', 'mpeg', 'mpg', 'm1s', 'm1v', 'm1a', 'm75', 'm15', 'mp2', 'mpm', 'mpv', 'mpa'], 'public.mime-type': ['video/mpeg']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film OGV', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer.ogv', 'UTTypeTagSpecification': {'com.apple.ostype': ['ogv'], 'public.filename-extension': ['ogv'], 'public.mime-type': ['video/ogg;video/theora']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film QuickTime', 'UTTypeIdentifier': 'com.apple.quicktime-movie', 'UTTypeTagSpecification': {'com.apple.ostype': ['MooV'], 'public.filename-extension': ['moov', 'mov', 'qt', 'mqv'], 'public.mime-type': ['video/quicktime']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film RMVB', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer.rmvb', 'UTTypeTagSpecification': {'com.apple.ostype': ['rmvb'], 'public.filename-extension': ['rmvb'], 'public.mime-type': ['application/vnd.rn-realmedia-vbr']}}, {'UTTypeConformsTo': ['public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film M4V', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer.m4v', 'UTTypeTagSpecification': {'com.apple.ostype': ['M4V '], 'public.filename-extension': ['m4v'], 'public.mime-type': ['video/m4v']}}, {'UTTypeConformsTo': ['public.item', 'public.movie', 'public.video', 'public.content', 'public.audiovisual-content'], 'UTTypeDescription': 'film VOB', 'UTTypeIdentifier': 'org.videolan.vob', 'UTTypeTagSpecification': {'public.filename-extension': ['vob']}}, {'UTTypeConformsTo': ['com.microsoft.advanced-systems-format', 'public.item', 'public.content', 'public.movie', 'public.audiovisual-content'], 'UTTypeDescription': 'film WMV', 'UTTypeIdentifier': 'com.microsoft.windows-media-wmv', 'UTTypeTagSpecification': {'public.filename-extension': ['wmv']}}, {'UTTypeConformsTo': ['public.text', 'public.data', 'public.item', 'public.content'], 'UTTypeDescription': 'plik tekstowy', 'UTTypeIdentifier': 'public.plain-text', 'UTTypeTagSpecification': {'public.filename-extension': ['txt']}}]",
+                        "CFBundleSupportedPlatforms": "['MacOSX']",
+                        "CFBundleIdentifier": "pl.uce.pym.pymplayer8",
+                        "CFBundleDocumentTypes": "[{'CFBundleTypeExtensions': ['pymlib'], 'CFBundleTypeName': 'PYMLibraryBundle', 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner', 'LSItemContentTypes': ['pl.uce.pym.pymplayer8-PYMLibraryBundle']}, {'CFBundleTypeExtensions': ['asf'], 'CFBundleTypeName': 'AdvancedStreamingFormat', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.microsoft.advanced-systems-format']}, {'CFBundleTypeExtensions': ['flv'], 'CFBundleTypeName': 'FlashVideoFile', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.adobe.flash.video']}, {'CFBundleTypeExtensions': ['webm'], 'CFBundleTypeName': 'HTML5VideoWebM', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.videolan.webm']}, {'CFBundleTypeExtensions': ['mkv'], 'CFBundleTypeName': 'MatroskaVideoFile', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.matroska.mkv']}, {'CFBundleTypeExtensions': ['mts'], 'CFBundleTypeName': 'MPEG2TransportStream', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.avchd-mpeg-2-transport-stream']}, {'CFBundleTypeExtensions': ['m4v'], 'CFBundleTypeName': 'MPEG4File', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.apple.m4v-video']}, {'CFBundleTypeExtensions': ['rmvb'], 'CFBundleTypeName': 'RealPlayerMediaFiles', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.real.realmedia-vbr']}, {'CFBundleTypeExtensions': ['avi', 'vfw', 'avi'], 'CFBundleTypeName': 'VideoAvi', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.avi']}, {'CFBundleTypeExtensions': ['divx'], 'CFBundleTypeName': 'VideoDivx', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['pl.uce.pym.pymplayer.divx']}, {'CFBundleTypeExtensions': ['flv'], 'CFBundleTypeName': 'VideoFlv', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.flv']}, {'CFBundleTypeExtensions': ['mkv'], 'CFBundleTypeName': 'VideoMkv', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['pl.uce.pym.pymplayer.mkv']}, {'CFBundleTypeExtensions': ['mp4'], 'CFBundleTypeName': 'VideoMp4', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.mpeg-4']}, {'CFBundleTypeExtensions': ['mpe', 'mpeg', 'mpg', 'm1s', 'm1v', 'm1a', 'm75', 'm15', 'mp2', 'mpm', 'mpv', 'mpa'], 'CFBundleTypeName': 'video/mpeg', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.mpeg']}, {'CFBundleTypeExtensions': ['ogv'], 'CFBundleTypeName': 'video/ogg', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['pl.uce.pym.pymplayer.ogv']}, {'CFBundleTypeExtensions': ['moov', 'mov', 'qt', 'mqv'], 'CFBundleTypeName': 'video/quicktime', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.apple.quicktime-movie']}, {'CFBundleTypeExtensions': ['rmvb'], 'CFBundleTypeName': 'video/rmvb', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['pl.uce.pym.pymplayer.rmvb']}, {'CFBundleTypeExtensions': ['m4v'], 'CFBundleTypeName': 'video/x-m4v', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['pl.uce.pym.pymplayer.m4v']}, {'CFBundleTypeExtensions': ['vob'], 'CFBundleTypeName': 'VOBFileDVDVideo', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.videolan.vob']}, {'CFBundleTypeExtensions': ['wmv'], 'CFBundleTypeName': 'WindowsMediaVideo', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.microsoft.windows-media-wmv']}]",
+                        "NSHighResolutionCapable": "True",
+                        "CFBundleShortVersionString": "8.0",
+                        "CFBundleExecutable": "PYM Player",
+                        "LSMinimumSystemVersion": "10.15",
+                        "NSAppTransportSecurity": "{'NSAllowsArbitraryLoads': True, 'NSAllowsArbitraryLoadsForMedia': True, 'NSAllowsArbitraryLoadsInWebContent': True}",
+                        "CFBundleVersion": "8.0.0",
+                        "OWARPublisherURL": "pym.uce.pl",
+                        "CFBundleIconFile": "App",
+                        "CFBundleDevelopmentRegion": "pl",
+                        "NSServices": "[{'NSKeyEquivalent': {'default': 'X'}, 'NSMenuItem': {'default': 'Pobierz napisy z NapiProjektu'}, 'NSMessage': 'ServiceInvoked', 'NSPortName': 'Test Service', 'NSRequiredContext': {'NSTextContent': 'FilePath'}, 'NSSendTypes': ['NSFilenamesPboardType']}]",
+                        "LSApplicationCategoryType": "public.app-category.entertainment",
+                        "NSAppAccentColorName": "PYMcolor",
+                        "CFBundleSignature": "????",
+                        "UTExportedTypeDeclarations": "[{'UTTypeConformsTo': ['public.item', 'dyn.ah62d4qmuhk2x46d3rz0gw2u', 'public.data'], 'UTTypeDescription': 'biblioteka PYM Playera', 'UTTypeIdentifier': 'pl.uce.pym.pymplayer8-PYMLibraryBundle', 'UTTypeTagSpecification': {'public.filename-extension': ['pymlib']}}]",
+                        "CFBundleName": "PYM Player",
+                        "CFBundlePackageType": "APPL"
+                    },
+                    "main_executable": {
+                        "path": "/PYM Player.app/Contents/MacOS/PYM Player",
+                        "sha256": "23292456ca01b49033e2dde6e4cdb5288445c5ac137b906bd3961923e2e4644e",
+                        "size": 38808960
+                    },
+                    "num_files": 228
+                },
+                "rsrc_fork_length": 0
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "1.3.0.9899",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": "v0.1.4",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.58.8230",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "14.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.3.3.37",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220914"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.37.44352",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Alibaba": {
+                    "category": "type-unsupported",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.34.44289",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220912"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220905"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.283",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Cyren": {
+                    "category": "undetected",
+                    "engine_name": "Cyren",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220208"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.18.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Elastic": {
+                    "category": "type-unsupported",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.45",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220913"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "25932",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.334",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220913"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "21.1.5827.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "0.105.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "21.0.1.45",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25623",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220910"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Ad-Aware": {
+                    "category": "undetected",
+                    "engine_name": "Ad-Aware",
+                    "engine_version": "3.0.21.193",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Sophos": {
+                    "category": "timeout",
+                    "engine_name": "Sophos",
+                    "engine_version": "1.4.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Comodo": {
+                    "category": "undetected",
+                    "engine_name": "Comodo",
+                    "engine_version": "34993",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.978.51",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4710",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "McAfee-GW-Edition": {
+                    "category": "undetected",
+                    "engine_name": "McAfee-GW-Edition",
+                    "engine_version": "v2019.1.2+3728",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "22.2.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220330"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.1.119",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220907"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.0.26.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "220915-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220914"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "2017.9.26.565",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Microsoft": {
+                    "category": "timeout",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.19600.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.93.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "1.0.0.889",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.34002B:27.28826",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Google": {
+                    "category": "undetected",
+                    "engine_name": "Google",
+                    "engine_version": "1663261263",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220103"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.22.2.10299",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.108",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220426"
+                },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2019.9.16.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Cylance": {
+                    "category": "timeout",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.3.1.101",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220914"
+                },
+                "Rising": {
+                    "category": "undetected",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2022-09-15.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "6.4.258.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20210330"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220915"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220418"
+                }
+            },
+            "sha256": "18d5dd49daad460cdc03283b4613d47ddcd75553b6b6c1b98f1a87a9ce51b62d",
+            "tags": [
+                "contains-macho",
+                "dmg"
+            ],
+            "last_analysis_date": 1663266212,
+            "unique_sources": 1,
+            "first_submission_date": 1663266212,
+            "ssdeep": "1572864:TTBNaqneEjrPZY/9VaaUtKuf0fM+WiZLJdM7:TTBNreE3C/ay",
+            "md5": "9d9ddf1f6e73f352d3d8aa2b3ef456f8",
+            "sha1": "1d2f83a100ef8aa1144f3a494dd2d419647d72af",
+            "magic": "data",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 15,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 3,
+                "failure": 0,
+                "malicious": 0,
+                "undetected": 56
+            },
+            "meaningful_name": "PYMPlayer8A181.dmg",
+            "reputation": 0
+        },
+        "type": "file",
+        "id": "18d5dd49daad460cdc03283b4613d47ddcd75553b6b6c1b98f1a87a9ce51b62d",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/18d5dd49daad460cdc03283b4613d47ddcd75553b6b6c1b98f1a87a9ce51b62d"
+        }
+    }
+}
