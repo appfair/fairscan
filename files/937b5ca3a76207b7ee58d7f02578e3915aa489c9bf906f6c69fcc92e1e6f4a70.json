@@ -1,0 +1,2148 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "ZIP",
+            "tlsh": "T19E7833B8E1F84682F43F887A86FE7249C095210B9963596BB8A441C58DE77F3BF31447",
+            "vhash": "20cfa296fb0629d2fe0030ee9e94ccff",
+            "type_tags": [
+                "compressed",
+                "zip"
+            ],
+            "names": [
+                "Winbox-mac-3.39.0.zip"
+            ],
+            "last_modification_date": 1694770445,
+            "type_tag": "zip",
+            "times_submitted": 10,
+            "total_votes": {
+                "harmless": 1,
+                "malicious": 0
+            },
+            "size": 151612800,
+            "popular_threat_classification": {
+                "suggested_threat_label": "trojan.suspbehav/genericml",
+                "popular_threat_category": [
+                    {
+                        "count": 4,
+                        "value": "trojan"
+                    },
+                    {
+                        "count": 4,
+                        "value": "dropper"
+                    }
+                ],
+                "popular_threat_name": [
+                    {
+                        "count": 3,
+                        "value": "suspbehav"
+                    },
+                    {
+                        "count": 2,
+                        "value": "genericml"
+                    },
+                    {
+                        "count": 2,
+                        "value": "xnet"
+                    }
+                ]
+            },
+            "last_submission_date": 1694770444,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "HanaLoader (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144014",
+                                "UtcTime": "1692144014",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\msvcr100.dll"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144039",
+                                "UtcTime": "1692144039",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\x86_64-windows\\msvcr100.dll"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "38853c8efaf750ffd744961ebcbeb037146acaabb9ca85c445af59f87e98e44d",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_description": "HanaLoader its a tool used by APT31 Group."
+                },
+                {
+                    "rule_title": "Creation of an WerFault.exe in Unusual Folder",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wer.dll",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144013",
+                                "UtcTime": "1692144013",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144038",
+                                "UtcTime": "1692144038",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\x86_64-windows\\wer.dll"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "4469b0111d1f4747a00542caf4ceadd719bff3e7e6e21793e9446d294be895bb",
+                    "rule_author": "frack113",
+                    "rule_description": "Detects WerFault copoed to a suspicious folder, which could be a sign of WerFault DLL hijacking"
+                },
+                {
+                    "rule_title": "DropboxAES RAT (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\msvcr100.dll",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144014",
+                                "UtcTime": "1692144014",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\x86_64-windows\\msvcr100.dll",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144039",
+                                "UtcTime": "1692144039",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "8c558244a29064b6842314ce986116d2007b1087f6f8bb45ae883911d0155549",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_description": "DropboxAES is a simple remote access trojan (RAT) used by APT31 Group. The RAT uses the Dropbox file-sharing service for its command and control (C2) communications"
+                },
+                {
+                    "rule_title": "Malicious behaviour on user login (Microsoft Windows - c0d0s0 group behavior)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dbgeng.dll",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\x86_64-windows\\dbgeng.dll",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1692144051",
+                                "UtcTime": "1692144051",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "bf0f7d2a84916abcc597e4a38a6231519b38af0223147ef15e28c7ab83f47c7d",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_description": "Detects malicious registry values and unusual AppData folder modification related also to c0d0s0 group."
+                },
+                {
+                    "rule_title": "Password Protected Compressed File Extraction Via 7Zip",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "TerminalSessionId": "1",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "ProcessId": "8092",
+                                "Product": "7-Zip",
+                                "Description": "7-Zip Console",
+                                "Company": "Igor Pavlov",
+                                "ParentProcessGuid": "{C784477D-1181-64DC-4E06-000000004400}",
+                                "User": "DESKTOP-B0T93D6\\george",
+                                "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
+                                "OriginalFileName": "7z.exe",
+                                "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
+                                "FileVersion": "18.05",
+                                "ParentProcessId": "8100",
+                                "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
+                                "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\" \"C:\\Users\\george\\Desktop\\Winbox-mac-3.39.0.zip\"",
+                                "EventID": "1",
+                                "LogonGuid": "C784477D-D5C5-648A-ABF8-030000000000",
+                                "LogonId": "260267",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "IntegrityLevel": "High",
+                                "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\Winbox-mac-3.39.0.zip\"",
+                                "UtcTime": "1692144001",
+                                "RuleName": "-"
+                            }
+                        }
+                    ],
+                    "rule_level": "medium",
+                    "rule_id": "22e867c244280c1d01bcddc8355c10d82b6c69577cd784cefbbe4eb5e7a82f65",
+                    "rule_author": "Nasreddine Bencherchali (Nextron Systems)",
+                    "rule_description": "Detects usage of 7zip utilities (7z.exe, 7za.exe and 7zr.exe) to extract password protected zip files."
+                },
+                {
+                    "rule_title": "Creation of an Executable by an Executable",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144002",
+                                "UtcTime": "1692144002",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\winbox64.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\view.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144005",
+                                "UtcTime": "1692144005",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\icinfo.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\cmd.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\ngen.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\iexplore.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\net.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\ping.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wscript.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\rpcss.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144006",
+                                "UtcTime": "1692144006",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144007",
+                                "UtcTime": "1692144007",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dpvsetup.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\clock.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144007",
+                                "UtcTime": "1692144007",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wusa.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144008",
+                                "UtcTime": "1692144008",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144008",
+                                "UtcTime": "1692144008",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\shutdown.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144008",
+                                "UtcTime": "1692144008",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\sdbinst.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\secedit.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144009",
+                                "UtcTime": "1692144009",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\find.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144009",
+                                "UtcTime": "1692144009",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\termsv.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144009",
+                                "UtcTime": "1692144009",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144009",
+                                "UtcTime": "1692144009",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\certutil.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\mshta.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144009",
+                                "UtcTime": "1692144009",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\taskmgr.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144010",
+                                "UtcTime": "1692144010",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\findstr.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144010",
+                                "UtcTime": "1692144010",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\arp.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144011",
+                                "UtcTime": "1692144011",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\reg.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144011",
+                                "UtcTime": "1692144011",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dllhost.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144011",
+                                "UtcTime": "1692144011",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\cscript.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144011",
+                                "UtcTime": "1692144011",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dpnsvr.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144011",
+                                "UtcTime": "1692144011",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\progman.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144012",
+                                "UtcTime": "1692144012",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\attrib.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144012",
+                                "UtcTime": "1692144012",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wineboot.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144012",
+                                "UtcTime": "1692144012",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144012",
+                                "UtcTime": "1692144012",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\robocopy.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144012",
+                                "UtcTime": "1692144012",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dism.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\xcopy.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144013",
+                                "UtcTime": "1692144013",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\start.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144014",
+                                "UtcTime": "1692144014",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\icacls.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144014",
+                                "UtcTime": "1692144014",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144014",
+                                "UtcTime": "1692144014",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\msinfo32.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144015",
+                                "UtcTime": "1692144015",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\regsvcs.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wuauserv.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144015",
+                                "UtcTime": "1692144015",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winedbg.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144016",
+                                "UtcTime": "1692144016",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144016",
+                                "UtcTime": "1692144016",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winemenubuilder.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144016",
+                                "UtcTime": "1692144016",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\cacls.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144017",
+                                "UtcTime": "1692144017",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\write.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\setx.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144017",
+                                "UtcTime": "1692144017",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winevdm.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144017",
+                                "UtcTime": "1692144017",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144017",
+                                "UtcTime": "1692144017",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\plugplay.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\schtasks.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144017",
+                                "UtcTime": "1692144017",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winecfg.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\netsh.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dplaysvr.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\netstat.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\ntoskrnl.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wevtutil.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\expand.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144018",
+                                "UtcTime": "1692144018",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\spoolsv.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144019",
+                                "UtcTime": "1692144019",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\mofcomp.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144019",
+                                "UtcTime": "1692144019",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144019",
+                                "UtcTime": "1692144019",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\taskkill.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winmgmt.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144019",
+                                "UtcTime": "1692144019",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\uninstaller.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144019",
+                                "UtcTime": "1692144019",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\svchost.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144020",
+                                "UtcTime": "1692144020",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\servicemodelreg.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144020",
+                                "UtcTime": "1692144020",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\hostname.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144020",
+                                "UtcTime": "1692144020",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144021",
+                                "UtcTime": "1692144021",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wmic.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winebrowser.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144021",
+                                "UtcTime": "1692144021",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\regsvr32.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144021",
+                                "UtcTime": "1692144021",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144021",
+                                "UtcTime": "1692144021",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\regedit.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\msiexec.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144021",
+                                "UtcTime": "1692144021",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\regini.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144022",
+                                "UtcTime": "1692144022",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144022",
+                                "UtcTime": "1692144022",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\explorer.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\subst.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144022",
+                                "UtcTime": "1692144022",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\dxdiag.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144023",
+                                "UtcTime": "1692144023",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\powershell.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144023",
+                                "UtcTime": "1692144023",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144023",
+                                "UtcTime": "1692144023",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\notepad.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144023",
+                                "UtcTime": "1692144023",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wmplayer.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144023",
+                                "UtcTime": "1692144023",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\lodctr.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\cabarc.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144024",
+                                "UtcTime": "1692144024",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144024",
+                                "UtcTime": "1692144024",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winemine.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winhlp32.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144024",
+                                "UtcTime": "1692144024",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144024",
+                                "UtcTime": "1692144024",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\presentationfontcache.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winefile.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144024",
+                                "UtcTime": "1692144024",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144025",
+                                "UtcTime": "1692144025",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winedevice.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\ipconfig.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144025",
+                                "UtcTime": "1692144025",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winemsibuilder.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144025",
+                                "UtcTime": "1692144025",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\regasm.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144025",
+                                "UtcTime": "1692144025",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\wordpad.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winver.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\unlodctr.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\rundll32.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\msidb.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\extrac32.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144026",
+                                "UtcTime": "1692144026",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144027",
+                                "UtcTime": "1692144027",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\services.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\tasklist.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144027",
+                                "UtcTime": "1692144027",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\aspnet_regiis.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144027",
+                                "UtcTime": "1692144027",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\control.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144027",
+                                "UtcTime": "1692144027",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\winepath.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144027",
+                                "UtcTime": "1692144027",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\where.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\fc.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\hh.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\eject.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\systeminfo.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "8092",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\xndf2gll.ire\\Winbox-mac.app\\Contents\\Resources\\wine\\lib\\wine\\i386-windows\\oleview.exe",
+                                "ProcessGuid": "{C784477D-1181-64DC-4F06-000000004400}",
+                                "CreationUtcTime": "1692144028",
+                                "UtcTime": "1692144028",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427",
+                    "rule_author": "frack113",
+                    "rule_description": "Detects the creation of an executable by another executable"
+                }
+            ],
+            "meaningful_name": "Winbox-mac-3.39.0.zip",
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 0,
+                "low": 1
+            },
+            "trid": [
+                {
+                    "file_type": "ZIP compressed archive",
+                    "probability": 80.0
+                },
+                {
+                    "file_type": "PrintFox/Pagefox bitmap (640x800)",
+                    "probability": 20.0
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 0,
+                    "medium": 1,
+                    "critical": 0,
+                    "low": 1
+                },
+                "SOC Prime Threat Detection Marketplace": {
+                    "high": 2,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 0
+                }
+            },
+            "sha256": "937b5ca3a76207b7ee58d7f02578e3915aa489c9bf906f6c69fcc92e1e6f4a70",
+            "type_extension": "zip",
+            "tags": [
+                "zip",
+                "checks-hostname",
+                "detect-debug-environment",
+                "checks-network-adapters",
+                "long-sleeps",
+                "mac-app",
+                "contains-pe",
+                "contains-macho"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(tcp) experimental TCP options found",
+                    "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_port": 443,
+                            "dest_ip": "17.253.20.119"
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "116:58"
+                }
+            ],
+            "last_analysis_date": 1694363451,
+            "unique_sources": 6,
+            "first_submission_date": 1692143810,
+            "ssdeep": "3145728:QCMfoaA2tcG09T2M/pOpiTDt1bzv+eoyGs4MLOtdGV2Sx8oq/vBF2brF6HQnU:PMVAI0B2M/Upi3t1HfGsB3gSxaj2vFg",
+            "bundle_info": {
+                "highest_datetime": "2023-08-13 02:09:14",
+                "lowest_datetime": "2021-11-14 14:36:46",
+                "num_children": 1813,
+                "extensions": {
+                    "exe": 117,
+                    "cpl": 7,
+                    "ocx": 6,
+                    "vxd": 9,
+                    "acm": 5,
+                    "dll": 628,
+                    "sys": 18,
+                    "tlb": 5,
+                    "so": 54,
+                    "ax": 1,
+                    "drv": 5,
+                    "com": 1
+                },
+                "file_types": {
+                    "directory": 12,
+                    "unknown": 32,
+                    "Mac OS X Executable": 89,
+                    "Portable Executable": 854,
+                    "script": 13
+                },
+                "type": "ZIP",
+                "uncompressed_size": 217119127
+            },
+            "md5": "9b7fde09c25609469b5a0418e062db6d",
+            "sha1": "be84759a5a208e4a5db703aacccc767f771a274a",
+            "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 12,
+                "suspicious": 0,
+                "confirmed-timeout": 3,
+                "timeout": 0,
+                "failure": 0,
+                "malicious": 15,
+                "undetected": 44
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Elastic": {
+                    "category": "undetected",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.105",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230909"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230908"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.113.49549",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.113.49549",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.532",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230908"
+                },
+                "Cyren": {
+                    "category": "malicious",
+                    "engine_name": "Cyren",
+                    "engine_version": "6.5.1.2",
+                    "result": "W32/Emotet.BGY.gen!Eldorado",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230119"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.20.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "27885",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.453",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Avast": {
+                    "category": "malicious",
+                    "engine_name": "Avast",
+                    "engine_version": "23.8.8378.0",
+                    "result": "Win32:SuspBehav-B [Heur]",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Kaspersky": {
+                    "category": "malicious",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": "UDS:Trojan.Win32.GenericML.xnet",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Alibaba": {
+                    "category": "malicious",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": "TrojanDropper:Win32/SuspBehav.9659d6b3",
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230908"
+                },
+                "Rising": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2023-09-10.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.3.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "F-Secure": {
+                    "category": "malicious",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1137.128",
+                    "result": "Trojan.TR/Dropper.Gen",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4952",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230908"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "McAfee-GW-Edition": {
+                    "category": "undetected",
+                    "engine_name": "McAfee-GW-Edition",
+                    "engine_version": "v2021.2.0+4045",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.91",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230907"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "SentinelOne": {
+                    "category": "undetected",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.3.0.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230705"
+                },
+                "Avast-Mobile": {
+                    "category": "undetected",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "230910-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230909"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Avira": {
+                    "category": "malicious",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": "TR/Dropper.Gen",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Microsoft": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23080.2005",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.138.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Xcitium": {
+                    "category": "malicious",
+                    "engine_name": "Xcitium",
+                    "engine_version": "35995",
+                    "result": "MalCrypt.Indus!@1qrzi1",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "ZoneAlarm": {
+                    "category": "malicious",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": "UDS:Trojan.Win32.GenericML.xnet",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.36479B:27.33091",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Google": {
+                    "category": "malicious",
+                    "engine_name": "Google",
+                    "engine_version": "1694372454",
+                    "result": "Detected",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230904"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.24.0.10447",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "McAfee": {
+                    "category": "malicious",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": "Artemis!99891B701DDD",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "DeepInstinct": {
+                    "category": "type-unsupported",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "3.1.0.15",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "VBA32": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "VBA32",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230908"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230830"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Ikarus": {
+                    "category": "malicious",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": "Trojan.Dropper",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230909"
+                },
+                "Fortinet": {
+                    "category": "malicious",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": "W32/PossibleThreat",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "BitDefenderTheta": {
+                    "category": "malicious",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": "Gen:NN.ZexaF.36662.hG1@ay0FTab",
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "AVG": {
+                    "category": "malicious",
+                    "engine_name": "AVG",
+                    "engine_version": "23.8.8378.0",
+                    "result": "Win32:SuspBehav-B [Heur]",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "Panda": {
+                    "category": "malicious",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": "Trj/Genetic.gen",
+                    "method": "blacklist",
+                    "engine_update": "20230910"
+                }
+            },
+            "reputation": 1,
+            "sigma_analysis_stats": {
+                "high": 4,
+                "medium": 1,
+                "critical": 0,
+                "low": 1
+            }
+        },
+        "type": "file",
+        "id": "937b5ca3a76207b7ee58d7f02578e3915aa489c9bf906f6c69fcc92e1e6f4a70",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/937b5ca3a76207b7ee58d7f02578e3915aa489c9bf906f6c69fcc92e1e6f4a70"
+        }
+    }
+}
