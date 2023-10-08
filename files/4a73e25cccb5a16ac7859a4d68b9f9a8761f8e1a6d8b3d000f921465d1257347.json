@@ -1,0 +1,2129 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "ZIP",
+            "tlsh": "T13E193338E1FD085AE69D9139F2B67205A3A507126A4A5CC53F4612848FEE2F3DF3BD41",
+            "vhash": "1a399b4f19093617aa7eadc39f8e8833",
+            "type_tags": [
+                "compressed",
+                "zip"
+            ],
+            "names": [
+                "crossover-23.5.0.zip"
+            ],
+            "signature_info": {
+                "VersionMin": "658688",
+                "CDHash": "a134f9676419bd390a427b20ab3f1fbc37bf2042",
+                "signers": "CodeWeavers Inc.; Apple Inc.; Apple Inc.",
+                "Runtime Version": "13.1.0",
+                "TeamIdentifier": "9C6B7X7Z8E",
+                "CandidateCDHash sha256": "a134f9676419bd390a427b20ab3f1fbc37bf2042",
+                "Hash choices": "sha256",
+                "Format": "app bundle with Mach-O thin (x86_64)",
+                "Timestamp": "Sep 25, 2023 at 12:01:02 PM",
+                "Signature size": "8981",
+                "Executable Segment base": "0",
+                "Page size": "4096",
+                "VersionPlatform": "1",
+                "CMSDigest": "a134f9676419bd390a427b20ab3f1fbc37bf204233bb805888a7404799a67ea1",
+                "CMSDigestType": "2",
+                "Executable Segment flags": "0x1",
+                "CandidateCDHashFull sha256": "a134f9676419bd390a427b20ab3f1fbc37bf204233bb805888a7404799a67ea1",
+                "verified": "Valid",
+                "VersionSDK": "852224",
+                "Identifier": "com.codeweavers.CrossOver",
+                "signers details": [
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "CodeWeavers Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "07:53 PM 02/09/2022",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "61 D6 73 CF A6 6B 3D 33",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "92123D9880B22A26FB276F86F011394F5DC64EF3"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "Info.plist entries": "38",
+                "Authority": "Apple Root CA",
+                "Executable Segment limit": "622592"
+            },
+            "last_modification_date": 1696737193,
+            "type_tag": "zip",
+            "times_submitted": 12,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 424344883,
+            "popular_threat_classification": {
+                "suggested_threat_label": "trojan.suspbehav",
+                "popular_threat_category": [
+                    {
+                        "count": 3,
+                        "value": "trojan"
+                    },
+                    {
+                        "count": 2,
+                        "value": "dropper"
+                    }
+                ],
+                "popular_threat_name": [
+                    {
+                        "count": 3,
+                        "value": "suspbehav"
+                    }
+                ]
+            },
+            "last_submission_date": 1696737192,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "HanaLoader (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msvcr100.dll",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881965",
+                                "UtcTime": "1695881965",
+                                "RuleName": "DLL",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msvcr100.dll"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "HanaLoader its a tool used by APT31 Group.",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "38853c8efaf750ffd744961ebcbeb037146acaabb9ca85c445af59f87e98e44d"
+                },
+                {
+                    "rule_title": "Creation of an WerFault.exe in Unusual Folder",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "RuleName": "DLL",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wer.dll"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\wer.dll",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881964",
+                                "UtcTime": "1695881964",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Detects WerFault copoed to a suspicious folder, which could be a sign of WerFault DLL hijacking",
+                    "rule_author": "frack113",
+                    "rule_id": "4469b0111d1f4747a00542caf4ceadd719bff3e7e6e21793e9446d294be895bb"
+                },
+                {
+                    "rule_title": "DropboxAES RAT (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msvcr100.dll",
+                                "RuleName": "DLL",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msvcr100.dll",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881965",
+                                "UtcTime": "1695881965",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "DropboxAES is a simple remote access trojan (RAT) used by APT31 Group. The RAT uses the Dropbox file-sharing service for its command and control (C2) communications",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "8c558244a29064b6842314ce986116d2007b1087f6f8bb45ae883911d0155549"
+                },
+                {
+                    "rule_title": "Malicious behaviour on user login (Microsoft Windows - c0d0s0 group behavior)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dbgeng.dll",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\dbgeng.dll",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881976",
+                                "UtcTime": "1695881976",
+                                "RuleName": "DLL",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Detects malicious registry values and unusual AppData folder modification related also to c0d0s0 group.",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "bf0f7d2a84916abcc597e4a38a6231519b38af0223147ef15e28c7ab83f47c7d"
+                },
+                {
+                    "rule_title": "Creation of an Executable by an Executable",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\findfast.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cmd.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ngen.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\iexplore.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxcplinfo.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\net.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881934",
+                                "UtcTime": "1695881934",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881935",
+                                "UtcTime": "1695881935",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ping.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881935",
+                                "UtcTime": "1695881935",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wscript.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881935",
+                                "UtcTime": "1695881935",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\rpcss.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dpvsetup.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881935",
+                                "UtcTime": "1695881935",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wusa.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881936",
+                                "UtcTime": "1695881936",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\shutdown.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\sdbinst.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\secedit.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\find.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ctfmon.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\mosearch.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\termsv.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881937",
+                                "UtcTime": "1695881937",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\certutil.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881938",
+                                "UtcTime": "1695881938",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\mshta.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881938",
+                                "UtcTime": "1695881938",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxkeepalive.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881938",
+                                "UtcTime": "1695881938",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\taskmgr.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881938",
+                                "UtcTime": "1695881938",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881938",
+                                "UtcTime": "1695881938",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\imjpmig.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\findstr.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881939",
+                                "UtcTime": "1695881939",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881939",
+                                "UtcTime": "1695881939",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\arp.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxmanip.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881939",
+                                "UtcTime": "1695881939",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\reg.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881939",
+                                "UtcTime": "1695881939",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\qttask.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881939",
+                                "UtcTime": "1695881939",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881940",
+                                "UtcTime": "1695881940",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dllhost.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cscript.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881940",
+                                "UtcTime": "1695881940",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dpnsvr.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881940",
+                                "UtcTime": "1695881940",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxdummy.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881940",
+                                "UtcTime": "1695881940",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\progman.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\attrib.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wineboot.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\robocopy.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dism.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881941",
+                                "UtcTime": "1695881941",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\xcopy.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxwget.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\start.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\icacls.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msinfo32.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881942",
+                                "UtcTime": "1695881942",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regsvcs.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881943",
+                                "UtcTime": "1695881943",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881943",
+                                "UtcTime": "1695881943",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wuauserv.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\autorun.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881943",
+                                "UtcTime": "1695881943",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winedbg.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881943",
+                                "UtcTime": "1695881943",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881943",
+                                "UtcTime": "1695881943",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winemenubuilder.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881944",
+                                "UtcTime": "1695881944",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ddhelp.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881944",
+                                "UtcTime": "1695881944",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxnative.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881944",
+                                "UtcTime": "1695881944",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cacls.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881944",
+                                "UtcTime": "1695881944",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\write.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\setx.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881944",
+                                "UtcTime": "1695881944",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winevdm.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\plugplay.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\schtasks.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winecfg.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\netsh.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\extract.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dplaysvr.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\netstat.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881945",
+                                "UtcTime": "1695881945",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ntoskrnl.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wevtutil.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\expand.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\spoolsv.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\mofcomp.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\taskkill.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881946",
+                                "UtcTime": "1695881946",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winmgmt.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\uninstaller.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\mdm.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\maildoff.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\reboot.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\svchost.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881947",
+                                "UtcTime": "1695881947",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\servicemodelreg.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cxmklnk.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\hostname.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\assocscan.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winewrapper.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wmic.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881948",
+                                "UtcTime": "1695881948",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winebrowser.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881949",
+                                "UtcTime": "1695881949",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regsvr32.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881949",
+                                "UtcTime": "1695881949",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881949",
+                                "UtcTime": "1695881949",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regedit.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881949",
+                                "UtcTime": "1695881949",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msiexec.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regini.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881949",
+                                "UtcTime": "1695881949",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\explorer.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881950",
+                                "UtcTime": "1695881950",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\subst.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881950",
+                                "UtcTime": "1695881950",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dxdiag.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881950",
+                                "UtcTime": "1695881950",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\powershell.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881950",
+                                "UtcTime": "1695881950",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881951",
+                                "UtcTime": "1695881951",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\notepad.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881951",
+                                "UtcTime": "1695881951",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wmplayer.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\lodctr.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881951",
+                                "UtcTime": "1695881951",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\cabarc.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881951",
+                                "UtcTime": "1695881951",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881951",
+                                "UtcTime": "1695881951",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winhlp32.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\presentationfontcache.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winefile.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winedevice.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ipconfig.exe",
+                                "RuleName": "EXE",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winemsibuilder.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regasm.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wordpad.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "ProcessId": "7548",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\h5sk1aks.g0a\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\winver.exe",
+                                "ProcessGuid": "{C784477D-1AAF-6515-4406-000000004400}",
+                                "CreationUtcTime": "1695881952",
+                                "UtcTime": "1695881952",
+                                "RuleName": "EXE",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Detects the creation of an executable by another executable",
+                    "rule_author": "frack113",
+                    "rule_id": "b5386a23355681c43cfbd2f2ccfe4b16ed45324d0d7b5583487a9f302ee1e427"
+                }
+            ],
+            "meaningful_name": "com.codeweavers.CrossOver",
+            "trid": [
+                {
+                    "file_type": "Opera Widget",
+                    "probability": 31.4
+                },
+                {
+                    "file_type": "Sweet Home 3D design (generic)",
+                    "probability": 23.5
+                },
+                {
+                    "file_type": "Mozilla Firefox browser extension",
+                    "probability": 17.9
+                },
+                {
+                    "file_type": "Mozilla Archive Format (gen)",
+                    "probability": 15.7
+                },
+                {
+                    "file_type": "ZIP compressed archive",
+                    "probability": 8.9
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 0,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 1
+                },
+                "SOC Prime Threat Detection Marketplace": {
+                    "high": 2,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 0
+                }
+            },
+            "sandbox_verdicts": {
+                "Zenbox Linux": {
+                    "category": "harmless",
+                    "confidence": 99,
+                    "sandbox_name": "Zenbox Linux",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "4a73e25cccb5a16ac7859a4d68b9f9a8761f8e1a6d8b3d000f921465d1257347",
+            "type_extension": "zip",
+            "tags": [
+                "sets-process-name",
+                "zip",
+                "detect-debug-environment",
+                "mac-app",
+                "checks-user-input",
+                "contains-macho",
+                "signed"
+            ],
+            "last_analysis_date": 1696122400,
+            "unique_sources": 11,
+            "first_submission_date": 1695856541,
+            "ssdeep": "12582912:Ik9poRuWWmB1YuhSopO+jbTzdV08W800tmOsVw:Ik6uWTBdYopO+jbddx00sVw",
+            "bundle_info": {
+                "highest_datetime": "2023-09-25 14:06:06",
+                "lowest_datetime": "2023-09-25 13:58:04",
+                "num_children": 8622,
+                "extensions": {
+                    "nib": 34,
+                    "car": 1,
+                    "py": 1,
+                    "txt": 1
+                },
+                "file_types": {
+                    "directory": 40,
+                    "unknown": 930,
+                    "HTML": 28,
+                    "Mac OS X Executable": 1,
+                    "XML": 1
+                },
+                "type": "ZIP",
+                "uncompressed_size": 10617666
+            },
+            "md5": "7b41be9a64ec04b0309e96e85edd3510",
+            "sha1": "605df7763855f5516cb17cd13845b18786f62a40",
+            "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 10,
+                "suspicious": 0,
+                "confirmed-timeout": 12,
+                "timeout": 0,
+                "failure": 0,
+                "malicious": 8,
+                "undetected": 41
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Elastic": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Elastic",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230929"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "McAfee": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230926"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.116.49755",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.116.49757",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "VirIT",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230929"
+                },
+                "Cyren": {
+                    "category": "malicious",
+                    "engine_name": "Cyren",
+                    "engine_version": "6.5.1.2",
+                    "result": "W32/Tibs.V.gen!Eldorado",
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230119"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.20.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "27997",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.459",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230928"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Avast": {
+                    "category": "malicious",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": "Win32:SuspBehav-B [Heur]",
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Alibaba": {
+                    "category": "malicious",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": "Trojan:Win32/SuspBehav.92ff87c0",
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Rising": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Sophos": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.3.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "F-Secure": {
+                    "category": "malicious",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1137.128",
+                    "result": "Trojan.TR/Dropper.Gen",
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4965",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230929"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "McAfee-GW-Edition": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "McAfee-GW-Edition",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.91",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230907"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Emsisoft": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "SentinelOne": {
+                    "category": "undetected",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.3.0.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230705"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.36584B:27.33338",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Jiangmin": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Jiangmin",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "2023.8.30.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.140.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Xcitium": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Xcitium",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Microsoft": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23080.2005",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230929"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Avast-Mobile": {
+                    "category": "undetected",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "230930-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230921"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.24.0.10447",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "BitDefenderTheta": {
+                    "category": "malicious",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": "Gen:NN.ZexaF.36738.gCX@aSJKjlpG",
+                    "method": "blacklist",
+                    "engine_update": "20230928"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2023-09-30.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "VBA32": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "VBA32",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230929"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230927"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Ikarus": {
+                    "category": "malicious",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": "Trojan.Dropper",
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230930"
+                },
+                "Fortinet": {
+                    "category": "malicious",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": "W32/PossibleThreat",
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "AVG": {
+                    "category": "malicious",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": "Win32:SuspBehav-B [Heur]",
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230927"
+                },
+                "Panda": {
+                    "category": "confirmed-timeout",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231001"
+                }
+            },
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 4,
+                "medium": 0,
+                "critical": 0,
+                "low": 1
+            }
+        },
+        "type": "file",
+        "id": "4a73e25cccb5a16ac7859a4d68b9f9a8761f8e1a6d8b3d000f921465d1257347",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/4a73e25cccb5a16ac7859a4d68b9f9a8761f8e1a6d8b3d000f921465d1257347"
+        }
+    }
+}
