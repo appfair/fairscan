@@ -1,0 +1,1826 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Apple software package",
+            "tlsh": "T11B07335888E6B804D02E961D4B6FBB2942334788367F1DC26A35CF49FEF589145DA0FB",
+            "type_tags": [
+                "executable",
+                "mac",
+                "pkg"
+            ],
+            "names": [
+                "VNC-Server-7.8.0-MacOSX-universal.pkg"
+            ],
+            "signature_info": {
+                "Status": "signed by a developer certificate issued by Apple for distribution",
+                "verified": "Valid",
+                "signers details": [
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "RealVNC Limited",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "08:04 AM 03/11/2022",
+                        "valid to": "08:04 AM 03/12/2027",
+                        "serial number": "39 E4 1E 33 AC 58 7F 49 B4 6E 1E 45 E7 6F BE 16",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "958E944486106FA7F4DC55567D92CCC98083869C"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "06:55 PM 09/22/2021",
+                        "valid to": "12:00 AM 09/17/2031",
+                        "serial number": "7F B4 00 3F CD 97 49 7A CB 83 4D 92 A4 8A 78 73 C2 84 5D 43",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "A6E49DEE25063FFCFFCB50E3E11B563919AB9910"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "09848755390F8398842E26E854E71E1C06A0D90A"
+                    }
+                ],
+                "signers": "RealVNC Limited; Apple Inc.; Apple Inc.",
+                "Signed with a trusted timestamp on": "2023-11-02 15:37:58 +0000"
+            },
+            "last_modification_date": 1699636420,
+            "type_tag": "pkg",
+            "times_submitted": 1,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 17264275,
+            "type_extension": "pkg",
+            "last_submission_date": 1699538679,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "Execution of Suspicious File Type Extension",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/usr/bin/syslog",
+                                "CommandLine": "/usr/bin/syslog -s -k com.apple.message.domain com.apple.security.assessment.current_state com.apple.message.signature assessments enabled com.apple.message.signature2 devid enabled Message Gatekeeper state assessments enabled/devid enabled"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/bin/open /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg",
+                                "Image": "/usr/bin/open"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/preflight /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg / / /"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dirname /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/preflight",
+                                "Image": "dirname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "defaults read /System/Library/CoreServices/SystemVersion ProductVersion",
+                                "Image": "defaults"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d. -f1",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d. -f2",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh /Library/vnc/vncserver",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh /Library/vnc/vncserver",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mktemp /tmp/removeFwExc-XXXXXX",
+                                "Image": "mktemp"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "sed -e s%^/%%",
+                                "Image": "sed"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/libexec/PlistBuddy -c Print :applications:0:alias /Library/Preferences/com.apple.alf.plist",
+                                "Image": "/usr/libexec/PlistBuddy"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm /tmp/removeFwExc-t4MuhK"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Library/vnc",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /usr/libexec/cups/backend/vnc",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /etc/vnc/get_primary_ip4",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -f /Library/LaunchDaemons/com.realvnc.vncserver.plist"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -f /Library/LaunchAgents/com.realvnc.vncserver.prelogin.plist"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/VNC Server.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/VNC Server (User Mode).app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/Uninstall VNC Server.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/Enter VNC Server License Key.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/VNC Server (User Mode).app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Uninstall VNC Server.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Enter VNC Server License Key.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ls -A /Applications/RealVNC/Advanced.localized",
+                                "Image": "ls"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "grep",
+                                "CommandLine": "grep -v .localized"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rmdir /Applications/RealVNC/Advanced",
+                                "Image": "rmdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Uninstall VNC Server.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rmdir /Applications/RealVNC",
+                                "Image": "rmdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/postflight /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg / / /",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dirname /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/postflight",
+                                "Image": "dirname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -p /etc/vnc",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -p /etc/vnc/config.d",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cat",
+                                "Image": "cat"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "grep realvnc /etc/asl.conf",
+                                "Image": "grep"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "killall -HUP syslogd",
+                                "Image": "killall"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dsconfigad -show",
+                                "Image": "dsconfigad"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "grep",
+                                "CommandLine": "grep -i Computer Account"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ln -s /usr/bin/klist /etc/vnc/klist",
+                                "Image": "ln"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ln -s /usr/bin/kinit /etc/vnc/kinit",
+                                "Image": "ln"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -m 01777 -p /tmp/.vncserver-license",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chown -R root:admin /Applications/RealVNC",
+                                "Image": "chown"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chown root:wheel /Library/LaunchDaemons /Library/LaunchAgents",
+                                "Image": "chown"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chown -R root:wheel /etc/vnc /etc/pam.d/vncserver /Library/vnc /Library/LaunchDaemons/com.realvnc.vncserver.plist /Library/LaunchAgents/com.realvnc.vncserver.prelogin.plist /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist /usr/libexec/cups/backend/vnc",
+                                "Image": "chown"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chmod u+s /Library/vnc/vncserver-root",
+                                "Image": "chmod"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/vncserver -generatekeys",
+                                "Image": "/Library/vnc/vncserver"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/vncserver -createHostId",
+                                "Image": "/Library/vnc/vncserver"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver.prelogin",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/bin/users",
+                                "Image": "/usr/bin/users"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "su -l maria -c launchctl remove com.realvnc.vncserver.peruser",
+                                "Image": "su"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "-bash -c launchctl remove com.realvnc.vncserver.peruser",
+                                "Image": "-bash"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver.peruser",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "killall",
+                                "CommandLine": "killall vncserver_service_agent vncserver_service_daemon"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "sleep 2",
+                                "Image": "sleep"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl load /Library/LaunchDaemons/com.realvnc.vncserver.plist",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ps -axo pid,uid,args",
+                                "Image": "ps"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "grep",
+                                "CommandLine": "grep -i [l]oginwindow.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "awk {print $1 ',' $2}",
+                                "Image": "awk"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d, -f1",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d, -f2",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "launchctl",
+                                "CommandLine": "launchctl bootstrap gui/501 /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/Applications/RealVNC/VNC",
+                                "CommandLine": "/Applications/RealVNC/VNC Server.app/Contents/MacOS/vncserver_service -wait=30"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/VNC Server.app/Contents/MacOS/vncserverui service 11",
+                                "Image": "/Library/vnc/VNC"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/VNC Server Licensing.app/Contents/MacOS/vnclicensewiz -pipe 0 -showstatusdialog /tmp/.vnc-vncservice/vncserver.CtrlComms -id 982_1da131a7fe7808c",
+                                "Image": "/Library/vnc/VNC"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "2104d1ee1ce64e7aa3dbd368652a54ce160e6a5751019af14601fc8fd1df8086",
+                    "rule_author": "Max Altgelt (Nextron Systems)",
+                    "rule_description": "Checks whether the image specified in a process creation event doesn't refer to an .exe file (caused by process ghosting or other unorthodox methods to start a process)"
+                },
+                {
+                    "rule_title": "Potentially Suspicious Execution From Tmp Folder",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh /Library/vnc/vncserver",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "b8017658b8eef8b1293176d76212e600b660d0a36a4f5dc80141324fae360bbf",
+                    "rule_author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+                    "rule_description": "Detects a potentially suspicious execution of a process located in the '/tmp/' folder"
+                },
+                {
+                    "rule_title": "Execution Of Non-Existing File",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/usr/bin/syslog",
+                                "CommandLine": "/usr/bin/syslog -s -k com.apple.message.domain com.apple.security.assessment.current_state com.apple.message.signature assessments enabled com.apple.message.signature2 devid enabled Message Gatekeeper state assessments enabled/devid enabled"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/usr/bin/open",
+                                "CommandLine": "/usr/bin/open /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/preflight /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg / / /",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dirname /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/preflight",
+                                "Image": "dirname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "defaults read /System/Library/CoreServices/SystemVersion ProductVersion",
+                                "Image": "defaults"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "cut",
+                                "CommandLine": "cut -d. -f1"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d. -f2",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh /Library/vnc/vncserver",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/removeFwExc.sh /Library/vnc/vncserver",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "mktemp",
+                                "CommandLine": "mktemp /tmp/removeFwExc-XXXXXX"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "sed -e s%^/%%",
+                                "Image": "sed"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/usr/libexec/PlistBuddy",
+                                "CommandLine": "/usr/libexec/PlistBuddy -c Print :applications:0:alias /Library/Preferences/com.apple.alf.plist"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm /tmp/removeFwExc-t4MuhK",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Library/vnc",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /usr/libexec/cups/backend/vnc",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /etc/vnc/get_primary_ip4",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /Library/LaunchDaemons/com.realvnc.vncserver.plist",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -f /Library/LaunchAgents/com.realvnc.vncserver.prelogin.plist"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -f /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/VNC Server.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/VNC Server (User Mode).app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/Uninstall VNC Server.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced/Enter VNC Server License Key.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/VNC Server (User Mode).app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Uninstall VNC Server.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Enter VNC Server License Key.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ls -A /Applications/RealVNC/Advanced.localized",
+                                "Image": "ls"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "grep -v .localized",
+                                "Image": "grep"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rmdir /Applications/RealVNC/Advanced",
+                                "Image": "rmdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Uninstall VNC Server.app",
+                                "Image": "rm"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "rmdir /Applications/RealVNC",
+                                "Image": "rmdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/postflight /Users/maria/Desktop/VNC-Server-7.8.0-MacOSX-universal.pkg / / /",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dirname /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/postflight",
+                                "Image": "dirname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -p /etc/vnc",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -p /etc/vnc/config.d",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cat",
+                                "Image": "cat"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "grep",
+                                "CommandLine": "grep realvnc /etc/asl.conf"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "killall -HUP syslogd",
+                                "Image": "killall"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "rm",
+                                "CommandLine": "rm -rf /Applications/RealVNC/Advanced.localized/Uninstall VNC Viewer.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dsconfigad -show",
+                                "Image": "dsconfigad"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "grep -i Computer Account",
+                                "Image": "grep"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ln -s /usr/bin/klist /etc/vnc/klist",
+                                "Image": "ln"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ln -s /usr/bin/kinit /etc/vnc/kinit",
+                                "Image": "ln"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "mkdir -m 01777 -p /tmp/.vncserver-license",
+                                "Image": "mkdir"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chown -R root:admin /Applications/RealVNC",
+                                "Image": "chown"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chown root:wheel /Library/LaunchDaemons /Library/LaunchAgents",
+                                "Image": "chown"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "chown",
+                                "CommandLine": "chown -R root:wheel /etc/vnc /etc/pam.d/vncserver /Library/vnc /Library/LaunchDaemons/com.realvnc.vncserver.plist /Library/LaunchAgents/com.realvnc.vncserver.prelogin.plist /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist /usr/libexec/cups/backend/vnc"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "chmod u+s /Library/vnc/vncserver-root",
+                                "Image": "chmod"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/Library/vnc/vncserver",
+                                "CommandLine": "/Library/vnc/vncserver -generatekeys"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/vncserver -createHostId",
+                                "Image": "/Library/vnc/vncserver"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh",
+                                "Image": "/tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh /tmp/PKInstallSandbox.8wLQTk/Scripts/com.realvnc.vncserver.pkg.LUgTb2/stopServer.sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver.prelogin",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/bin/users",
+                                "Image": "/usr/bin/users"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "su",
+                                "CommandLine": "su -l maria -c launchctl remove com.realvnc.vncserver.peruser"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "-bash",
+                                "CommandLine": "-bash -c launchctl remove com.realvnc.vncserver.peruser"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl remove com.realvnc.vncserver.peruser",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "killall vncserver_service_agent vncserver_service_daemon",
+                                "Image": "killall"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "sleep 2",
+                                "Image": "sleep"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl load /Library/LaunchDaemons/com.realvnc.vncserver.plist",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "ps -axo pid,uid,args",
+                                "Image": "ps"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "grep",
+                                "CommandLine": "grep -i [l]oginwindow.app"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "awk {print $1 ',' $2}",
+                                "Image": "awk"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "cut",
+                                "CommandLine": "cut -d, -f1"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "cut -d, -f2",
+                                "Image": "cut"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "launchctl bootstrap gui/501 /Library/LaunchAgents/com.realvnc.vncserver.peruser.plist",
+                                "Image": "launchctl"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/Applications/RealVNC/VNC",
+                                "CommandLine": "/Applications/RealVNC/VNC Server.app/Contents/MacOS/vncserver_service -wait=30"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/VNC Server.app/Contents/MacOS/vncserverui service 11",
+                                "Image": "/Library/vnc/VNC"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/vnc/VNC Server Licensing.app/Contents/MacOS/vnclicensewiz -pipe 0 -showstatusdialog /tmp/.vnc-vncservice/vncserver.CtrlComms -id 982_1da131a7fe7808c",
+                                "Image": "/Library/vnc/VNC"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_id": "d2b7b95657238f7c078b9a6a17689a6184c1cf349ffb183b174ad2bd84681b08",
+                    "rule_author": "Max Altgelt (Nextron Systems)",
+                    "rule_description": "Checks whether the image specified in a process creation event is not a full, absolute path (caused by process ghosting or other unorthodox methods to start a process)"
+                }
+            ],
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Skyhigh": {
+                    "category": "undetected",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231026"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.124.50144",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Alibaba": {
+                    "category": "type-unsupported",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.124.50148",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.575",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230119"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Elastic": {
+                    "category": "type-unsupported",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.116",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231106"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28211",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.473",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231107"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Cynet": {
+                    "category": "undetected",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Rising": {
+                    "category": "undetected",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.3.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4991",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.4.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231018"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.97",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231106"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.36793B:27.33796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Varist": {
+                    "category": "undetected",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.146.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Xcitium": {
+                    "category": "undetected",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36161",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "231109-06",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Microsoft": {
+                    "category": "undetected",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23100.2009",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Google": {
+                    "category": "undetected",
+                    "engine_name": "Google",
+                    "engine_version": "1699533047",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230921"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.24.0.10447",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231023"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2023-11-09.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "DeepInstinct": {
+                    "category": "type-unsupported",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "3.1.0.15",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "MaxSecure": {
+                    "category": "timeout",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "AVG": {
+                    "category": "undetected",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231102"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                }
+            },
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 1,
+                "low": 2
+            },
+            "trid": [
+                {
+                    "file_type": "XAR Archive",
+                    "probability": 100.0
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 3,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 0
+                }
+            },
+            "sha256": "c4c21164ea2bdd91c8385f10cb40659bf32659d6f8f076402d04076afcdb3046",
+            "tags": [
+                "pkg",
+                "signed",
+                "long-sleeps"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "bad-unknown",
+                    "alert_severity": "medium",
+                    "rule_msg": "(stream_tcp) data sent on stream after TCP reset received",
+                    "rule_raw": "alert ( gid:129; sid:18; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset received\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:bad-unknown;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "184.31.60.191",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "129:18"
+                },
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(tcp) experimental TCP options found",
+                    "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "64.78.201.1",
+                            "dest_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "116:58"
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM Packet with invalid timestamp",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM Packet with invalid timestamp\"; stream-event:pkt_invalid_timestamp; classtype:protocol-command-decode; sid:2210044; rev:2;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "184.30.252.187",
+                            "ja3": [
+                                "773906b0efdefa24a7f2b8eb6985bf37"
+                            ],
+                            "ja3s": [
+                                "15af977ce25de452b96affa2addb1036"
+                            ],
+                            "dest_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210044"
+                }
+            ],
+            "last_analysis_date": 1699538679,
+            "unique_sources": 1,
+            "first_submission_date": 1699538679,
+            "ssdeep": "393216:qN5v++czrbnhXEAUw+U5OEl3hR4rRuhGqjoA8VK+qszOTTukJ:q3v+z7nhRhwEFhurPAgPqsaTTF",
+            "md5": "480fb6ce53f96eb23e6127492f74e090",
+            "sha1": "574b3f5a9f15c1e44bb3b1ec5e1bdeae84a3b704",
+            "magic": "xar archive compressed TOC: 4751, SHA-1 checksum",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 16,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 1,
+                "failure": 0,
+                "malicious": 0,
+                "undetected": 59
+            },
+            "meaningful_name": "VNC-Server-7.8.0-MacOSX-universal.pkg",
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 3,
+                "medium": 0,
+                "critical": 0,
+                "low": 0
+            }
+        },
+        "type": "file",
+        "id": "c4c21164ea2bdd91c8385f10cb40659bf32659d6f8f076402d04076afcdb3046",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/c4c21164ea2bdd91c8385f10cb40659bf32659d6f8f076402d04076afcdb3046"
+        }
+    }
+}
