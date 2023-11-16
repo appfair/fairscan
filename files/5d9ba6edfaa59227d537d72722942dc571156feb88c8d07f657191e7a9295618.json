@@ -1,0 +1,1245 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "ZIP",
+            "tlsh": "T159A8333845F80B31C71790F7F480A4018A74C1C6E1A6AE29ADD806DD67E77E1E6B6D8F",
+            "vhash": "cd07102f94b989f1dadd45833d792765",
+            "type_tags": [
+                "compressed",
+                "zip"
+            ],
+            "names": [
+                "azuredatastudio-macos-1.47.0.zip"
+            ],
+            "signature_info": {
+                "VersionMin": "658688",
+                "CDHash": "a384bfb9eae6cc577fff0572a4d9994084ddadf1",
+                "signers": "Microsoft Corporation; Apple Inc.; Apple Inc.",
+                "Runtime Version": "13.3.0",
+                "TeamIdentifier": "UBF8T346G9",
+                "CandidateCDHash sha256": "a384bfb9eae6cc577fff0572a4d9994084ddadf1",
+                "Hash choices": "sha256",
+                "Format": "app bundle with Mach-O thin (x86_64)",
+                "Timestamp": "Nov 7, 2023 at 10:05:40 AM",
+                "Signature size": "9012",
+                "Executable Segment base": "0",
+                "Page size": "4096",
+                "VersionPlatform": "1",
+                "CMSDigest": "a384bfb9eae6cc577fff0572a4d9994084ddadf1b25dbe97ccd9dbddf3afe008",
+                "CMSDigestType": "2",
+                "Executable Segment flags": "0x1",
+                "CandidateCDHashFull sha256": "a384bfb9eae6cc577fff0572a4d9994084ddadf1b25dbe97ccd9dbddf3afe008",
+                "verified": "Valid",
+                "VersionSDK": "852736",
+                "Identifier": "com.azuredatastudio.oss",
+                "signers details": [
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Microsoft Corporation",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "09:46 PM 04/27/2023",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "68 31 B4 41 EF 16 F9 33",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "7D4DE827C9FA532C2C65684AD5DDB003231DDF9F"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "Info.plist entries": "34",
+                "Authority": "Apple Root CA",
+                "Executable Segment limit": "8192"
+            },
+            "last_modification_date": 1699551242,
+            "type_tag": "zip",
+            "times_submitted": 1,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 214095825,
+            "type_extension": "zip",
+            "last_submission_date": 1699517764,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "Execution of Suspicious File Type Extension",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dbus-launch --autolaunch=a39eb3ed78b7401fb6809ed0c562a5b1 --binary-syntax --close-stderr",
+                                "Image": "dbus-launch"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -e -u -c \"export GIO_LAUNCHED_DESKTOP_FILE_PID=$$; exec \\\"$@\\\"\" sh engrampa /tmp/azuredatastudio-macos-1.47.0.zip"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "engrampa",
+                                "CommandLine": "engrampa /tmp/azuredatastudio-macos-1.47.0.zip"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "7z l -slt -bd -y -- /tmp/azuredatastudio-macos-1.47.0.zip",
+                                "Image": "7z"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/lib/p7zip/7z l -slt -bd -y -- /tmp/azuredatastudio-macos-1.47.0.zip",
+                                "Image": "/usr/lib/p7zip/7z"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "dpkg",
+                                "CommandLine": "dpkg --print-architecture"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/bin/open /Users/maria/Desktop/unpack/Azure Data Studio.app",
+                                "Image": "/usr/bin/open"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -i -l -c '/Users/maria/Desktop/unpack/Azure Data Studio.app/Contents/MacOS/Electron'  -p ''6442b355539a' + JSON.stringify(process.env) + '6442b355539a''",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Users/maria/Desktop/unpack/Azure Data Studio.app/Contents/MacOS/Electron -p '6442b355539a' + JSON.stringify(process.env) + '6442b355539a'",
+                                "Image": "/Users/maria/Desktop/unpack/Azure"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/libexec/path_helper -s",
+                                "Image": "/usr/libexec/path_helper"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -c which git",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "which git",
+                                "Image": "which"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -c xcode-select -p"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "xcode-select -p",
+                                "Image": "xcode-select"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -c uname -m",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "uname -m",
+                                "Image": "uname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -c git --version",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "git --version",
+                                "Image": "git"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/Developer/CommandLineTools/usr/bin/git --version",
+                                "Image": "/Library/Developer/CommandLineTools/usr/bin/git"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Checks whether the image specified in a process creation event doesn't refer to an .exe file (caused by process ghosting or other unorthodox methods to start a process)",
+                    "rule_author": "Max Altgelt (Nextron Systems)",
+                    "rule_id": "2104d1ee1ce64e7aa3dbd368652a54ce160e6a5751019af14601fc8fd1df8086"
+                },
+                {
+                    "rule_title": "Execution Of Non-Existing File",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dbus-launch --autolaunch=a39eb3ed78b7401fb6809ed0c562a5b1 --binary-syntax --close-stderr",
+                                "Image": "dbus-launch"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -e -u -c \"export GIO_LAUNCHED_DESKTOP_FILE_PID=$$; exec \\\"$@\\\"\" sh engrampa /tmp/azuredatastudio-macos-1.47.0.zip"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "engrampa",
+                                "CommandLine": "engrampa /tmp/azuredatastudio-macos-1.47.0.zip"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "7z l -slt -bd -y -- /tmp/azuredatastudio-macos-1.47.0.zip",
+                                "Image": "7z"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/lib/p7zip/7z l -slt -bd -y -- /tmp/azuredatastudio-macos-1.47.0.zip",
+                                "Image": "/usr/lib/p7zip/7z"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "dpkg --print-architecture",
+                                "Image": "dpkg"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/bin/open /Users/maria/Desktop/unpack/Azure Data Studio.app",
+                                "Image": "/usr/bin/open"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -i -l -c '/Users/maria/Desktop/unpack/Azure Data Studio.app/Contents/MacOS/Electron'  -p ''6442b355539a' + JSON.stringify(process.env) + '6442b355539a''",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Users/maria/Desktop/unpack/Azure Data Studio.app/Contents/MacOS/Electron -p '6442b355539a' + JSON.stringify(process.env) + '6442b355539a'",
+                                "Image": "/Users/maria/Desktop/unpack/Azure"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/usr/libexec/path_helper -s",
+                                "Image": "/usr/libexec/path_helper"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -c which git",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "which git",
+                                "Image": "which"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -c xcode-select -p"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "xcode-select -p",
+                                "Image": "xcode-select"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -c uname -m"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "uname -m",
+                                "Image": "uname"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/bin/sh -c git --version",
+                                "Image": "/bin/sh"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "git --version",
+                                "Image": "git"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "CommandLine": "/Library/Developer/CommandLineTools/usr/bin/git --version",
+                                "Image": "/Library/Developer/CommandLineTools/usr/bin/git"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Checks whether the image specified in a process creation event is not a full, absolute path (caused by process ghosting or other unorthodox methods to start a process)",
+                    "rule_author": "Max Altgelt (Nextron Systems)",
+                    "rule_id": "d2b7b95657238f7c078b9a6a17689a6184c1cf349ffb183b174ad2bd84681b08"
+                },
+                {
+                    "rule_title": "Execution Of Script Located In Potentially Suspicious Directory",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "0",
+                                "Image": "/bin/sh",
+                                "CommandLine": "/bin/sh -e -u -c \"export GIO_LAUNCHED_DESKTOP_FILE_PID=$$; exec \\\"$@\\\"\" sh engrampa /tmp/azuredatastudio-macos-1.47.0.zip"
+                            }
+                        }
+                    ],
+                    "rule_level": "medium",
+                    "rule_description": "Detects executions of scripts located in potentially suspicious locations such as \"/tmp\" via a shell such as \"bash\", \"sh\", etc.",
+                    "rule_author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+                    "rule_id": "444cf775e51f1f48a4f280cf4a392d9fa3244628404c303864ad4b00325530c5"
+                },
+                {
+                    "rule_title": "Potential Defense Evasion Via Binary Rename",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "TerminalSessionId": "1",
+                                "ProcessGuid": "{C784477D-1596-654D-3F06-000000004800}",
+                                "ProcessId": "8012",
+                                "Product": "7-Zip",
+                                "Description": "7-Zip Console",
+                                "Company": "Igor Pavlov",
+                                "ParentProcessGuid": "{C784477D-1596-654D-3D06-000000004800}",
+                                "User": "DESKTOP-B0T93D6\\george",
+                                "Hashes": "MD5=77E556CDFDC5C592F5C46DB4127C6F4C,SHA256=034ECA579F68B44F8F41294D8C9DAC96F032C57DEE0877095DA47913060DFF84,IMPHASH=6D26C857784EEA32AC92DCB74E598644",
+                                "OriginalFileName": "7z.exe",
+                                "ParentImage": "C:\\Windows\\SysWOW64\\unarchiver.exe",
+                                "FileVersion": "18.05",
+                                "ParentProcessId": "7976",
+                                "CurrentDirectory": "C:\\Users\\george\\Desktop\\",
+                                "CommandLine": "\"C:\\Windows\\System32\\7za.exe\" x -pinfected -y -o\"C:\\Users\\george\\AppData\\Local\\Temp\\fvftzp0w.rxm\" \"C:\\Users\\george\\Desktop\\azuredatastudio-macos-1.47.0.zip\"",
+                                "EventID": "1",
+                                "LogonGuid": "C784477D-34A9-6538-0FBA-030000000000",
+                                "LogonId": "244239",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "IntegrityLevel": "High",
+                                "ParentCommandLine": "\"C:\\Windows\\SysWOW64\\unarchiver.exe\" \"C:\\Users\\george\\Desktop\\azuredatastudio-macos-1.47.0.zip\"",
+                                "UtcTime": "1699550614",
+                                "RuleName": "-"
+                            }
+                        }
+                    ],
+                    "rule_level": "medium",
+                    "rule_description": "Detects the execution of a renamed binary often used by attackers or malware leveraging new Sysmon OriginalFileName datapoint.",
+                    "rule_author": "Matthew Green @mgreen27, Ecco, James Pemberton @4A616D6573, oscd.community, Andreas Hunkeler (@Karneades)",
+                    "rule_id": "686a5b6d5e098e507256a7207e9e4a237bb378c824f67f13ee0402525833b257"
+                },
+                {
+                    "rule_title": "Stop Windows Service Via Net.EXE",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "TerminalSessionId": "1",
+                                "ProcessGuid": "{C784477D-35F5-6538-CD05-000000004800}",
+                                "ProcessId": "1984",
+                                "Product": "Microsoft\\xae Windows\\xae Operating System",
+                                "Description": "Net Command",
+                                "Company": "Microsoft Corporation",
+                                "ParentProcessGuid": "{C784477D-35F5-6538-C805-000000004800}",
+                                "User": "DESKTOP-B0T93D6\\george",
+                                "Hashes": "MD5=B5A26C2BF17222E86B91D26F1247AF3E,SHA256=14CC5BE4C833ACC652195DEAD113E1C3B4AC0B98EA1AEAD11957836F9AE721CF,IMPHASH=3D3E7537BD3BA07738DC5CA8AD01B073",
+                                "OriginalFileName": "net1.exe",
+                                "ParentImage": "C:\\Windows\\SysWOW64\\net.exe",
+                                "FileVersion": "10.0.17134.1 (WinBuild.160101.0800)",
+                                "ParentProcessId": "572",
+                                "CurrentDirectory": "C:\\Program Files (x86)\\AutoIt3\\",
+                                "CommandLine": "C:\\Windows\\system32\\net1  stop DoSvc",
+                                "EventID": "1",
+                                "LogonGuid": "C784477D-34A9-6538-0FBA-030000000000",
+                                "LogonId": "244239",
+                                "Image": "C:\\Windows\\SysWOW64\\net1.exe",
+                                "IntegrityLevel": "High",
+                                "ParentCommandLine": "net  stop DoSvc",
+                                "UtcTime": "1698182645",
+                                "RuleName": "-"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_description": "Detects the stopping of a Windows service",
+                    "rule_author": "Jakob Weinzettl, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+                    "rule_id": "5b84c64b930b911c8206935d6c61b2a128347a34d495da3ea3523cdf5397c3ef"
+                }
+            ],
+            "meaningful_name": "com.azuredatastudio.oss",
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 1,
+                "low": 1
+            },
+            "trid": [
+                {
+                    "file_type": "iOS Application",
+                    "probability": 37.1
+                },
+                {
+                    "file_type": "Sweet Home 3D design (generic)",
+                    "probability": 21.6
+                },
+                {
+                    "file_type": "Mozilla Firefox browser extension",
+                    "probability": 16.4
+                },
+                {
+                    "file_type": "Mozilla Archive Format (gen)",
+                    "probability": 14.4
+                },
+                {
+                    "file_type": "ZIP compressed archive",
+                    "probability": 8.2
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 2,
+                    "medium": 2,
+                    "critical": 0,
+                    "low": 1
+                }
+            },
+            "sandbox_verdicts": {
+                "Zenbox Linux": {
+                    "category": "harmless",
+                    "confidence": 99,
+                    "sandbox_name": "Zenbox Linux",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "5d9ba6edfaa59227d537d72722942dc571156feb88c8d07f657191e7a9295618",
+            "tags": [
+                "contains-macho",
+                "mac-app",
+                "zip",
+                "signed",
+                "sets-process-name",
+                "detect-debug-environment",
+                "checks-user-input"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "bad-unknown",
+                    "alert_severity": "medium",
+                    "rule_msg": "(stream_tcp) TCP timestamp is missing",
+                    "rule_raw": "alert ( gid:129; sid:14; rev:2; msg:\"(stream_tcp) TCP timestamp is missing\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:bad-unknown;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "8.8.4.4",
+                            "dest_port": 443
+                        },
+                        {
+                            "dest_port": 443,
+                            "dest_ip": "8.8.8.8"
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "129:14"
+                },
+                {
+                    "rule_category": "Misc activity",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)",
+                    "rule_raw": "alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Observed Google DNS over HTTPS Domain (dns .google in TLS SNI)\"; flow:established,to_server; threshold: type both, track by_src, count 1, seconds 600; tls.sni; dotprefix; content:\".dns.google\"; endswith; reference:url,developers.google.com/speed/public-dns/docs/doh/; classtype:misc-activity; sid:2047866; rev:4; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2022_02_07, deployment Perimeter, former_category INFO, performance_impact Low, confidence High, signature_severity Informational, tag DoH, updated_at 2023_10_05, reviewed_at 2023_10_05, former_sid 2851058; target:src_ip;)",
+                    "rule_references": [
+                        "https://developers.google.com/speed/public-dns/docs/doh/"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "8.8.4.4",
+                            "ja3": [
+                                "11fef1f278416df9259de68737a5f271"
+                            ],
+                            "ja3s": [
+                                "eb1d94daa7e0344597e756a1fb6e7054"
+                            ],
+                            "dest_port": 443
+                        },
+                        {
+                            "ja3s": [
+                                "eb1d94daa7e0344597e756a1fb6e7054"
+                            ],
+                            "dest_port": 443,
+                            "ja3": [
+                                "88b1a9b30ad41c6d3b33841ec07e7e61"
+                            ],
+                            "dest_ip": "8.8.8.8"
+                        }
+                    ],
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2047866"
+                }
+            ],
+            "last_analysis_date": 1699517764,
+            "unique_sources": 1,
+            "first_submission_date": 1699517764,
+            "ssdeep": "6291456:Ux5NJZqHiLVavNSNazjvdKdoj28f1+10lEs+kHizDlJ:iYHiLVavNSN0jvd6D1IEcin",
+            "bundle_info": {
+                "highest_datetime": "2023-11-07 10:16:58",
+                "lowest_datetime": "1980-01-01 00:00:00",
+                "num_children": 6027,
+                "extensions": {
+                    "d/": 1,
+                    "txt": 14,
+                    "ico": 1,
+                    "md": 24,
+                    "svg": 124,
+                    "ts": 3,
+                    "js": 80,
+                    "sh": 4,
+                    "mp3": 17,
+                    "sql": 6,
+                    "ttf": 1,
+                    "ps1": 1,
+                    "zsh": 4,
+                    "yml": 1,
+                    "css": 16,
+                    "png": 161
+                },
+                "file_types": {
+                    "XML": 7,
+                    "script": 4,
+                    "unknown": 350,
+                    "JavaScript": 3,
+                    "directory": 326,
+                    "JSON": 113,
+                    "HTML": 4,
+                    "MP3": 17,
+                    "Mac OS X Executable": 15,
+                    "PNG": 161
+                },
+                "type": "ZIP",
+                "uncompressed_size": 114924229
+            },
+            "md5": "9ca5d80a2860619fe09584b385d5cfbd",
+            "sha1": "38ed21cddadeb3dc8b595f64154a4dd6182044d5",
+            "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 11,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 11,
+                "failure": 1,
+                "malicious": 0,
+                "undetected": 52
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Elastic": {
+                    "category": "timeout",
+                    "engine_name": "Elastic",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231106"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Skyhigh": {
+                    "category": "timeout",
+                    "engine_name": "Skyhigh",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "1.1.3.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Zillya": {
+                    "category": "timeout",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.4990",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231026"
+                },
+                "Trustlook": {
+                    "category": "undetected",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.124.50140",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.124.50140",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231023"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.574",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230119"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": "v0.1.4-109-g76614fd",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28209",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.473",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231107"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Alibaba": {
+                    "category": "undetected",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Rising": {
+                    "category": "timeout",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2023-11-09.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Emsisoft": {
+                    "category": "timeout",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.97",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231106"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.3.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.36793B:27.33795",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Jiangmin": {
+                    "category": "timeout",
+                    "engine_name": "Jiangmin",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Google": {
+                    "category": "timeout",
+                    "engine_name": "Google",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Microsoft": {
+                    "category": "timeout",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23100.2009",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.146.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Xcitium": {
+                    "category": "timeout",
+                    "engine_name": "Xcitium",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Avast-Mobile": {
+                    "category": "undetected",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "231108-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Varist": {
+                    "category": "undetected",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230921"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.24.0.10447",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "VBA32": {
+                    "category": "timeout",
+                    "engine_name": "VBA32",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "DeepInstinct": {
+                    "category": "failure",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "3.1.0.15",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "SentinelOne": {
+                    "category": "undetected",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.4.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231018"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "AVG": {
+                    "category": "undetected",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231109"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231102"
+                },
+                "Panda": {
+                    "category": "timeout",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20220812"
+                }
+            },
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 2,
+                "medium": 2,
+                "critical": 0,
+                "low": 1
+            }
+        },
+        "type": "file",
+        "id": "5d9ba6edfaa59227d537d72722942dc571156feb88c8d07f657191e7a9295618",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/5d9ba6edfaa59227d537d72722942dc571156feb88c8d07f657191e7a9295618"
+        }
+    }
+}
