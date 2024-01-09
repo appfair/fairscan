@@ -1,0 +1,1175 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "ZIP",
+            "tlsh": "T1B6293338E1FD085AF66D9039F2B63205B7A447116A4A5CC53E5A12848FDE2F3DE3FA41",
+            "vhash": "1a399b4f19093617aa7eadc39f8e8833",
+            "type_tags": [
+                "compressed",
+                "zip"
+            ],
+            "names": [
+                "crossover-23.7.1.zip"
+            ],
+            "signature_info": {
+                "VersionMin": "658688",
+                "CDHash": "32dd94436bba6ad8e57524dcff0be6c25f4fbf45",
+                "signers": "CodeWeavers Inc.; Apple Inc.; Apple Inc.",
+                "Runtime Version": "13.1.0",
+                "TeamIdentifier": "9C6B7X7Z8E",
+                "CandidateCDHash sha256": "32dd94436bba6ad8e57524dcff0be6c25f4fbf45",
+                "Hash choices": "sha256",
+                "Format": "app bundle with Mach-O thin (x86_64)",
+                "Timestamp": "Dec 4, 2023 at 1:09:39 PM",
+                "Signature size": "8981",
+                "Executable Segment base": "0",
+                "Page size": "4096",
+                "VersionPlatform": "1",
+                "CMSDigest": "32dd94436bba6ad8e57524dcff0be6c25f4fbf45a7816143bc92aaff35827012",
+                "CMSDigestType": "2",
+                "Executable Segment flags": "0x1",
+                "CandidateCDHashFull sha256": "32dd94436bba6ad8e57524dcff0be6c25f4fbf45a7816143bc92aaff35827012",
+                "verified": "Valid",
+                "VersionSDK": "852224",
+                "Identifier": "com.codeweavers.CrossOver",
+                "signers details": [
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "CodeWeavers Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "07:53 PM 02/09/2022",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "61 D6 73 CF A6 6B 3D 33",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "92123D9880B22A26FB276F86F011394F5DC64EF3"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "valid usage": "",
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "Info.plist entries": "38",
+                "Authority": "Apple Root CA",
+                "Executable Segment limit": "622592"
+            },
+            "last_modification_date": 1704737295,
+            "type_tag": "zip",
+            "times_submitted": 41,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 432225543,
+            "popular_threat_classification": {
+                "suggested_threat_label": "trojan.",
+                "popular_threat_category": [
+                    {
+                        "count": 3,
+                        "value": "trojan"
+                    }
+                ]
+            },
+            "last_submission_date": 1704737295,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "HanaLoader (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msvcr100.dll",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msvcr100.dll",
+                                "RuleName": "DLL"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "HanaLoader its a tool used by APT31 Group.",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "38853c8efaf750ffd744961ebcbeb037146acaabb9ca85c445af59f87e98e44d"
+                },
+                {
+                    "rule_title": "Creation of an WerFault.exe in Unusual Folder",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wer.dll",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\wer.dll",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Detects WerFault copoed to a suspicious folder, which could be a sign of WerFault DLL hijacking",
+                    "rule_author": "frack113",
+                    "rule_id": "4469b0111d1f4747a00542caf4ceadd719bff3e7e6e21793e9446d294be895bb"
+                },
+                {
+                    "rule_title": "DropboxAES RAT (Sysmon detection)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msvcr100.dll",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msvcr100.dll",
+                                "RuleName": "DLL"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "DropboxAES is a simple remote access trojan (RAT) used by APT31 Group. The RAT uses the Dropbox file-sharing service for its command and control (C2) communications",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "8c558244a29064b6842314ce986116d2007b1087f6f8bb45ae883911d0155549"
+                },
+                {
+                    "rule_title": "Malicious behaviour on user login (Microsoft Windows - c0d0s0 group behavior)",
+                    "rule_source": "SOC Prime Threat Detection Marketplace",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dbgeng.dll",
+                                "RuleName": "DLL"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\dbgeng.dll",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "DLL"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Detects malicious registry values and unusual AppData folder modification related also to c0d0s0 group.",
+                    "rule_author": "Ariel Millahuel",
+                    "rule_id": "bf0f7d2a84916abcc597e4a38a6231519b38af0223147ef15e28c7ab83f47c7d"
+                },
+                {
+                    "rule_title": "Files With System Process Name In Unsuspected Locations",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\taskmgr.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\dllhost.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msinfo32.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\schtasks.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\wevtutil.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\spoolsv.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\svchost.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regsvr32.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\msiexec.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\regini.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\explorer.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\powershell.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\ipconfig.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\rundll32.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\extrac32.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\services.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\i386-windows\\conhost.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\taskmgr.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\dllhost.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msinfo32.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\schtasks.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\wevtutil.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\spoolsv.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\svchost.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\regsvr32.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\msiexec.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\regini.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\explorer.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\powershell.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\ipconfig.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\rundll32.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\extrac32.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\services.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        },
+                        {
+                            "values": {
+                                "EventID": "11",
+                                "TargetFilename": "C:\\Users\\george\\AppData\\Local\\Temp\\g14fc1ki.4d4\\CrossOver.app\\Contents\\SharedSupport\\CrossOver\\lib\\wine\\x86_64-windows\\conhost.exe",
+                                "Image": "C:\\Windows\\SysWOW64\\7za.exe",
+                                "RuleName": "EXE"
+                            }
+                        }
+                    ],
+                    "rule_level": "high",
+                    "rule_description": "Detects the creation of an executable with a system process name in folders other than the system ones (System32, SysWOW64...etc).",
+                    "rule_author": "Sander Wiebing, Tim Shelton, Nasreddine Bencherchali (Nextron Systems)",
+                    "rule_id": "e13498937de9343f50c1e8f315ce602aa238e37e21f3dbb15d3403c25afafe3e"
+                }
+            ],
+            "meaningful_name": "com.codeweavers.CrossOver",
+            "trid": [
+                {
+                    "file_type": "Opera Widget",
+                    "probability": 31.4
+                },
+                {
+                    "file_type": "Sweet Home 3D design (generic)",
+                    "probability": 23.5
+                },
+                {
+                    "file_type": "Mozilla Firefox browser extension",
+                    "probability": 17.9
+                },
+                {
+                    "file_type": "Mozilla Archive Format (gen)",
+                    "probability": 15.7
+                },
+                {
+                    "file_type": "ZIP compressed archive",
+                    "probability": 8.9
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 1,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 0
+                },
+                "SOC Prime Threat Detection Marketplace": {
+                    "high": 2,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 0
+                }
+            },
+            "sandbox_verdicts": {
+                "Zenbox Linux": {
+                    "category": "harmless",
+                    "confidence": 99,
+                    "sandbox_name": "Zenbox Linux",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "c33df0cc20e5b9c9d4ecc148886bc673fb7153fca7e1b2f4d4d8f009bd30428d",
+            "type_extension": "zip",
+            "tags": [
+                "sets-process-name",
+                "zip",
+                "detect-debug-environment",
+                "mac-app",
+                "checks-user-input",
+                "contains-macho",
+                "signed"
+            ],
+            "last_analysis_date": 1704310642,
+            "unique_sources": 32,
+            "first_submission_date": 1701834164,
+            "ssdeep": "6291456:KxM1muuNUYa1DVvNUE4D9oNbofFAAgoGj1QwRVAI8yxGcE0x9wi5IdRBSoROLd8G:KfNUYQ74p6jb3BAn0s8IEoRySAZND",
+            "bundle_info": {
+                "highest_datetime": "2023-12-04 15:14:34",
+                "lowest_datetime": "2023-12-04 15:05:20",
+                "num_children": 8627,
+                "extensions": {
+                    "nib": 34,
+                    "car": 1,
+                    "py": 1,
+                    "txt": 1
+                },
+                "file_types": {
+                    "directory": 40,
+                    "unknown": 930,
+                    "HTML": 28,
+                    "Mac OS X Executable": 1,
+                    "XML": 1
+                },
+                "type": "ZIP",
+                "uncompressed_size": 10695636
+            },
+            "md5": "2c8f6839daf15c497120b6f0076f9300",
+            "sha1": "4fadf1811d496e23ad04bbe4717fc44ac92d3f36",
+            "magic": "Zip archive data, at least v1.0 to extract, compression method=store",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 8,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 29,
+                "failure": 5,
+                "malicious": 4,
+                "undetected": 27
+            },
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "failure",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Elastic": {
+                    "category": "timeout",
+                    "engine_name": "Elastic",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231208"
+                },
+                "DrWeb": {
+                    "category": "timeout",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230822"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240102"
+                },
+                "Skyhigh": {
+                    "category": "timeout",
+                    "engine_name": "Skyhigh",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "McAfee": {
+                    "category": "timeout",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "VIPRE": {
+                    "category": "timeout",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.134.50623",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "BitDefender": {
+                    "category": "timeout",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.134.50623",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Trustlook": {
+                    "category": "failure",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Arcabit": {
+                    "category": "failure",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "timeout",
+                    "engine_name": "VirIT",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "ESET-NOD32": {
+                    "category": "timeout",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28509",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.485",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240101"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Avast": {
+                    "category": "timeout",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Kaspersky": {
+                    "category": "timeout",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Alibaba": {
+                    "category": "malicious",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": "Trojan:Win32/SuspBehav.a16e0333",
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "NANO-Antivirus": {
+                    "category": "timeout",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Rising": {
+                    "category": "timeout",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Sophos": {
+                    "category": "timeout",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "F-Secure": {
+                    "category": "malicious",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "result": "Trojan.TR/Dropper.Gen",
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "BitDefenderTheta": {
+                    "category": "malicious",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": "Gen:NN.ZexaF.36680.gCX@aeChxJfG",
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5025",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240101"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "FireEye": {
+                    "category": "timeout",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.24.1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240101"
+                },
+                "Emsisoft": {
+                    "category": "timeout",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "SentinelOne": {
+                    "category": "timeout",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.4.2.3",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231119"
+                },
+                "GData": {
+                    "category": "timeout",
+                    "engine_name": "GData",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Jiangmin": {
+                    "category": "timeout",
+                    "engine_name": "Jiangmin",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240102"
+                },
+                "Webroot": {
+                    "category": "failure",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Varist": {
+                    "category": "timeout",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "MAX": {
+                    "category": "timeout",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.153.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Xcitium": {
+                    "category": "timeout",
+                    "engine_name": "Xcitium",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Microsoft": {
+                    "category": "timeout",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23110.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "ZoneAlarm": {
+                    "category": "timeout",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Avast-Mobile": {
+                    "category": "undetected",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240103-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Google": {
+                    "category": "timeout",
+                    "engine_name": "Google",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231230"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.0.10459",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Acronis": {
+                    "category": "timeout",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "VBA32": {
+                    "category": "timeout",
+                    "engine_name": "VBA32",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231229"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-01-03.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "DeepInstinct": {
+                    "category": "failure",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "3.1.0.15",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240102"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231108"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Ikarus": {
+                    "category": "malicious",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": "Trojan-Spy.Win32.Mimikatz",
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Fortinet": {
+                    "category": "timeout",
+                    "engine_name": "Fortinet",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "AVG": {
+                    "category": "timeout",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231102"
+                },
+                "Panda": {
+                    "category": "timeout",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                }
+            },
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 5,
+                "medium": 0,
+                "critical": 0,
+                "low": 0
+            }
+        },
+        "type": "file",
+        "id": "c33df0cc20e5b9c9d4ecc148886bc673fb7153fca7e1b2f4d4d8f009bd30428d",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/c33df0cc20e5b9c9d4ecc148886bc673fb7153fca7e1b2f4d4d8f009bd30428d"
+        }
+    }
+}
