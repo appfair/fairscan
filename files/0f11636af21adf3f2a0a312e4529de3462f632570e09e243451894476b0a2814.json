@@ -1,0 +1,861 @@
+{
+    "data": {
+        "id": "0f11636af21adf3f2a0a312e4529de3462f632570e09e243451894476b0a2814",
+        "type": "file",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/0f11636af21adf3f2a0a312e4529de3462f632570e09e243451894476b0a2814"
+        },
+        "attributes": {
+            "vhash": "4f5a6a5ac50311bb2521a3f9ad90eddc",
+            "type_extension": "dmg",
+            "trid": [
+                {
+                    "file_type": "Macintosh Disk image (BZlib compressed)",
+                    "probability": 97.6
+                },
+                {
+                    "file_type": "ZLIB compressed data (var. 4)",
+                    "probability": 2.3
+                }
+            ],
+            "size": 32852585,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "tags": [
+                "contains-macho",
+                "dmg"
+            ],
+            "magic": "DOS/MBR boot sector, extended partition table (last) (zlib compressed data)",
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(stream_tcp) data sent on stream after TCP reset sent",
+                    "rule_raw": "alert ( gid:129; sid:8; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset sent\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_port": 5223,
+                            "dest_ip": "17.57.144.103"
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "129:8"
+                }
+            ],
+            "ssdeep": "786432:zUAwkpaaWy87oqPx9jb9/gL5rBXaNVLRj/i:zUAPpajv7owFB/G9aNVti",
+            "sha256": "0f11636af21adf3f2a0a312e4529de3462f632570e09e243451894476b0a2814",
+            "type_tag": "dmg",
+            "first_submission_date": 1706607542,
+            "last_modification_date": 1706719445,
+            "names": [
+                "Keka-1.3.7.dmg",
+                "Keka.dmg"
+            ],
+            "last_analysis_stats": {
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 59,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 1,
+                "type-unsupported": 16
+            },
+            "unique_sources": 8,
+            "type_tags": [
+                "executable",
+                "mac",
+                "dmg"
+            ],
+            "md5": "c1242e2ce85835c810a7806c98a5a0b5",
+            "tlsh": "T1FB7733B98AC997B7CD1E12771C91A7441D6A5F879CA1B1BFE5C030E07378C9DB822A43",
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Protective Master Boot Record (MBR : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Primary GPT Header : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Primary GPT Table : 2)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 3)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 4)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 5)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Backup GPT Table : 6)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Backup GPT Header : 7)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 32832293,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 10286,
+                "data_fork_length": 32832293,
+                "hfs": {
+                    "unreadable_files": 4,
+                    "info_plist": {
+                        "SUFeedURL": "https://u.keka.io",
+                        "NSNetworkVolumesUsageDescription": "Keka requires network volumes access to work with it's files",
+                        "CFBundleIcons": "{'CFBundlePrimaryIcon': {'CFBundleIconFile': 'Keka', 'CFBundleSymbolName': 'externaldrive'}}",
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "NSHumanReadableCopyright": "Copyright \u00a9 2009-2023 aONe",
+                        "SUEnableDownloaderService": "True",
+                        "DTXcodeBuild": "15A507",
+                        "UTImportedTypeDeclarations": "[{'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'ZIPX Archive', 'UTTypeIconFile': 'zip.icns', 'UTTypeIconFiles': ['zip.icns'], 'UTTypeIdentifier': 'com.winzip.zipx-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['zipx']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': '7Z Archive', 'UTTypeIconFile': '7z.icns', 'UTTypeIconFiles': ['7z.icns'], 'UTTypeIdentifier': 'org.7-zip.7-zip-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['7z'], 'public.mime-type': ['application/x-7z-compressed']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LZMA Archive', 'UTTypeIconFile': 'lzma.icns', 'UTTypeIconFiles': ['lzma.icns'], 'UTTypeIdentifier': 'org.tukaani.lzma-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['lzma'], 'public.mime-type': ['application/x-lzma']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'XZ Archive', 'UTTypeIconFile': 'xz.icns', 'UTTypeIconFiles': ['xz.icns'], 'UTTypeIdentifier': 'org.tukaani.xz-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['xz'], 'public.mime-type': ['application/x-xz']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'XZ Tarball Archive', 'UTTypeIconFile': 'txz.icns', 'UTTypeIconFiles': ['txz.icns'], 'UTTypeIdentifier': 'org.tukaani.tar-xz-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['txz']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LZIP Archive', 'UTTypeIconFile': 'lz.icns', 'UTTypeIconFiles': ['lz.icns'], 'UTTypeIdentifier': 'public.lzip-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['lz'], 'public.mime-type': ['application/x-lzip']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LZIP Tarball Archive', 'UTTypeIconFile': 'tlz.icns', 'UTTypeIconFiles': ['tlz.icns'], 'UTTypeIdentifier': 'public.lzip-tar-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['tlz']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LZOP Archive', 'UTTypeIconFile': 'lzo.icns', 'UTTypeIconFiles': ['lzo.icns'], 'UTTypeIdentifier': 'public.lzop-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['lzop'], 'public.mime-type': ['application/x-lzop']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LZOP Tarball Archive', 'UTTypeIconFile': 'tzo.icns', 'UTTypeIconFiles': ['tzo.icns'], 'UTTypeIdentifier': 'public.lzop-tar-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['tzo']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LRZIP Archive', 'UTTypeIconFile': 'lrz.icns', 'UTTypeIconFiles': ['lrz.icns'], 'UTTypeIdentifier': 'public.lrzip-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['lrz'], 'public.mime-type': ['application/x-lrzip']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'LRZIP Tarball Archive', 'UTTypeIconFile': 'tlrz.icns', 'UTTypeIconFiles': ['tlrz.icns'], 'UTTypeIdentifier': 'public.lrzip-tar-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['tlrz']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'PAX Archive', 'UTTypeIconFile': 'pax.icns', 'UTTypeIconFiles': ['pax.icns'], 'UTTypeIdentifier': 'public.archive.pax', 'UTTypeTagSpecification': {'public.filename-extension': ['pax']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'LHA Archive', 'UTTypeIconFile': 'lha.icns', 'UTTypeIconFiles': ['lha.icns'], 'UTTypeIdentifier': 'public.archive.lha', 'UTTypeTagSpecification': {'public.filename-extension': ['lha', 'lzh'], 'public.mime-type': ['application/x-lzh-compressed', 'application/x-lha', 'application/x-lzh']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'Android Application Package', 'UTTypeIconFile': 'apk.icns', 'UTTypeIconFiles': ['apk.icns'], 'UTTypeIdentifier': 'public.archive.apk', 'UTTypeTagSpecification': {'public.filename-extension': ['apk', 'xapk'], 'public.mime-type': ['application/vnd.android.package-archive']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'RAR Archive', 'UTTypeIconFile': 'rar.icns', 'UTTypeIconFiles': ['rar.icns'], 'UTTypeIdentifier': 'com.rarlab.rar-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['rar', 'r00', 'r01', 'r02', 'r03', 'r04', 'r05', 'r06', 'r07', 'r08', 'r09', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30', 'r31', 'r32', 'r33', 'r34', 'r35', 'r36', 'r37', 'r38', 'r39', 'r40', 'r41', 'r42', 'r43', 'r44', 'r45', 'r46', 'r47', 'r48', 'r49', 'r50', 'r51', 'r52', 'r53', 'r54', 'r55', 'r56', 'r57', 'r58', 'r59', 'r60', 'r61', 'r62', 'r63', 'r64', 'r65', 'r66', 'r67', 'r68', 'r69', 'r70', 'r71', 'r72', 'r73', 'r74', 'r75', 'r76', 'r77', 'r78', 'r79', 'r80', 'r81', 'r82', 'r83', 'r84', 'r85', 'r86', 'r87', 'r88', 'r89', 'r90', 'r91', 'r92', 'r93', 'r94', 'r95', 'r96', 'r97', 'r98', 'r99'], 'public.mime-type': ['application/x-rar', 'application/x-rar-compressed']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'Windows Cabinet File', 'UTTypeIconFile': 'cab.icns', 'UTTypeIconFiles': ['cab.icns'], 'UTTypeIdentifier': 'com.microsoft.cab-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['cab'], 'public.mime-type': ['application/vnd.ms-cab-compressed']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'Windows Installer Package', 'UTTypeIconFile': 'msi.icns', 'UTTypeIconFiles': ['msi.icns'], 'UTTypeIdentifier': 'com.microsoft.msi-installer', 'UTTypeTagSpecification': {'public.filename-extension': ['cab'], 'public.mime-type': ['application/vnd.ms-cab-compressed']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'WIM Disk Image', 'UTTypeIconFile': 'wim.icns', 'UTTypeIconFiles': ['wim.icns'], 'UTTypeIdentifier': 'com.microsoft.wim-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['wim']}}, {'UTTypeConformsTo': ['public.data', 'public.archive'], 'UTTypeDescription': 'APPX Archive', 'UTTypeIconFile': 'appx.icns', 'UTTypeIconFiles': ['appx.icns'], 'UTTypeIdentifier': 'com.microsoft.appx-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['appx', 'appxbundle'], 'public.mime-type': ['application/vns.ms-appx']}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'Brotli Archive', 'UTTypeIconFile': 'br.icns', 'UTTypeIconFiles': ['br.icns'], 'UTTypeIdentifier': 'com.google.brotli-archive', 'UTTypeTagSpecification': {'public.filename-extension': ['br'], 'public.mime-type': []}}, {'UTTypeConformsTo': ['public.archive', 'public.data'], 'UTTypeDescription': 'Brotli Tarball Archive', 'UTTypeIconFil",
+                        "CFBundleSupportedPlatforms": "['MacOSX']",
+                        "CFBundleIdentifier": "com.aone.keka",
+                        "CFBundleDocumentTypes": "[{'CFBundleTypeExtensions': ['7z'], 'CFBundleTypeIconFile': '7z.icns', 'CFBundleTypeName': '7Z Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'brown', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.7-zip.7-zip-archive'], 'LSTypeIsPackage': False, 'OnTab': True}, {'CFBundleTypeExtensions': ['lzma'], 'CFBundleTypeIconFile': 'lzma.icns', 'CFBundleTypeName': 'LZMA Archive', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.tukaani.lzma-archive', 'public.lzma-archive'], 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['lzo'], 'CFBundleTypeIconFile': 'lzo.icns', 'CFBundleTypeName': 'LZOP Archive', 'CFBundleTypeRole': 'Viewer', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.lzop-archive'], 'LSTypeIsPackage': False, 'NeedsTarball': True, 'OnTab': True, 'UseFullTextOnTab': True}, {'CFBundleTypeExtensions': ['tzo'], 'CFBundleTypeIconFile': 'tzo.icns', 'CFBundleTypeName': 'LZOP Tarball Archive', 'CFBundleTypeRole': 'Viewer', 'IsTarball': True, 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.lzop-tar-archive'], 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['lz'], 'CFBundleTypeIconFile': 'lz.icns', 'CFBundleTypeName': 'LZIP Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'rose', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.lzip-archive'], 'LSTypeIsPackage': False, 'NeedsTarball': True, 'OnTab': True, 'UseFullTextOnTab': True}, {'CFBundleTypeExtensions': ['tlz'], 'CFBundleTypeIconFile': 'tlz.icns', 'CFBundleTypeName': 'LZIP Tarball Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'rose', 'IsTarball': True, 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.lzip-tar-archive'], 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['zip'], 'CFBundleTypeIconFile': 'zip.icns', 'CFBundleTypeName': 'ZIP Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'orange', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.pkware.zip-archive', 'public.zip-archive', 'public.zip-archive.first-part'], 'LSTypeIsPackage': False, 'OnTab': True}, {'CFBundleTypeExtensions': ['zipx'], 'CFBundleTypeIconFile': 'zip.icns', 'CFBundleTypeName': 'ZIPX Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'orange', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.winzip.zipx-archive'], 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['xz'], 'CFBundleTypeIconFile': 'xz.icns', 'CFBundleTypeName': 'XZ Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'aqua', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.tukaani.xz-archive', 'public.xz-archive'], 'LSTypeIsPackage': False, 'NeedsTarball': True, 'OnTab': True}, {'CFBundleTypeExtensions': ['txz'], 'CFBundleTypeIconFile': 'txz.icns', 'CFBundleTypeName': 'XZ Tarball Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'aqua', 'IsTarball': True, 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['org.tukaani.tar-xz-archive', 'org.tukaani.xz-tar-archive', 'public.tar-xz-archive'], 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['br'], 'CFBundleTypeIconFile': 'br.icns', 'CFBundleTypeName': 'Brotli Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'brightorange', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.google.brotli-archive', 'public.brotli-archive'], 'LSTypeIsPackage': False, 'NSPersistentStoreTypeKey': 'XML', 'NeedsTarball': True, 'OnTab': True}, {'CFBundleTypeExtensions': ['tbr'], 'CFBundleTypeIconFile': 'tbr.icns', 'CFBundleTypeName': 'Brotli Tarball Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'brightorange', 'IsTarball': True, 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.google.brotli-tar-archive', 'public.brotli-tar-archive'], 'LSTypeIsPackage': False, 'NSPersistentStoreTypeKey': 'XML'}, {'CFBundleTypeExtensions': ['zst'], 'CFBundleTypeIconFile': 'zst.icns', 'CFBundleTypeName': 'Zstandard Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'brightblue', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.facebook.zstandard-archive', 'public.zstandard-archive'], 'LSTypeIsPackage': False, 'NSPersistentStoreTypeKey': 'XML', 'NeedsTarball': True, 'OnTab': True}, {'CFBundleTypeExtensions': ['tzst'], 'CFBundleTypeIconFile': 'tzst.icns', 'CFBundleTypeName': 'Zstandard Tarball Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'brightblue', 'IsTarball': True, 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.facebook.zstandard-tar-archive', 'public.zstandard-tar-archive'], 'LSTypeIsPackage': False, 'NSPersistentStoreTypeKey': 'XML'}, {'CFBundleTypeExtensions': ['rar'], 'CFBundleTypeIconFile': 'rar.icns', 'CFBundleTypeName': 'RAR Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'violet', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['com.rarlab.rar-archive'], 'LSTypeIsPackage': False, 'OnTab': True}, {'CFBundleTypeExtensions': ['r00', 'r01', 'r02', 'r03', 'r04', 'r05', 'r06', 'r07', 'r08', 'r09', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30', 'r31', 'r32', 'r33', 'r34', 'r35', 'r36', 'r37', 'r38', 'r39', 'r40', 'r41', 'r42', 'r43', 'r44', 'r45', 'r46', 'r47', 'r48', 'r49', 'r50', 'r51', 'r52', 'r53', 'r54', 'r55', 'r56', 'r57', 'r58', 'r59', 'r60', 'r61', 'r62', 'r63', 'r64', 'r65', 'r66', 'r67', 'r68', 'r69', 'r70', 'r71', 'r72', 'r73', 'r74', 'r75', 'r76', 'r77', 'r78', 'r79', 'r80', 'r81', 'r82', 'r83', 'r84', 'r85', 'r86', 'r87', 'r88', 'r89', 'r90', 'r91', 'r92', 'r93', 'r94', 'r95', 'r96', 'r97', 'r98', 'r99'], 'CFBundleTypeIconFile': 'rxx.icns', 'CFBundleTypeName': 'RAR Legacy Archive Volume', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'violet', 'IsMultiVolume': 'YES', 'LSHandlerRank': 'Default', 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074', '075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099'], 'CFBundleTypeIconFile': 'vol.icns', 'CFBundleTypeName': 'Generic Archive Volume', 'CFBundleTypeRole': 'Viewer', 'ExcludeFromDefaults': True, 'IsMultiVolume': 'YES', 'LSHandlerRank': 'Alternate', 'LSTypeIsPackage': False}, {'CFBundleTypeExtensions': ['bz2', 'bzip2'], 'CFBundleTypeIconFile': 'bz2.icns', 'CFBundleTypeName': 'BZIP2 Archive', 'CFBundleTypeRole': 'Viewer', 'IconVariant': 'blue', 'LSHandlerRank': 'Default', 'LSItemContentTypes': ['public.bzip2-archive', 'org.bzip.bzip2-archive', 'com.redhat.bzip2",
+                        "DTSDKName": "macosx14.0",
+                        "DTPlatformVersion": "14.0",
+                        "CFBundleShortVersionString": "1.3.7",
+                        "BuildMachineOSBuild": "23D56",
+                        "CFBundleExecutable": "Keka",
+                        "LSMinimumSystemVersion": "10.10",
+                        "CFBundleVersion": "5302",
+                        "SUPublicDSAKeyFile": "kekakey",
+                        "CFBundleIconFile": "Keka",
+                        "SUEnableSystemProfiling": "False",
+                        "NSMainNibFile": "main",
+                        "DTXcode": "1501",
+                        "NSDownloadsFolderUsageDescription": "Keka requires Downloads access to work with it's files",
+                        "CFBundleDevelopmentRegion": "en",
+                        "DTPlatformName": "macosx",
+                        "NSServices": "[{'NSKeyEquivalent': {'default': '^$K'}, 'NSMenuItem': {'default': 'Keka/Send to Keka'}, 'NSMessage': 'serviceHandle', 'NSPortName': 'Keka', 'NSRequiredContext': {'NSTextContent': 'FilePath'}, 'NSSendTypes': ['NSFilenamesPboardType']}, {'NSKeyEquivalent': {'default': '^$X'}, 'NSMenuItem': {'default': 'Keka/Extract using Keka'}, 'NSMessage': 'serviceExtract', 'NSPortName': 'Keka', 'NSRequiredContext': {'NSTextContent': 'FilePath'}, 'NSSendTypes': ['NSFilenamesPboardType']}, {'NSKeyEquivalent': {'default': '^$C'}, 'NSMenuItem': {'default': 'Keka/Compress using Keka'}, 'NSMessage': 'serviceCompress', 'NSPortName': 'Keka', 'NSRequiredContext': {'NSTextContent': 'FilePath'}, 'NSSendTypes': ['NSFilenamesPboardType']}]",
+                        "SUPublicEDKey": "PJ6aXb+39SYsZE/LswCK3Oiw5hjkfwgZ89LpMS58+z0=",
+                        "LSApplicationCategoryType": "public.app-category.utilities",
+                        "NSDesktopFolderUsageDescription": "Keka requires Desktop access to work with it's files",
+                        "SUEnableInstallerLauncherService": "True",
+                        "ExtensionLists": "{'CanTarball': ['lzo', 'lz', 'xz', 'br', 'zst', 'bz2', 'bzip2', 'bz', 'bzip', 'gz', 'gzip', 'lrz'], 'Tarball': ['tzo', 'tlz', 'txz', 'tbr', 'tzst', 'tbz2', 'tbzip2', 'tb2', 'tbz', 'tbzip', 'tgz', 'tgzip', 'tar-gz', 'tlrz', 'cpgz'], 'X': ['7z', 'lzma', 'lzo', 'tzo', 'lz', 'tlz', 'zip', 'zipx', 'xz', 'txz', 'br', 'tbr', 'zst', 'tzst', 'rar', 'bz2', 'bzip2', 'tbz2', 'tbzip2', 'tb2', 'bz', 'bzip', 'tbz', 'tbzip', 'gz', 'gzip', 'tgz', 'tgzip', 'tar-gz', 'tar', 'lrz', 'tlrz', 'cpio', 'cpgz', 'pax', 'dmg', 'iso', 'lha', 'lzh', 'exe', 'cab', 'msi', 'wim', 'cbr', 'cbz', 'ipa', 'jar', 'war', 'cpt', 'spk', 'apk', 'xapk', 'xpi', 'appx', 'appxbundle', 'safariextz', 'ace', 'xip', 'epub', 'ibook', 'ibooks', 'mobi', 'azw', 'kepub', 'aar', 'yaa', 'aea', 'sqsh', 'sqfs', 'sfs', 'squashfs', 'wpress', 'z'], 'XS': ['r00', 'r01', 'r02', 'r03', 'r04', 'r05', 'r06', 'r07', 'r08', 'r09', 'r10', 'r11', 'r12', 'r13', 'r14', 'r15', 'r16', 'r17', 'r18', 'r19', 'r20', 'r21', 'r22', 'r23', 'r24', 'r25', 'r26', 'r27', 'r28', 'r29', 'r30', 'r31', 'r32', 'r33', 'r34', 'r35', 'r36', 'r37', 'r38', 'r39', 'r40', 'r41', 'r42', 'r43', 'r44', 'r45', 'r46', 'r47', 'r48', 'r49', 'r50', 'r51', 'r52', 'r53', 'r54', 'r55', 'r56', 'r57', 'r58', 'r59', 'r60', 'r61', 'r62', 'r63', 'r64', 'r65', 'r66', 'r67', 'r68', 'r69', 'r70', 'r71', 'r72', 'r73', 'r74', 'r75', 'r76', 'r77', 'r78', 'r79', 'r80', 'r81', 'r82', 'r83', 'r84', 'r85', 'r86', 'r87', 'r88', 'r89', 'r90', 'r91', 'r92', 'r93', 'r94', 'r95', 'r96', 'r97', 'r98', 'r99', '001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032', '033', '034', '035', '036', '037', '038', '039', '040', '041', '042', '043', '044', '045', '046', '047', '048', '049', '050', '051', '052', '053', '054', '055', '056', '057', '058', '059', '060', '061', '062', '063', '064', '065', '066', '067', '068', '069', '070', '071', '072', '073', '074', '075', '076', '077', '078', '079', '080', '081', '082', '083', '084', '085', '086', '087', '088', '089', '090', '091', '092', '093', '094', '095', '096', '097', '098', '099']}",
+                        "DTCompiler": "com.apple.compilers.llvm.clang.1_0",
+                        "CFBundleSignature": "????",
+                        "UTExportedTypeDeclarations": "[{'UTTypeConformsTo': ['com.apple.package', 'com.apple.bundle'], 'UTTypeDescription': 'Keka Extraction Package', 'UTTypeIconFile': 'Keka-Extraction-Package.icns', 'UTTypeIconFiles': ['Keka-Extraction-Package.icns'], 'UTTypeIdentifier': 'com.aone.keka-extraction', 'UTTypeReferenceURL': 'https://github.com/aonez/Keka/wiki/Keka-Extraction', 'UTTypeTagSpecification': {'public.filename-extension': 'kextraction'}}]",
+                        "NSRequiresAquaSystemAppearance": "False",
+                        "DTSDKBuild": "23A334",
+                        "CFBundleName": "Keka",
+                        "ITSAppUsesNonExemptEncryption": "False",
+                        "CFBundlePackageType": "APPL",
+                        "NSPrincipalClass": "NSApplication",
+                        "NSDocumentsFolderUsageDescription": "Keka requires Documents access to work with it's files",
+                        "NSRemovableVolumesUsageDescription": "Keka requires removable volumes access to work with it's files"
+                    },
+                    "main_executable": {
+                        "path": "/Keka.app/Contents/MacOS/7z.so",
+                        "sha256": "8238c99bffc30bdffd3579c1c5676dbddea2a138de97a61606cd8377dbc08448",
+                        "size": 4576304
+                    },
+                    "num_files": 643
+                },
+                "rsrc_fork_length": 0
+            },
+            "sha1": "a408093bb9fa09eafcf4921e8bf6c698e3b2958d",
+            "times_submitted": 9,
+            "last_analysis_results": {
+                "Bkav": {
+                    "method": "blacklist",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Lionic": {
+                    "method": "blacklist",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ClamAV": {
+                    "method": "blacklist",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.1.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CMC": {
+                    "method": "blacklist",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "engine_update": "20240129",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CAT-QuickHeal": {
+                    "method": "blacklist",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Skyhigh": {
+                    "method": "blacklist",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "McAfee": {
+                    "method": "blacklist",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Malwarebytes": {
+                    "method": "blacklist",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VIPRE": {
+                    "method": "blacklist",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sangfor": {
+                    "method": "blacklist",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "engine_update": "20240129",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7AntiVirus": {
+                    "method": "blacklist",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.139.50914",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7GW": {
+                    "method": "blacklist",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.139.50916",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefenderTheta": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "engine_update": "20240103",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VirIT": {
+                    "method": "blacklist",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.629",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Symantec": {
+                    "method": "blacklist",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ESET-NOD32": {
+                    "method": "blacklist",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28660",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro-HouseCall": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast": {
+                    "method": "blacklist",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Cynet": {
+                    "method": "blacklist",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.29",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Kaspersky": {
+                    "method": "blacklist",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefender": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "NANO-Antivirus": {
+                    "method": "blacklist",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "SUPERAntiSpyware": {
+                    "method": "blacklist",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MicroWorld-eScan": {
+                    "method": "blacklist",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Tencent": {
+                    "method": "blacklist",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TACHYON": {
+                    "method": "blacklist",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-01-31.02",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Emsisoft": {
+                    "method": "blacklist",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Baidu": {
+                    "method": "blacklist",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "engine_update": "20190318",
+                    "category": "undetected",
+                    "result": null
+                },
+                "F-Secure": {
+                    "method": "blacklist",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "DrWeb": {
+                    "method": "blacklist",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Zillya": {
+                    "method": "blacklist",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5042",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "FireEye": {
+                    "method": "blacklist",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.47.0.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sophos": {
+                    "method": "blacklist",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Jiangmin": {
+                    "method": "blacklist",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avira": {
+                    "method": "blacklist",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Antiy-AVL": {
+                    "method": "blacklist",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Kingsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "engine_update": "20230906",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Microsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23110.2",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Gridinsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.158.174",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Xcitium": {
+                    "method": "blacklist",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36394",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Arcabit": {
+                    "method": "blacklist",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ViRobot": {
+                    "method": "blacklist",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ZoneAlarm": {
+                    "method": "blacklist",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "GData": {
+                    "method": "blacklist",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.37269B:27.34760",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Varist": {
+                    "method": "blacklist",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AhnLab-V3": {
+                    "method": "blacklist",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.0.10459",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Acronis": {
+                    "method": "blacklist",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "engine_update": "20230828",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VBA32": {
+                    "method": "blacklist",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ALYac": {
+                    "method": "blacklist",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.8",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MAX": {
+                    "method": "blacklist",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Zoner": {
+                    "method": "blacklist",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Rising": {
+                    "method": "blacklist",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Yandex": {
+                    "method": "blacklist",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Ikarus": {
+                    "method": "blacklist",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MaxSecure": {
+                    "method": "blacklist",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Fortinet": {
+                    "method": "blacklist",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AVG": {
+                    "method": "blacklist",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240131",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Panda": {
+                    "method": "blacklist",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "engine_update": "20240130",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Google": {
+                    "method": "blacklist",
+                    "engine_name": "Google",
+                    "engine_version": null,
+                    "engine_update": "20240131",
+                    "category": "failure",
+                    "result": null
+                },
+                "Avast-Mobile": {
+                    "method": "blacklist",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240131-00",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SymantecMobileInsight": {
+                    "method": "blacklist",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "BitDefenderFalx": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "engine_update": "20240128",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "tehtris": {
+                    "method": "blacklist",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Elastic": {
+                    "method": "blacklist",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.125",
+                    "engine_update": "20240115",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Webroot": {
+                    "method": "blacklist",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "APEX": {
+                    "method": "blacklist",
+                    "engine_name": "APEX",
+                    "engine_version": "6.495",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Paloalto": {
+                    "method": "blacklist",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Alibaba": {
+                    "method": "blacklist",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "engine_update": "20190527",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Trapmine": {
+                    "method": "blacklist",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.97",
+                    "engine_update": "20231106",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cylance": {
+                    "method": "blacklist",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "DeepInstinct": {
+                    "method": "blacklist",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SentinelOne": {
+                    "method": "blacklist",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "24.1.0.5",
+                    "engine_update": "20240129",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Trustlook": {
+                    "method": "blacklist",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "engine_update": "20240131",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cybereason": {
+                    "method": "blacklist",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "engine_update": "20231102",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "CrowdStrike": {
+                    "method": "blacklist",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "engine_update": null,
+                    "category": "type-unsupported",
+                    "result": null
+                }
+            },
+            "signature_info": {
+                "verified": "Valid",
+                "signers details": [
+                    {
+                        "status": "Valid",
+                        "name": "Jorge Garcia Armero",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "12:10 PM 02/10/2023",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "13 95 28 17 D8 21 F3 03",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "E4B273D38BC0909A10485752C58B99410EB3FD23"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "signers": "Jorge Garcia Armero; Apple Inc.; Apple Inc.",
+                "CandidateCDHash sha256": "ac5f0df37d1faffa5c8e02ed1d9378487c5977d7",
+                "CMSDigestType": "2",
+                "Hash choices": "sha1,sha256",
+                "Format": "app bundle with Mach-O universal (x86_64 arm64)",
+                "CDHash": "ac5f0df37d1faffa5c8e02ed1d9378487c5977d7",
+                "Authority": "Apple Root CA",
+                "Runtime Version": "14.0.0",
+                "CandidateCDHashFull sha256": "ac5f0df37d1faffa5c8e02ed1d9378487c5977d7b8095154cc1d6e74c7cbbafd",
+                "CandidateCDHashFull sha1": "ecd3a0a446d72a3db7e0235e1d13567c80739faf",
+                "TeamIdentifier": "4FG648TM2A",
+                "Info.plist entries": "44",
+                "Identifier": "com.aone.keka",
+                "CandidateCDHash sha1": "ecd3a0a446d72a3db7e0235e1d13567c80739faf",
+                "CMSDigest": "dc094c169062ae5df48cae24d23bd45d67f635986b8c5472e9a43795b2c9bfaf"
+            },
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 0,
+                "low": 1
+            },
+            "last_analysis_date": 1706704308,
+            "last_submission_date": 1706719445,
+            "meaningful_name": "com.aone.keka",
+            "reputation": 0,
+            "type_description": "Macintosh Disk Image"
+        }
+    }
+}
