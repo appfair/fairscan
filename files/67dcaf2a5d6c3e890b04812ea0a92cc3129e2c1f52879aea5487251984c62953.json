@@ -1,0 +1,1088 @@
+{
+    "data": {
+        "id": "67dcaf2a5d6c3e890b04812ea0a92cc3129e2c1f52879aea5487251984c62953",
+        "type": "file",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/67dcaf2a5d6c3e890b04812ea0a92cc3129e2c1f52879aea5487251984c62953"
+        },
+        "attributes": {
+            "type_description": "Macintosh Disk Image",
+            "sha256": "67dcaf2a5d6c3e890b04812ea0a92cc3129e2c1f52879aea5487251984c62953",
+            "last_modification_date": 1705770426,
+            "size": 100437993,
+            "times_submitted": 1,
+            "magic": "DOS/MBR boot sector, extended partition table (last) (zlib compressed data)",
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Protective Master Boot Record (MBR : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Primary GPT Header : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Primary GPT Table : 2)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 3)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 4)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 5)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Backup GPT Table : 6)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Backup GPT Header : 7)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 100395852,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 20441,
+                "data_fork_length": 100395852,
+                "hfs": {
+                    "unreadable_files": 0,
+                    "main_executable": {
+                        "path": "/Wasabi Wallet.app/Contents/MacOS/createdump",
+                        "sha256": "3631a1286f44391f96330f4e8f61fad25c450039f7cfe5c39f1341bb5f106d96",
+                        "size": 156928
+                    },
+                    "num_files": 461,
+                    "info_plist": {
+                        "CFBundlePackageType": "APPL",
+                        "CFBundleShortVersionString": "2.0.5",
+                        "NSAppleScriptEnabled": "True",
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "CFBundleIconFile": "WasabiLogo.icns",
+                        "CFBundleIdentifier": "zksnacks.wasabiwallet",
+                        "CFBundleExecutable": "wassabee",
+                        "CFBundleName": "Wasabi Wallet",
+                        "LSArchitecturePriority": "['x86_64']",
+                        "LSApplicationCategoryType": "public.app-category.finance",
+                        "CFBundleVersion": "2.0.5",
+                        "NSHighResolutionCapable": "True"
+                    }
+                },
+                "rsrc_fork_length": 0
+            },
+            "sha1": "9338ffd8f2b69a632c6dcab629fac8f17c9527ca",
+            "reputation": 0,
+            "tags": [
+                "checks-hostname",
+                "contains-macho",
+                "dmg",
+                "signed"
+            ],
+            "last_analysis_date": 1705743489,
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 12,
+                "low": 3
+            },
+            "ssdeep": "1572864:W6c5wcccNxBwKp3GLGMP2V70ZYqTdVICqk760eSBLMMaufnXcZ9abQgoABUAH153:yrBw1GTaYMdvt14ufQascFH11pQy",
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 0,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 1
+                }
+            },
+            "type_tags": [
+                "executable",
+                "mac",
+                "dmg"
+            ],
+            "signature_info": {
+                "verified": "Valid",
+                "signers details": [
+                    {
+                        "status": "Valid",
+                        "name": "zkSNACKs Ltd.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "12:03 PM 09/24/2019",
+                        "valid to": "12:03 PM 09/24/2024",
+                        "serial number": "DB 19 9C EE 3E 0E 0D",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "B19C5773503B5DE23287A3672EC51034E99D86CE"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "signers": "zkSNACKs Ltd.; Apple Inc.; Apple Inc.",
+                "CandidateCDHash sha256": "2bc2649b2fe8547491b668d99b543186eadafbf1",
+                "CMSDigestType": "2",
+                "Hash choices": "sha256",
+                "Format": "app bundle with Mach-O thin (x86_64)",
+                "CDHash": "2bc2649b2fe8547491b668d99b543186eadafbf1",
+                "Authority": "Apple Root CA",
+                "Runtime Version": "12.1.0",
+                "CandidateCDHashFull sha256": "2bc2649b2fe8547491b668d99b543186eadafbf14fd6ef6fab91cca34312398a",
+                "TeamIdentifier": "L233B2JQ68",
+                "Info.plist entries": "12",
+                "Identifier": "zksnacks.wasabiwallet",
+                "CMSDigest": "2bc2649b2fe8547491b668d99b543186eadafbf14fd6ef6fab91cca34312398a"
+            },
+            "vhash": "4d5cc8f4609d0f5ae7bc23b721f22540",
+            "type_tag": "dmg",
+            "md5": "aa45f2a9a611971caaeeef0f3345200a",
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Exit Node Traffic group 19",
+                    "rule_raw": "alert tcp [162.251.5.152,163.172.213.212,163.172.45.102,163.5.143.76,165.73.242.163,166.70.207.2,171.25.193.20,171.25.193.234,171.25.193.235,171.25.193.25] any -> $HOME_NET any (msg:\"ET TOR Known Tor Exit Node Traffic group 19\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2520018; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "163.172.213.212",
+                            "src_port": 10010
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2520018"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 19",
+                    "rule_raw": "alert tcp [162.247.74.74,162.251.5.152,163.172.213.212,163.172.45.102,163.5.143.76,165.73.242.163,166.70.207.2,171.25.193.20,171.25.193.234,171.25.193.235] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 19\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522018; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "163.172.213.212",
+                            "src_port": 10010
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522018"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 165",
+                    "rule_raw": "alert tcp [128.199.146.186,128.199.197.172,128.199.7.41,128.31.0.39,128.31.0.61,128.76.152.2,129.126.111.54,129.13.131.140,129.146.85.61,129.150.32.113] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 165\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522164; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "128.31.0.39",
+                            "src_port": 9201
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522164"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 210",
+                    "rule_raw": "alert tcp [144.76.86.5,144.91.113.241,144.91.125.15,144.91.125.239,144.91.66.153,144.91.90.86,144.91.92.99,145.239.1.189,145.239.136.129,145.239.206.236] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 210\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522209; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "144.91.125.15",
+                            "src_port": 9001
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522209"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 237",
+                    "rule_raw": "alert tcp [158.69.204.36,158.69.205.247,158.69.205.92,158.69.207.216,158.69.225.167,158.69.48.49,159.196.177.138,159.196.188.206,159.196.231.128,159.196.251.45] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 237\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522236; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "158.69.207.216",
+                            "src_port": 9001
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522236"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 294",
+                    "rule_raw": "alert tcp [185.170.112.128,185.170.113.25,185.17.136.101,185.173.200.125,185.173.93.47,185.174.135.11,185.175.158.198,185.175.56.120,185.177.127.34,185.177.151.33] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 294\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522293; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "185.175.158.198",
+                            "src_port": 9090
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522293"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 298",
+                    "rule_raw": "alert tcp [185.194.57.75,185.195.237.116,185.195.71.10,185.195.71.11,185.195.71.2,185.195.71.3,185.195.71.4,185.195.71.5,185.195.71.6,185.195.71.7] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 298\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522297; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "185.195.71.3",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522297"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 342",
+                    "rule_raw": "alert tcp [193.226.13.80,193.226.78.213,193.228.128.87,193.228.199.148,193.23.244.244,193.233.202.71,193.239.86.133,193.239.86.147,193.26.158.214,193.29.187.81] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 342\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522341; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "193.23.244.244",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522341"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 709",
+                    "rule_raw": "alert tcp [37.221.212.147,37.228.129.163,37.228.129.164,37.228.129.29,37.235.48.247,37.235.49.138,37.24.0.186,37.252.187.14,37.252.189.17,37.252.190.176] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 709\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522708; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "37.235.48.247",
+                            "src_port": 7654
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522708"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 712",
+                    "rule_raw": "alert tcp [38.102.20.41,38.102.84.24,38.102.85.200,38.103.195.2,38.108.119.208,38.126.101.151,38.132.178.154,38.145.211.218,38.147.122.250,38.147.122.251] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 712\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522711; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "38.145.211.218",
+                            "src_port": 9010
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522711"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 750",
+                    "rule_raw": "alert tcp [51.14.214.219,51.148.150.203,51.148.180.40,51.15.108.12,51.15.113.108,51.15.114.49,51.15.138.196,51.15.142.0,51.15.150.228,51.15.178.93] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 750\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522749; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "51.15.150.228",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522749"
+                },
+                {
+                    "rule_category": "Misc Attack",
+                    "alert_severity": "medium",
+                    "rule_msg": "ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 888",
+                    "rule_raw": "alert tcp [86.245.182.192,86.248.250.217,86.41.221.138,86.59.21.163,86.59.21.38,86.8.43.114,86.84.35.254,86.86.173.62,87.100.217.17,87.104.37.132] any -> $HOME_NET any (msg:\"ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 888\"; reference:url,doc.emergingthreats.net/bin/view/Main/TorRules; threshold: type limit, track by_src, seconds 60, count 1; classtype:misc-attack; flowbits:set,ET.TorIP; sid:2522887; rev:5345; metadata:affected_product Any, attack_target Any, deployment Perimeter, tag TOR, signature_severity Informational, created_at 2008_12_01, updated_at 2023_11_15;)",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "alert_context": [
+                        {
+                            "src_ip": "86.59.21.38",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_references": [
+                        "https://doc.emergingthreats.net/bin/view/Main/TorRules"
+                    ],
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2522887"
+                },
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(tcp) experimental TCP options found",
+                    "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "64.78.200.1",
+                            "dest_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "116:58"
+                },
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(stream_tcp) data sent on stream after TCP reset sent",
+                    "rule_raw": "alert ( gid:129; sid:8; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset sent\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "17.57.144.26",
+                            "dest_port": 5223
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "129:8"
+                },
+                {
+                    "rule_category": "Misc activity",
+                    "alert_severity": "low",
+                    "rule_msg": "ET POLICY TLS possible TOR SSL traffic",
+                    "rule_raw": "alert tcp any ![21,25,110,143,443,465,587,636,989:995,5061,5222,8443] -> any any (msg:\"ET POLICY TLS possible TOR SSL traffic\"; flow:established,from_server; tls.cert_issuer; content:\"CN=www\"; startswith; content:\".com\"; endswith; pcre:\"/^CN=www\\.[0-9a-z]{8,20}\\.com$/\"; tls.cert_subject; content:\"CN=www\"; startswith; content:\".net\"; endswith; pcre:\"/^CN=www\\.[0-9a-z]{8,20}\\.net$/\"; classtype:misc-activity; sid:2018789; rev:4; metadata:created_at 2014_07_28, former_category POLICY, updated_at 2021_07_23;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "38.145.211.218",
+                            "src_port": 9010,
+                            "ja3": [
+                                "140e0f0cad708278ade0984528fe8493"
+                            ],
+                            "ja3s": [
+                                "0debd3853f330c574b05e0b6d882dc27"
+                            ]
+                        }
+                    ],
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_id": "1:2018789"
+                }
+            ],
+            "tlsh": "T1122833B7CDA4628F70A042AA347C14E66E5E2D4B35B6C85684D340FE67F7B88FA70D05",
+            "type_extension": "dmg",
+            "last_analysis_results": {
+                "Bkav": {
+                    "method": "blacklist",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Lionic": {
+                    "method": "blacklist",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MicroWorld-eScan": {
+                    "method": "blacklist",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ClamAV": {
+                    "method": "blacklist",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.2.1.0",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CMC": {
+                    "method": "blacklist",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "engine_update": "20240106",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CAT-QuickHeal": {
+                    "method": "blacklist",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Skyhigh": {
+                    "method": "blacklist",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "McAfee": {
+                    "method": "blacklist",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Malwarebytes": {
+                    "method": "blacklist",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VIPRE": {
+                    "method": "blacklist",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sangfor": {
+                    "method": "blacklist",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7AntiVirus": {
+                    "method": "blacklist",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.137.50794",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7GW": {
+                    "method": "blacklist",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.137.50794",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Baidu": {
+                    "method": "blacklist",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "engine_update": "20190318",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VirIT": {
+                    "method": "blacklist",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.622",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Symantec": {
+                    "method": "blacklist",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "engine_update": "20240119",
+                    "category": "malicious",
+                    "result": "OSX.Trojan.Gen.2"
+                },
+                "ESET-NOD32": {
+                    "method": "blacklist",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28600",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro-HouseCall": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast": {
+                    "method": "blacklist",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "MacOS:BitCoinMiner-EB [PUP]"
+                },
+                "Cynet": {
+                    "method": "blacklist",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.28",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "Malicious (score: 99)"
+                },
+                "Kaspersky": {
+                    "method": "blacklist",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefender": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "NANO-Antivirus": {
+                    "method": "blacklist",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "SUPERAntiSpyware": {
+                    "method": "blacklist",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Tencent": {
+                    "method": "blacklist",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sophos": {
+                    "method": "blacklist",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "F-Secure": {
+                    "method": "blacklist",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "PotentialRisk.PUA/AVA.Miner.decxf"
+                },
+                "DrWeb": {
+                    "method": "blacklist",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "Tool.Mac.BtcMine.9964"
+                },
+                "Zillya": {
+                    "method": "blacklist",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5037",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Emsisoft": {
+                    "method": "blacklist",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "GData": {
+                    "method": "blacklist",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.37201B:27.34630",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Jiangmin": {
+                    "method": "blacklist",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Google": {
+                    "method": "blacklist",
+                    "engine_name": "Google",
+                    "engine_version": "1705732261",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avira": {
+                    "method": "blacklist",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "PUA/AVA.Miner.decxf"
+                },
+                "Antiy-AVL": {
+                    "method": "blacklist",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Kingsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "engine_update": "20230906",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Gridinsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.155.174",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Xcitium": {
+                    "method": "blacklist",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36361",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Arcabit": {
+                    "method": "blacklist",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ViRobot": {
+                    "method": "blacklist",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ZoneAlarm": {
+                    "method": "blacklist",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Microsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23110.2",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Varist": {
+                    "method": "blacklist",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AhnLab-V3": {
+                    "method": "blacklist",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.0.10459",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Acronis": {
+                    "method": "blacklist",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "engine_update": "20230828",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefenderTheta": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "engine_update": "20240103",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ALYac": {
+                    "method": "blacklist",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.8",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TACHYON": {
+                    "method": "blacklist",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-01-20.02",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VBA32": {
+                    "method": "blacklist",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Zoner": {
+                    "method": "blacklist",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Rising": {
+                    "method": "blacklist",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Yandex": {
+                    "method": "blacklist",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Ikarus": {
+                    "method": "blacklist",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "engine_update": "20240119",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MaxSecure": {
+                    "method": "blacklist",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Fortinet": {
+                    "method": "blacklist",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AVG": {
+                    "method": "blacklist",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240120",
+                    "category": "malicious",
+                    "result": "MacOS:BitCoinMiner-EB [PUP]"
+                },
+                "Panda": {
+                    "method": "blacklist",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "engine_update": "20240120",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast-Mobile": {
+                    "method": "blacklist",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240119-02",
+                    "engine_update": "20240119",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SymantecMobileInsight": {
+                    "method": "blacklist",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "BitDefenderFalx": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "engine_update": "20240108",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "tehtris": {
+                    "method": "blacklist",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "engine_update": "20240120",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "DeepInstinct": {
+                    "method": "blacklist",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "engine_update": "20240116",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "APEX": {
+                    "method": "blacklist",
+                    "engine_name": "APEX",
+                    "engine_version": "6.491",
+                    "engine_update": "20240119",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Paloalto": {
+                    "method": "blacklist",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "engine_update": "20240120",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Alibaba": {
+                    "method": "blacklist",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "engine_update": "20190527",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Webroot": {
+                    "method": "blacklist",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "engine_update": "20240120",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cylance": {
+                    "method": "blacklist",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SentinelOne": {
+                    "method": "blacklist",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "23.4.2.3",
+                    "engine_update": "20231119",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Trustlook": {
+                    "method": "blacklist",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "engine_update": "20240120",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cybereason": {
+                    "method": "blacklist",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "engine_update": "20231102",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "CrowdStrike": {
+                    "method": "blacklist",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "engine_update": null,
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Elastic": {
+                    "method": "blacklist",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.125",
+                    "engine_update": "20240115",
+                    "category": "type-unsupported",
+                    "result": null
+                }
+            },
+            "sigma_analysis_stats": {
+                "high": 0,
+                "medium": 0,
+                "critical": 0,
+                "low": 1
+            },
+            "first_submission_date": 1705049131,
+            "meaningful_name": "zksnacks.wasabiwallet",
+            "sigma_analysis_results": [
+                {
+                    "match_context": [
+                        {
+                            "values": {
+                                "TargetFilename": "/Users/user1/Library/Saved Application State/zksnacks.wasabiwallet.savedState/windows.plist"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_id": "80c9078b4f0a21412506961251c7253e037afc83c8a88cd362377082d1efaa30",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "rule_title": "Startup Items",
+                    "rule_description": "Detects creation of startup item plist files that automatically get executed at boot initialization to establish persistence.",
+                    "rule_author": "Alejandro Ortuno, oscd.community"
+                }
+            ],
+            "last_submission_date": 1705049131,
+            "names": [
+                "Wasabi-2.0.5.dmg"
+            ],
+            "last_analysis_stats": {
+                "malicious": 7,
+                "suspicious": 0,
+                "undetected": 51,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 0,
+                "type-unsupported": 15
+            },
+            "unique_sources": 1,
+            "trid": [
+                {
+                    "file_type": "Macintosh Disk image (BZlib compressed)",
+                    "probability": 97.6
+                },
+                {
+                    "file_type": "ZLIB compressed data (var. 1)",
+                    "probability": 2.3
+                }
+            ]
+        }
+    }
+}
