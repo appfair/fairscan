@@ -1,0 +1,853 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Apple related",
+            "tlsh": "T199C833FEF5B5490BF4DDB13206632F8CAD101407309A95CE85A3EA3701667B7BAA8477",
+            "vhash": "0a2c46d37d45da7fb21ee9ddef3a6385",
+            "type_tags": [
+                "apple",
+                "apple-gen"
+            ],
+            "crowdsourced_yara_results": [
+                {
+                    "description": "This signature identifies Adobe Extensible Metadata Platform (XMP) identifiers embedded within files. Defined as a standard for mapping graphical asset relationships, XMP allows for tracking of both parent-child relationships and individual revisions. There are three categories of identifiers: original document, document, and instance. Generally, XMP data is stored in XML format, updated on save/copy, and embedded within the graphical asset. These identifiers can be used to track both malicious and benign graphics within common Microsoft and Adobe document lures.",
+                    "source": "https://github.com/InQuest/yara-rules-vt",
+                    "author": "InQuest Labs",
+                    "ruleset_name": "Adobe_XMP_Identifier",
+                    "rule_name": "Adobe_XMP_Identifier",
+                    "ruleset_id": "0121ae37cc"
+                }
+            ],
+            "names": [
+                "imazing-2-17-17.dmg",
+                "iMazing2forMac.dmg",
+                "iMazing_2.17.17.17670.dmg"
+            ],
+            "signature_info": {
+                "CandidateCDHash sha256": "1995255e824175f265a314c1094572871c1fe56e",
+                "CMSDigestType": "2",
+                "CandidateCDHashFull sha1": "c187077071ac6595ff1e681fa71c69698cfc67b9",
+                "Info.plist entries": "35",
+                "Format": "app bundle with Mach-O universal (x86_64 arm64)",
+                "CDHash": "1995255e824175f265a314c1094572871c1fe56e",
+                "signers": "DigiDNA SARL; Apple Inc.; Apple Inc.",
+                "Runtime Version": "14.2.0",
+                "verified": "Valid",
+                "CandidateCDHashFull sha256": "1995255e824175f265a314c1094572871c1fe56e618cc1acecfcda5eca5c385d",
+                "Authority": "Apple Root CA",
+                "TeamIdentifier": "J5PR93692Y",
+                "Hash choices": "sha1,sha256",
+                "Identifier": "com.DigiDNA.iMazing2Mac",
+                "signers details": [
+                    {
+                        "status": "Valid",
+                        "name": "DigiDNA SARL",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "01:52 PM 03/10/2022",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "58 95 CC 3B B5 4D B4 9B",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "7D6C95C06A2B4B6E906DF6040E8996A9829B5968"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha256WithRSAEncryption",
+                        "valid from": "10:12 PM 02/01/2012",
+                        "valid to": "10:12 PM 02/01/2027",
+                        "serial number": "18 7A A9 A8 C2 96 21 0C",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "3B166C3B7DC4B751C9FE2AFAB9135641E388E186"
+                    },
+                    {
+                        "status": "Valid",
+                        "name": "Apple Inc.",
+                        "algorithm": "sha1WithRSAEncryption",
+                        "valid from": "09:40 PM 04/25/2006",
+                        "valid to": "09:40 PM 02/09/2035",
+                        "serial number": "2",
+                        "cert issuer": "Apple Inc.",
+                        "thumbprint": "611E5B662C593A08FF58D14AE22452D198DF6C60"
+                    }
+                ],
+                "CandidateCDHash sha1": "c187077071ac6595ff1e681fa71c69698cfc67b9",
+                "CMSDigest": "5d6292f4a1e0857164290bd4e638953450fd917add23032104b40e6f753cb52a"
+            },
+            "last_modification_date": 1707836496,
+            "type_tag": "apple",
+            "times_submitted": 11,
+            "size": 261722807,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "last_submission_date": 1707836496,
+            "meaningful_name": "com.DigiDNA.iMazing2Mac",
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Alibaba": {
+                    "category": "type-unsupported",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "Elastic": {
+                    "category": "type-unsupported",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.125",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240115"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Skyhigh": {
+                    "category": "undetected",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.142.51045",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Varist": {
+                    "category": "timeout",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.142.51046",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.638",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28725",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.499",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.3.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Cynet": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.29",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5049",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "24.1.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "Trapmine": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.14.97",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231106"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.47.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240212-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Google": {
+                    "category": "timeout",
+                    "engine_name": "Google",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.160.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Xcitium": {
+                    "category": "undetected",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36431",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Microsoft": {
+                    "category": "undetected",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23110.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.37351B:27.34906",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-02-11.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240128"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.0.10459",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240202"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.8",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "DeepInstinct": {
+                    "category": "failure",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240131"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240208"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Rising": {
+                    "category": "undetected",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "AVG": {
+                    "category": "undetected",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231102"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240212"
+                }
+            },
+            "trid": [
+                {
+                    "file_type": "ZLIB compressed data (var. 1)",
+                    "probability": 100.0
+                }
+            ],
+            "sandbox_verdicts": {
+                "Zenbox macOS": {
+                    "category": "harmless",
+                    "confidence": 100,
+                    "sandbox_name": "Zenbox macOS",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "58cbc8dc6f29b13971106308cb5ea1fe3676140663842852932958bf5465eede",
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 0,
+                "low": 1
+            },
+            "tags": [
+                "contains-macho",
+                "apple"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM excessive retransmissions",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM excessive retransmissions\"; flowbits:isnotset,tcp.retransmission.alerted; flowint:tcp.retransmission.count,>=,10; flowbits:set,tcp.retransmission.alerted; classtype:protocol-command-decode; sid:2210054; rev:1;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "17.253.27.201",
+                            "src_port": 443,
+                            "ja3": [
+                                "773906b0efdefa24a7f2b8eb6985bf37"
+                            ],
+                            "ja3s": [
+                                "eb1d94daa7e0344597e756a1fb6e7054"
+                            ]
+                        }
+                    ],
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_source": "Suricata",
+                    "rule_id": "1:2210054"
+                }
+            ],
+            "last_analysis_date": 1707763673,
+            "unique_sources": 9,
+            "first_submission_date": 1706942642,
+            "ssdeep": "6291456:Tfas/g/La1boHqMD57f41zCJu7N2qPYrZ11x/1VcNUxbNEVr:Td/cLgSTD57Up2IYrZP7qNUxb2V",
+            "md5": "0b910ebe9381ff37a70469f4b4f022ed",
+            "sha1": "d6e68dd9c743a269e8eb92a61a0264a0ea1f8a02",
+            "magic": "Apple Driver Map, blocksize 512, blockcount 2060288, devtype 0, devid 0, driver count 0 (zlib compressed data)",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 16,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 2,
+                "failure": 1,
+                "malicious": 0,
+                "undetected": 57
+            },
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Driver Descriptor Map (DDM : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "Apple (Apple_partition_map : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 2)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 261677832,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 31555,
+                "data_fork_length": 261677832,
+                "hfs": {
+                    "unreadable_files": 22,
+                    "info_plist": {
+                        "SUFeedURL": "https://downloads.imazing.com/com.DigiDNA.iMazing2Mac.xml",
+                        "MDItemKeywords": "iOS Backup, iPhone Backup, backup iPhone, back up iPhone, manage iPhone, setup iPhone, iOS manager",
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "NSHumanReadableCopyright": "Copyright \u00a9 DigiDNA SARL, 2008-2023. All rights reserved.",
+                        "DTXcodeBuild": "15C500b",
+                        "CFBundleSupportedPlatforms": "['MacOSX']",
+                        "CFBundleIdentifier": "com.DigiDNA.iMazing2Mac",
+                        "CFBundleDocumentTypes": "[{'CFBundleTypeExtensions': ['imazing'], 'CFBundleTypeIconFile': 'iMazingBackupFileIcon.icns', 'CFBundleTypeName': 'iMazing Backup File', 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner', 'LSTypeIsPackage': 0, 'NSDocumentClass': 'IMazingBackupDocument'}, {'CFBundleTypeExtensions': ['imazingapp'], 'CFBundleTypeIconFile': 'iMazingAppFileIcon.icns', 'CFBundleTypeName': 'iMazing Application File', 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner', 'LSTypeIsPackage': 0, 'NSDocumentClass': 'IMazingAppDocument'}]",
+                        "DTSDKName": "macosx14.2",
+                        "DTSDKBuild": "23C53",
+                        "NSPhotoLibraryUsageDescription": "Since macOS 10.15.2, access to the Photo Library is needed in order to delete photos from connected devices. iMazing will only use this access to delete photos from the device of your choice, and will not access your Mac's Photo Library.",
+                        "NSHighResolutionCapable": "True",
+                        "CFBundleShortVersionString": "2.17.17",
+                        "BuildMachineOSBuild": "23C71",
+                        "CFBundleExecutable": "iMazing",
+                        "LSMinimumSystemVersion": "10.10",
+                        "NSAppTransportSecurity": "{'NSExceptionDomains': {'in.appcenter.ms': {'NSExceptionAllowsInsecureHTTPLoads': True, 'NSIncludesSubdomains': True}, 'localhost': {'NSExceptionAllowsInsecureHTTPLoads': True, 'NSIncludesSubdomains': True}, 'mzstatic.com': {'NSExceptionAllowsInsecureHTTPLoads': True, 'NSIncludesSubdomains': True}}}",
+                        "CFBundleVersion": "17670",
+                        "CFBundleIconFile": "iMazing",
+                        "NSMainNibFile": "MainMenu",
+                        "DTXcode": "1520",
+                        "CFBundleDevelopmentRegion": "en",
+                        "CFBundleURLTypes": "[{'CFBundleURLName': 'com.DigiDNA.iMazing.ActivationScheme', 'CFBundleURLSchemes': ['imz']}]",
+                        "DTPlatformName": "macosx",
+                        "NSAppleEventsUsageDescription": "iMazing cannot import media to your iTunes library without your permission.",
+                        "LSApplicationCategoryType": "public.app-category.utilities",
+                        "DTCompiler": "com.apple.compilers.llvm.clang.1_0",
+                        "CFBundleSignature": "????",
+                        "UTExportedTypeDeclarations": "[{'UTTypeConformsTo': ['public.data'], 'UTTypeDescription': 'iMazing Backup File', 'UTTypeIconFile': 'iMazingBackupFileIcon', 'UTTypeIdentifier': 'com.digidna.imazing.backup', 'UTTypeTagSpecification': {'public.filename-extension': ['imazing'], 'public.mime-type': ['application/octet-stream']}}, {'UTTypeConformsTo': ['public.data'], 'UTTypeDescription': 'iMazing Application File', 'UTTypeIconFile': 'iMazingAppFileIcon', 'UTTypeIdentifier': 'com.digidna.imazing.app', 'UTTypeTagSpecification': {'public.filename-extension': ['imazingapp'], 'public.mime-type': ['application/octet-stream']}}]",
+                        "NSContactsUsageDescription": "In order to display your contacts, iMazing needs your permission. iMazing will only access your contacts to display them to you, and to transfer them to your devices.",
+                        "DTPlatformVersion": "14.2",
+                        "CFBundleName": "iMazing",
+                        "CFBundlePackageType": "APPL",
+                        "NSPrincipalClass": "DKApplication"
+                    },
+                    "main_executable": {
+                        "path": "/iMazing.app/Contents/MacOS/AppleScriptServer",
+                        "sha256": "7b5c87f91657ee90de94b17c21b583504b63872d3e24694c2fd0783e520ed102",
+                        "size": 170368
+                    },
+                    "num_files": 2395
+                },
+                "rsrc_fork_length": 0
+            },
+            "reputation": 0
+        },
+        "type": "file",
+        "id": "58cbc8dc6f29b13971106308cb5ea1fe3676140663842852932958bf5465eede",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/58cbc8dc6f29b13971106308cb5ea1fe3676140663842852932958bf5465eede"
+        }
+    }
+}

@@ -1,0 +1,835 @@
+{
+    "data": {
+        "attributes": {
+            "type_description": "Macintosh Disk Image",
+            "tlsh": "T1791833B8C29288DDD4935B71173B1C768C8E71E398C3E802984D479A5492FCA66F3F97",
+            "vhash": "65d3713f5e45a6c1ddcad5379a78eb8a",
+            "type_tags": [
+                "executable",
+                "mac",
+                "dmg"
+            ],
+            "names": [
+                "TIConnectCE-6.0.1.344.dmg"
+            ],
+            "last_modification_date": 1707678677,
+            "type_tag": "dmg",
+            "times_submitted": 1,
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "size": 87916112,
+            "type_extension": "dmg",
+            "last_submission_date": 1707671405,
+            "sigma_analysis_results": [
+                {
+                    "rule_title": "Startup Items",
+                    "rule_source": "Sigma Integrated Rule Set (GitHub)",
+                    "match_context": [
+                        {
+                            "values": {
+                                "TargetFilename": "/Users/user1/Library/Saved Application State/com.ti.et.elg.tiConnect.TIConnectApplication.savedState/windows.plist"
+                            }
+                        }
+                    ],
+                    "rule_level": "low",
+                    "rule_id": "80c9078b4f0a21412506961251c7253e037afc83c8a88cd362377082d1efaa30",
+                    "rule_author": "Alejandro Ortuno, oscd.community",
+                    "rule_description": "Detects creation of startup item plist files that automatically get executed at boot initialization to establish persistence."
+                }
+            ],
+            "last_analysis_results": {
+                "Bkav": {
+                    "category": "undetected",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Lionic": {
+                    "category": "undetected",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Elastic": {
+                    "category": "type-unsupported",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.125",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240115"
+                },
+                "MicroWorld-eScan": {
+                    "category": "undetected",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "ClamAV": {
+                    "category": "undetected",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.3.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "CMC": {
+                    "category": "undetected",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "CAT-QuickHeal": {
+                    "category": "undetected",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240209"
+                },
+                "Skyhigh": {
+                    "category": "undetected",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "McAfee": {
+                    "category": "undetected",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Malwarebytes": {
+                    "category": "undetected",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "VIPRE": {
+                    "category": "undetected",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Sangfor": {
+                    "category": "undetected",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "K7AntiVirus": {
+                    "category": "undetected",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.141.51032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Alibaba": {
+                    "category": "type-unsupported",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190527"
+                },
+                "K7GW": {
+                    "category": "undetected",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.141.51033",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Trustlook": {
+                    "category": "type-unsupported",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Arcabit": {
+                    "category": "undetected",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Baidu": {
+                    "category": "undetected",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20190318"
+                },
+                "VirIT": {
+                    "category": "undetected",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.637",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240209"
+                },
+                "Paloalto": {
+                    "category": "type-unsupported",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "SymantecMobileInsight": {
+                    "category": "type-unsupported",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240103"
+                },
+                "Symantec": {
+                    "category": "undetected",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "tehtris": {
+                    "category": "type-unsupported",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "ESET-NOD32": {
+                    "category": "undetected",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28720",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "APEX": {
+                    "category": "type-unsupported",
+                    "engine_name": "APEX",
+                    "engine_version": "6.499",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "TrendMicro-HouseCall": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Avast": {
+                    "category": "undetected",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Cynet": {
+                    "category": "undetected",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.29",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Kaspersky": {
+                    "category": "undetected",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "BitDefender": {
+                    "category": "undetected",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "NANO-Antivirus": {
+                    "category": "undetected",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "SUPERAntiSpyware": {
+                    "category": "undetected",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Tencent": {
+                    "category": "undetected",
+                    "engine_name": "Tencent",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Emsisoft": {
+                    "category": "undetected",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "F-Secure": {
+                    "category": "undetected",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "DrWeb": {
+                    "category": "undetected",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.61.8090",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Zillya": {
+                    "category": "undetected",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5048",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "TrendMicro": {
+                    "category": "undetected",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "SentinelOne": {
+                    "category": "type-unsupported",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "24.1.0.5",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240129"
+                },
+                "FireEye": {
+                    "category": "undetected",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.47.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Sophos": {
+                    "category": "undetected",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Ikarus": {
+                    "category": "undetected",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.2.4.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Avast-Mobile": {
+                    "category": "type-unsupported",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240211-00",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Jiangmin": {
+                    "category": "undetected",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "Webroot": {
+                    "category": "type-unsupported",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Google": {
+                    "category": "undetected",
+                    "engine_name": "Google",
+                    "engine_version": "1707667286",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Avira": {
+                    "category": "undetected",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Antiy-AVL": {
+                    "category": "undetected",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Kingsoft": {
+                    "category": "undetected",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230906"
+                },
+                "Gridinsoft": {
+                    "category": "undetected",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.159.174",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Xcitium": {
+                    "category": "undetected",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36427",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Microsoft": {
+                    "category": "undetected",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.23110.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "ViRobot": {
+                    "category": "undetected",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "ZoneAlarm": {
+                    "category": "undetected",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "GData": {
+                    "category": "undetected",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.37343B:27.34892",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Varist": {
+                    "category": "undetected",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "BitDefenderFalx": {
+                    "category": "type-unsupported",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240128"
+                },
+                "AhnLab-V3": {
+                    "category": "undetected",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.0.10459",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Acronis": {
+                    "category": "undetected",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20230828"
+                },
+                "BitDefenderTheta": {
+                    "category": "undetected",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240202"
+                },
+                "ALYac": {
+                    "category": "undetected",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.8",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240210"
+                },
+                "MAX": {
+                    "category": "undetected",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "DeepInstinct": {
+                    "category": "type-unsupported",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240131"
+                },
+                "VBA32": {
+                    "category": "undetected",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240209"
+                },
+                "Cylance": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240208"
+                },
+                "Zoner": {
+                    "category": "undetected",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Rising": {
+                    "category": "undetected",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Yandex": {
+                    "category": "undetected",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "TACHYON": {
+                    "category": "undetected",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-02-11.02",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "MaxSecure": {
+                    "category": "undetected",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240209"
+                },
+                "Fortinet": {
+                    "category": "undetected",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "AVG": {
+                    "category": "undetected",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "Cybereason": {
+                    "category": "type-unsupported",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20231102"
+                },
+                "Panda": {
+                    "category": "undetected",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": "20240211"
+                },
+                "CrowdStrike": {
+                    "category": "type-unsupported",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "result": null,
+                    "method": "blacklist",
+                    "engine_update": null
+                }
+            },
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "info": 0,
+                "medium": 1,
+                "low": 1
+            },
+            "trid": [
+                {
+                    "file_type": "Macintosh Disk image (BZlib compressed)",
+                    "probability": 97.6
+                },
+                {
+                    "file_type": "ZLIB compressed data (var. 4)",
+                    "probability": 2.3
+                }
+            ],
+            "sigma_analysis_summary": {
+                "Sigma Integrated Rule Set (GitHub)": {
+                    "high": 0,
+                    "medium": 0,
+                    "critical": 0,
+                    "low": 1
+                }
+            },
+            "sandbox_verdicts": {
+                "OS X Sandbox": {
+                    "category": "harmless",
+                    "confidence": 99,
+                    "sandbox_name": "OS X Sandbox",
+                    "malware_classification": [
+                        "CLEAN"
+                    ]
+                }
+            },
+            "sha256": "e112df8a5b4d441d262b03e17966c84136bdc71d64387bfa52a83937e4885bb9",
+            "tags": [
+                "contains-macho",
+                "dmg"
+            ],
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "bad-unknown",
+                    "alert_severity": "medium",
+                    "rule_msg": "(stream_tcp) data sent on stream after TCP reset received",
+                    "rule_raw": "alert ( gid:129; sid:18; rev:2; msg:\"(stream_tcp) data sent on stream after TCP reset received\"; metadata: policy max-detect-ips drop, rule-type preproc; classtype:bad-unknown;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "184.25.164.143",
+                            "src_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "129:18"
+                },
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(tcp) experimental TCP options found",
+                    "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "17.253.20.247",
+                            "dest_port": 443
+                        }
+                    ],
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_id": "116:58"
+                }
+            ],
+            "last_analysis_date": 1707671405,
+            "meaningful_name": "TIConnectCE-6.0.1.344.dmg",
+            "unique_sources": 1,
+            "first_submission_date": 1707671405,
+            "ssdeep": "1572864:EjKcLS4L+YuyZYbHM+bMIawjRmw9BLxZexmj3pcItaXaSzAh6g:O5G4L+YjYrM+paORrVbexUuFRng",
+            "md5": "962ca5fa11c4502a3cc93525d15fb032",
+            "sha1": "d07c9f7091316cb1606460e38a5bd6aa29c317a2",
+            "magic": "DOS/MBR boot sector, extended partition table (last) (zlib compressed data)",
+            "last_analysis_stats": {
+                "harmless": 0,
+                "type-unsupported": 15,
+                "suspicious": 0,
+                "confirmed-timeout": 0,
+                "timeout": 0,
+                "failure": 0,
+                "malicious": 0,
+                "undetected": 60
+            },
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Protective Master Boot Record (MBR : 0)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Primary GPT Header : 1)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Primary GPT Table : 2)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 3)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "disk image (Apple_HFS : 4)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": " (Apple_Free : 5)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Partition Data (Backup GPT Table : 6)"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "GPT Header (Backup GPT Header : 7)"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 87893632,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 19257,
+                "data_fork_length": 87893632,
+                "hfs": {
+                    "unreadable_files": 0,
+                    "info_plist": {
+                        "LSApplicationCategoryType": "public.app-category.education",
+                        "CFBundlePackageType": "APPL",
+                        "JVMOptions": "['-verbose:jni', '-DELG_TIC_BUILD_NUM=344', '-DBUILD_YEAR=2023', '-Dglass.win.uiScale=1.0', '-XX:ErrorFile=../../../hs_err_pid%p.log', '-Dprism.allowhidpi=true']",
+                        "CFBundleShortVersionString": "6.0.1.344",
+                        "UTExportedTypeDeclarations": "[{'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xi', 'UTTypeDescription': 'TI-84 Plus Family Pic', 'UTTypeIconFile': '8xi.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xi']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xu', 'UTTypeDescription': 'TI-84 Plus OS', 'UTTypeIconFile': '8xu.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xu']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8cu', 'UTTypeDescription': 'TI-84 Plus C OS', 'UTTypeIconFile': '8cu.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8cu']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xk', 'UTTypeDescription': 'TI-84 Plus Family App', 'UTTypeIconFile': '8xk.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xk']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8ck', 'UTTypeDescription': 'TI-84 Plus C Family App', 'UTTypeIconFile': '8ck.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8ck']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8cg', 'UTTypeDescription': 'TI-84 Plus C Family Group', 'UTTypeIconFile': '8cg.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8cg']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8ci', 'UTTypeDescription': 'TI-84 Plus CE Family Pic', 'UTTypeIconFile': '8ci.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8ci']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8ca', 'UTTypeDescription': 'TI-84 Plus CE Family Image', 'UTTypeIconFile': '8ca.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8ca']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8ek', 'UTTypeDescription': 'TI-84 Plus CE Family App', 'UTTypeIconFile': '8ek.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8ek']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8pu', 'UTTypeDescription': 'TI-83 Premium CE OS', 'UTTypeIconFile': '8pu.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8pu']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xc', 'UTTypeDescription': 'TI-84 Plus Family Complex Number', 'UTTypeIconFile': '8xc.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xc']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xg', 'UTTypeDescription': 'TI-84 Plus Family Group', 'UTTypeIconFile': '8xg.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xg']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xl', 'UTTypeDescription': 'TI-84 Plus Family List', 'UTTypeIconFile': '8xl.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xl']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xm', 'UTTypeDescription': 'TI-84 Plus Family Matrix', 'UTTypeIconFile': '8xm.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xm']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xn', 'UTTypeDescription': 'TI-84 Plus Family Number', 'UTTypeIconFile': '8xn.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xn']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xp', 'UTTypeDescription': 'TI-84 Plus Family Program', 'UTTypeIconFile': '8xp.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xp']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xs', 'UTTypeDescription': 'TI-84 Plus Family String', 'UTTypeIconFile': '8xs.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xs']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xt', 'UTTypeDescription': 'TI-84 Plus Family TableSet', 'UTTypeIconFile': '8xt.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xt']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xv', 'UTTypeDescription': 'TI-84 Plus Family Appvar', 'UTTypeIconFile': '8xv.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xv']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xw', 'UTTypeDescription': 'TI-84 Plus Family Window Setup', 'UTTypeIconFile': '8xw.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xw']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xy', 'UTTypeDescription': 'TI-84 Plus Family Y Var', 'UTTypeIconFile': '8xy.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xy']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xz', 'UTTypeDescription': 'TI-84 Plus Family Zoom', 'UTTypeIconFile': '8xz.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xz']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8xd', 'UTTypeDescription': 'TI-84 Plus Family Graph Database', 'UTTypeIconFile': '8xd.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8xd']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.8eu', 'UTTypeDescription': 'TI-84 Plus CE OS', 'UTTypeIconFile': '8eu.icns', 'UTTypeReferenceURL': 'https://education.ti.com/', 'UTTypeConformsTo': ['public.data'], 'UTTypeTagSpecification': {'public.filename-extension': ['8eu']}}, {'UTTypeIdentifier': 'com.ti.et.core.dataTypes.82u', 'UTTypeDescription': 'TI-82 Advanced OS', 'UTTypeIconFile': '82u.icns', 'UTT",
+                        "CFBundleInfoDictionaryVersion": "6.0",
+                        "CFBundleIconFile": "TI Connect CE.icns",
+                        "NSHumanReadableCopyright": "\u00a9 2003-2023 by Texas Instruments Incorporated. All rights reserved.",
+                        "CFBundleAllowMixedLocalizations": "True",
+                        "CFBundleIdentifier": "com.ti.et.elg.tiConnect.TIConnectApplication",
+                        "JVMUserOptions": "{}",
+                        "CFBundleDocumentTypes": "[{'CFBundleTypeName': 'TI-82 Advanced OS', 'CFBundleTypeIconFile': '82u.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.82u'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-82 Advanced Edition Python OS', 'CFBundleTypeIconFile': '8yu.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8yu'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus CE OS', 'CFBundleTypeIconFile': '8eu.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8eu'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Graph Database', 'CFBundleTypeIconFile': '8xd.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xd'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Zoom', 'CFBundleTypeIconFile': '8xz.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xz'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Y Var', 'CFBundleTypeIconFile': '8xy.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xy'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Window Setup', 'CFBundleTypeIconFile': '8xw.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xw'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Appvar', 'CFBundleTypeIconFile': '8xv.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xv'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family TableSet', 'CFBundleTypeIconFile': '8xt.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xt'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family String', 'CFBundleTypeIconFile': '8xs.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xs'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Program', 'CFBundleTypeIconFile': '8xp.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xp'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Number', 'CFBundleTypeIconFile': '8xn.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xn'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Matrix', 'CFBundleTypeIconFile': '8xm.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xm'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family List', 'CFBundleTypeIconFile': '8xl.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xl'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Group', 'CFBundleTypeIconFile': '8xg.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xg'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Complex Number', 'CFBundleTypeIconFile': '8xc.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xc'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-83 Premium CE OS', 'CFBundleTypeIconFile': '8pu.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8pu'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus CE Family App', 'CFBundleTypeIconFile': '8ek.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8ek'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus CE Family Image', 'CFBundleTypeIconFile': '8ca.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8ca'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus CE Family Pic', 'CFBundleTypeIconFile': '8ci.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8ci'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus C Family Group', 'CFBundleTypeIconFile': '8cg.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8cg'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus C Family App', 'CFBundleTypeIconFile': '8ck.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8ck'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family App', 'CFBundleTypeIconFile': '8xk.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xk'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus C OS', 'CFBundleTypeIconFile': '8cu.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8cu'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus OS', 'CFBundleTypeIconFile': '8xu.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xu'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus Family Pic', 'CFBundleTypeIconFile': '8xi.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.8xi'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-84 Plus CE Bundle', 'CFBundleTypeIconFile': 'b84.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.b84'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}, {'CFBundleTypeName': 'TI-83 Premium CE Bundle', 'CFBundleTypeIconFile': 'b83.icns', 'LSItemContentTypes': ['com.ti.et.core.dataTypes.b83'], 'CFBundleTypeRole': 'Editor', 'LSHandlerRank': 'Owner'}]",
+                        "CFBundleDevelopmentRegion": "English",
+                        "CFBundleExecutable": "TI Connect CE",
+                        "CFBundleName": "TI Connect CE",
+                        "JVMMainJarName": "ticonnect.jar",
+                        "CFBundleVersion": "6.0.1.344",
+                        "JVMPreferencesID": "com/ti/et/elg/ticonnect/ticonnectapplication",
+                        "NSHighResolutionCapable": "true",
+                        "JVMMainClassName": "com.ti.et.elg.tiConnect.TIConnectApplication"
+                    },
+                    "main_executable": {
+                        "path": "/TI Connect CE.app/Contents/MacOS/TI Connect CE",
+                        "sha256": "a8b7c925b6665f5f835c91f293bb5b389a6bd7ba29272a90265888499328c43e",
+                        "size": 183120
+                    },
+                    "num_files": 256
+                },
+                "rsrc_fork_length": 0
+            },
+            "reputation": 0,
+            "sigma_analysis_stats": {
+                "high": 0,
+                "medium": 0,
+                "critical": 0,
+                "low": 1
+            }
+        },
+        "type": "file",
+        "id": "e112df8a5b4d441d262b03e17966c84136bdc71d64387bfa52a83937e4885bb9",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/e112df8a5b4d441d262b03e17966c84136bdc71d64387bfa52a83937e4885bb9"
+        }
+    }
+}
