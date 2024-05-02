@@ -1,0 +1,950 @@
+{
+    "data": {
+        "id": "55c8e749fc04b039fd0d0541c312730fccb57d063ad3d9cabd28d519922b0c9c",
+        "type": "file",
+        "links": {
+            "self": "https://www.virustotal.com/api/v3/files/55c8e749fc04b039fd0d0541c312730fccb57d063ad3d9cabd28d519922b0c9c"
+        },
+        "attributes": {
+            "type_extension": "dmg",
+            "first_submission_date": 1709859887,
+            "tlsh": "T1257733B1752A4B41E6B15270873DF1985E3720DB6E30884E8F75BD0EB46B5EB4E0683D",
+            "unique_sources": 1,
+            "times_submitted": 1,
+            "meaningful_name": "mgtv-mango-6.4.16.dmg",
+            "last_analysis_date": 1709859887,
+            "reputation": 0,
+            "dmg_info": {
+                "blkx": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "Driver Descriptor Map\u00d4\u00ba\u00e0DDM\u00d4\u00ba\u00f60\u00d4\u00ba\u00e2 Driver Descriptor Map\uff08DDM\uff1a0\uff09"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "Apple\u00d4\u00ba\u00e0Apple_partition_map\u00d4\u00ba\u00f61\u00d4\u00ba\u00e2 Apple\uff08Apple_partition_map\uff1a1\uff09"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "DiscRecording 9.0.3d5\u00d4\u00ba\u00e0Apple_HFS\u00d4\u00ba\u00f62\u00d4\u00ba\u00e2 DiscRecording 9.0.3d5\uff08Apple_HFS\uff1a2\uff09"
+                    },
+                    {
+                        "attributes": "0x0050",
+                        "name": "\u00d4\u00ba\u00e0Apple_Free\u00d4\u00ba\u00f63\u00d4\u00ba\u00e2 \uff08Apple_Free\uff1a3\uff09"
+                    }
+                ],
+                "plst": [
+                    {
+                        "attributes": "0x0050",
+                        "name": "ID:0"
+                    }
+                ],
+                "running_data_fork_offset": 0,
+                "plst_keys": [
+                    "resource-fork"
+                ],
+                "dmg_version": 4,
+                "xml_offset": 34022984,
+                "data_fork_offset": 0,
+                "rsrc_fork_offset": 0,
+                "resourcefork_keys": [
+                    "blkx",
+                    "plst"
+                ],
+                "xml_length": 11316,
+                "data_fork_length": 34022984,
+                "hfs": {
+                    "unreadable_files": 5,
+                    "num_files": 449
+                },
+                "rsrc_fork_length": 0
+            },
+            "magic": "Apple Driver Map, blocksize 2048, blockcount 64531, devtype 0, devid 0, driver count 0 (zlib compressed data)",
+            "last_submission_date": 1709859887,
+            "crowdsourced_ids_results": [
+                {
+                    "rule_category": "non-standard-protocol",
+                    "alert_severity": "medium",
+                    "rule_msg": "MALWARE-OTHER HTTP POST request to a GIF file",
+                    "rule_id": "1:24105",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_raw": "alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:\"MALWARE-OTHER HTTP POST request to a GIF file\"; flow:to_server,established; http_method; content:\"POST\",nocase; http_raw_uri; bufferlen:<50; http_uri; content:\".gif\",nocase; http_header; content:!\"widgetserver.com\",nocase; http_uri; pcre:\"/\\.gif([\\?\\x5c\\x2f]|$)/ims\"; metadata:policy max-detect-ips drop; service:http; reference:url,snort.org/rule_docs/1-24105; classtype:non-standard-protocol; sid:24105; rev:11; )",
+                    "rule_references": [
+                        "https://snort.org/rule_docs/1-24105"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "8.140.56.13",
+                            "dest_port": 80
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "protocol-command-decode",
+                    "alert_severity": "low",
+                    "rule_msg": "(tcp) experimental TCP options found",
+                    "rule_id": "116:58",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_raw": "alert ( gid:116; sid:58; rev:2; msg:\"(tcp) experimental TCP options found\"; metadata: policy max-detect-ips drop, rule-type decode; classtype:protocol-command-decode;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "64.78.201.1",
+                            "dest_port": 443
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "unknown",
+                    "alert_severity": "low",
+                    "rule_msg": "(http_inspect) invalid status line",
+                    "rule_id": "119:279",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_raw": "alert ( gid:119; sid:279; rev:1; msg:\"(http_inspect) invalid status line\"; metadata: rule-type preproc; classtype:unknown;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "82.157.158.85",
+                            "dest_port": 80
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "unknown",
+                    "alert_severity": "low",
+                    "rule_msg": "(http_inspect) invalid request line",
+                    "rule_id": "119:281",
+                    "rule_source": "Snort registered user ruleset",
+                    "rule_url": "https://www.snort.org/downloads/#rule-downloads",
+                    "rule_raw": "alert ( gid:119; sid:281; rev:1; msg:\"(http_inspect) invalid request line\"; metadata: rule-type preproc; classtype:unknown;)",
+                    "alert_context": [
+                        {
+                            "src_ip": "82.157.158.85",
+                            "src_port": 80
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Unknown Traffic",
+                    "alert_severity": "low",
+                    "rule_msg": "ET HUNTING Suspicious Empty User-Agent",
+                    "rule_id": "1:2007994",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert http $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET HUNTING Suspicious Empty User-Agent\"; flow:to_server,established; http.header; content:\"User-Agent|3a 20 0d 0a|\"; http.host; content:!\"connectivitycheck.gstatic.com\"; endswith; content:!\".mcafee.com\"; content:!\"deezer.com\"; endswith; content:!\"googlezip.net\"; content:!\"metrics.tbliab.net\"; endswith; content:!\"dajax.com\"; endswith; content:!\"update.eset.com\"; endswith; content:!\".sketchup.com\"; endswith; content:!\".yieldmo.com\"; endswith; content:!\"ping-start.com\"; endswith; content:!\".bluekai.com\"; content:!\".stockstracker.com\"; content:!\".doubleclick.net\"; content:!\".pingstart.com\"; content:!\".colis-logistique.com\"; content:!\"android-lrcresource.wps.com\"; content:!\"track.package-buddy.com\"; content:!\"talkgadget.google.com\"; endswith; content:!\".visualstudio.com\"; endswith; content:!\".slack-edge.com\"; endswith; content:!\".slack.com\"; endswith; content:!\".lifesizecloud.com\"; endswith; classtype:unknown; sid:2007994; rev:24; metadata:affected_product Any, attack_target Client_Endpoint, created_at 2010_07_30, deployment Perimeter, former_category HUNTING, signature_severity Major, tag User_Agent, updated_at 2022_12_28;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "81.70.125.185",
+                            "dest_port": 80,
+                            "hostname": "pcc.api.mgtv.com",
+                            "url": "http://pcc.api.mgtv.com/vod/config?code=drmCertificateFromServers,dataSourceSDK,audioEffectConfig,pcdn_speedup_entry_switch&appVersion=6.4.16&source=mango&ticket=&_support=11111111&abroad=0&channel=&device=VMware7,1&guid=&mac=b485e14269f3&osType=macos&osVersion=12.6.0&platform=8"
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Misc activity",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request)",
+                    "rule_id": "1:2016149",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET 3478 (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Request)\"; content:\"|00 01|\"; depth:2; content:\"|21 12 a4 42|\"; distance:2; within:4; reference:url,tools.ietf.org/html/rfc5389; classtype:misc-activity; sid:2016149; rev:3; metadata:created_at 2013_01_04, deployment Perimeter, deployment alert_only, former_category INFO, signature_severity Informational, updated_at 2023_04_24;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc5389"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "120.132.47.23",
+                            "dest_port": 3478
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Misc activity",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Response)",
+                    "rule_id": "1:2016150",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $EXTERNAL_NET 3478 -> $HOME_NET any (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Response)\"; content:\"|01 01|\"; depth:2; content:\"|21 12 a4 42|\"; distance:2; within:4; reference:url,tools.ietf.org/html/rfc5389; classtype:misc-activity; sid:2016150; rev:3; metadata:created_at 2013_01_04, deployment Perimeter, deployment alert_only, former_category INFO, signature_severity Informational, updated_at 2023_04_24;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc5389"
+                    ],
+                    "alert_context": [
+                        {
+                            "src_ip": "120.132.47.23",
+                            "src_port": 3478
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag false)",
+                    "rule_id": "1:2018904",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag false)\"; dsize:28; content:\"|00 01 00 08|\"; depth:4; content:\"|00 03 00 04 00 00 00 00|\"; fast_pattern; distance:16; within:8; threshold: type limit, track by_dst, count 1, seconds 120; reference:url,tools.ietf.org/html/rfc3489; classtype:protocol-command-decode; sid:2018904; rev:6; metadata:created_at 2014_08_07, updated_at 2019_07_26;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc3489"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "120.132.47.23",
+                            "dest_port": 3478
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag true)",
+                    "rule_id": "1:2018905",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag false change port flag true)\"; dsize:28; content:\"|00 01 00 08|\"; depth:4; content:\"|00 03 00 04 00 00 00 02|\"; fast_pattern; distance:16; within:8; threshold: type limit, track by_dst, count 1, seconds 120; reference:url,tools.ietf.org/html/rfc3489; classtype:protocol-command-decode; sid:2018905; rev:6; metadata:created_at 2014_08_07, updated_at 2019_07_26;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc3489"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "120.132.47.24",
+                            "dest_port": 3478
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag true change port flag false)",
+                    "rule_id": "1:2018906",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Request obsolete rfc 3489 CHANGE-REQUEST attribute change IP flag true change port flag false)\"; dsize:28; content:\"|00 01 00 08|\"; depth:4; content:\"|00 03 00 04 00 00 00 04|\"; fast_pattern; distance:16; within:8; threshold: type limit, track by_dst, count 1, seconds 120; reference:url,tools.ietf.org/html/rfc3489; classtype:protocol-command-decode; sid:2018906; rev:6; metadata:created_at 2014_08_07, updated_at 2019_07_26;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc3489"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "120.132.47.24",
+                            "dest_port": 3478
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Misc activity",
+                    "alert_severity": "low",
+                    "rule_msg": "ET INFO Session Traversal Utilities for NAT (STUN Binding Request On Non-Standard High Port)",
+                    "rule_id": "1:2033078",
+                    "rule_source": "Proofpoint Emerging Threats Open",
+                    "rule_url": "https://rules.emergingthreats.net/",
+                    "rule_raw": "alert udp $HOME_NET any -> $EXTERNAL_NET [!3478,1023:] (msg:\"ET INFO Session Traversal Utilities for NAT (STUN Binding Request On Non-Standard High Port)\"; content:\"|00 01|\"; depth:2; content:\"|21 12 a4 42|\"; distance:2; within:4; reference:url,tools.ietf.org/html/rfc5389; classtype:misc-activity; sid:2033078; rev:4; metadata:created_at 2021_06_03, deployment Perimeter, deployment alert_only, former_category INFO, signature_severity Informational, updated_at 2023_04_28;)",
+                    "rule_references": [
+                        "https://tools.ietf.org/html/rfc5389"
+                    ],
+                    "alert_context": [
+                        {
+                            "dest_ip": "208.83.5.155",
+                            "dest_port": 17010
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM Packet with invalid timestamp",
+                    "rule_id": "1:2210044",
+                    "rule_source": "Suricata",
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM Packet with invalid timestamp\"; stream-event:pkt_invalid_timestamp; classtype:protocol-command-decode; sid:2210044; rev:2;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "17.57.144.154",
+                            "dest_port": 5223,
+                            "ja3": [
+                                "c99d50b733b0a6bccb638925976e7e5e"
+                            ],
+                            "ja3s": [
+                                "15af977ce25de452b96affa2addb1036"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "rule_category": "Generic Protocol Command Decode",
+                    "alert_severity": "low",
+                    "rule_msg": "SURICATA STREAM excessive retransmissions",
+                    "rule_id": "1:2210054",
+                    "rule_source": "Suricata",
+                    "rule_url": "https://www.openinfosecfoundation.org/",
+                    "rule_raw": "alert tcp any any -> any any (msg:\"SURICATA STREAM excessive retransmissions\"; flowbits:isnotset,tcp.retransmission.alerted; flowint:tcp.retransmission.count,>=,10; flowbits:set,tcp.retransmission.alerted; classtype:protocol-command-decode; sid:2210054; rev:1;)",
+                    "alert_context": [
+                        {
+                            "dest_ip": "116.136.12.227",
+                            "dest_port": 443,
+                            "ja3": [
+                                "773906b0efdefa24a7f2b8eb6985bf37"
+                            ],
+                            "ja3s": [
+                                "5d79edf64e03689ff559a54e9d9487bc"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "sha256": "55c8e749fc04b039fd0d0541c312730fccb57d063ad3d9cabd28d519922b0c9c",
+            "last_analysis_results": {
+                "Bkav": {
+                    "method": "blacklist",
+                    "engine_name": "Bkav",
+                    "engine_version": "2.0.0.1",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Lionic": {
+                    "method": "blacklist",
+                    "engine_name": "Lionic",
+                    "engine_version": "7.5",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "DrWeb": {
+                    "method": "blacklist",
+                    "engine_name": "DrWeb",
+                    "engine_version": "7.0.62.1180",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ClamAV": {
+                    "method": "blacklist",
+                    "engine_name": "ClamAV",
+                    "engine_version": "1.3.0.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CMC": {
+                    "method": "blacklist",
+                    "engine_name": "CMC",
+                    "engine_version": "2.4.2022.1",
+                    "engine_update": "20240129",
+                    "category": "undetected",
+                    "result": null
+                },
+                "CAT-QuickHeal": {
+                    "method": "blacklist",
+                    "engine_name": "CAT-QuickHeal",
+                    "engine_version": "22.00",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Skyhigh": {
+                    "method": "blacklist",
+                    "engine_name": "Skyhigh",
+                    "engine_version": "v2021.2.0+4045",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "McAfee": {
+                    "method": "blacklist",
+                    "engine_name": "McAfee",
+                    "engine_version": "6.0.6.653",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Malwarebytes": {
+                    "method": "blacklist",
+                    "engine_name": "Malwarebytes",
+                    "engine_version": "4.5.5.54",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VIPRE": {
+                    "method": "blacklist",
+                    "engine_name": "VIPRE",
+                    "engine_version": "6.0.0.35",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sangfor": {
+                    "method": "blacklist",
+                    "engine_name": "Sangfor",
+                    "engine_version": "2.23.0.0",
+                    "engine_update": "20240305",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7AntiVirus": {
+                    "method": "blacklist",
+                    "engine_name": "K7AntiVirus",
+                    "engine_version": "12.146.51298",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "K7GW": {
+                    "method": "blacklist",
+                    "engine_name": "K7GW",
+                    "engine_version": "12.146.51304",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefenderTheta": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderTheta",
+                    "engine_version": "7.2.37796.0",
+                    "engine_update": "20240305",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VirIT": {
+                    "method": "blacklist",
+                    "engine_name": "VirIT",
+                    "engine_version": "9.5.656",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Symantec": {
+                    "method": "blacklist",
+                    "engine_name": "Symantec",
+                    "engine_version": "1.21.0.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ESET-NOD32": {
+                    "method": "blacklist",
+                    "engine_name": "ESET-NOD32",
+                    "engine_version": "28858",
+                    "engine_update": "20240308",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro-HouseCall": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro-HouseCall",
+                    "engine_version": "10.0.0.1040",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast": {
+                    "method": "blacklist",
+                    "engine_name": "Avast",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Cynet": {
+                    "method": "blacklist",
+                    "engine_name": "Cynet",
+                    "engine_version": "4.0.0.29",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Kaspersky": {
+                    "method": "blacklist",
+                    "engine_name": "Kaspersky",
+                    "engine_version": "22.0.1.28",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "BitDefender": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefender",
+                    "engine_version": "7.2",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "NANO-Antivirus": {
+                    "method": "blacklist",
+                    "engine_name": "NANO-Antivirus",
+                    "engine_version": "1.0.146.25796",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "SUPERAntiSpyware": {
+                    "method": "blacklist",
+                    "engine_name": "SUPERAntiSpyware",
+                    "engine_version": "5.6.0.1032",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MicroWorld-eScan": {
+                    "method": "blacklist",
+                    "engine_name": "MicroWorld-eScan",
+                    "engine_version": "14.0.409.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Emsisoft": {
+                    "method": "blacklist",
+                    "engine_name": "Emsisoft",
+                    "engine_version": "2022.6.0.32461",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "F-Secure": {
+                    "method": "blacklist",
+                    "engine_name": "F-Secure",
+                    "engine_version": "18.10.1547.307",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Baidu": {
+                    "method": "blacklist",
+                    "engine_name": "Baidu",
+                    "engine_version": "1.0.0.2",
+                    "engine_update": "20190318",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Zillya": {
+                    "method": "blacklist",
+                    "engine_name": "Zillya",
+                    "engine_version": "2.0.0.5066",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TrendMicro": {
+                    "method": "blacklist",
+                    "engine_name": "TrendMicro",
+                    "engine_version": "11.0.0.1006",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "FireEye": {
+                    "method": "blacklist",
+                    "engine_name": "FireEye",
+                    "engine_version": "35.47.0.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Sophos": {
+                    "method": "blacklist",
+                    "engine_name": "Sophos",
+                    "engine_version": "2.4.3.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Ikarus": {
+                    "method": "blacklist",
+                    "engine_name": "Ikarus",
+                    "engine_version": "6.3.12.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Jiangmin": {
+                    "method": "blacklist",
+                    "engine_name": "Jiangmin",
+                    "engine_version": "16.0.100",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Varist": {
+                    "method": "blacklist",
+                    "engine_name": "Varist",
+                    "engine_version": "6.5.1.2",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avira": {
+                    "method": "blacklist",
+                    "engine_name": "Avira",
+                    "engine_version": "8.3.3.16",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Antiy-AVL": {
+                    "method": "blacklist",
+                    "engine_name": "Antiy-AVL",
+                    "engine_version": "3.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Kingsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Kingsoft",
+                    "engine_version": "None",
+                    "engine_update": "20230906",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Microsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Microsoft",
+                    "engine_version": "1.1.24020.9",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Gridinsoft": {
+                    "method": "blacklist",
+                    "engine_name": "Gridinsoft",
+                    "engine_version": "1.0.168.174",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Xcitium": {
+                    "method": "blacklist",
+                    "engine_name": "Xcitium",
+                    "engine_version": "36502",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Arcabit": {
+                    "method": "blacklist",
+                    "engine_name": "Arcabit",
+                    "engine_version": "2022.0.0.18",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ViRobot": {
+                    "method": "blacklist",
+                    "engine_name": "ViRobot",
+                    "engine_version": "2014.3.20.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ZoneAlarm": {
+                    "method": "blacklist",
+                    "engine_name": "ZoneAlarm",
+                    "engine_version": "1.0",
+                    "engine_update": "20240306",
+                    "category": "undetected",
+                    "result": null
+                },
+                "GData": {
+                    "method": "blacklist",
+                    "engine_name": "GData",
+                    "engine_version": "A:25.37511B:27.35196",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Google": {
+                    "method": "blacklist",
+                    "engine_name": "Google",
+                    "engine_version": "1709854249",
+                    "engine_update": "20240308",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AhnLab-V3": {
+                    "method": "blacklist",
+                    "engine_name": "AhnLab-V3",
+                    "engine_version": "3.25.1.10473",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Acronis": {
+                    "method": "blacklist",
+                    "engine_name": "Acronis",
+                    "engine_version": "1.2.0.121",
+                    "engine_update": "20230828",
+                    "category": "undetected",
+                    "result": null
+                },
+                "VBA32": {
+                    "method": "blacklist",
+                    "engine_name": "VBA32",
+                    "engine_version": "5.0.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "ALYac": {
+                    "method": "blacklist",
+                    "engine_name": "ALYac",
+                    "engine_version": "2.0.0.8",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MAX": {
+                    "method": "blacklist",
+                    "engine_name": "MAX",
+                    "engine_version": "2023.1.4.1",
+                    "engine_update": "20240308",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Zoner": {
+                    "method": "blacklist",
+                    "engine_name": "Zoner",
+                    "engine_version": "2.2.2.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Rising": {
+                    "method": "blacklist",
+                    "engine_name": "Rising",
+                    "engine_version": "25.0.0.27",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Yandex": {
+                    "method": "blacklist",
+                    "engine_name": "Yandex",
+                    "engine_version": "5.5.2.24",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "TACHYON": {
+                    "method": "blacklist",
+                    "engine_name": "TACHYON",
+                    "engine_version": "2024-03-07.02",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "MaxSecure": {
+                    "method": "blacklist",
+                    "engine_name": "MaxSecure",
+                    "engine_version": "1.0.0.1",
+                    "engine_update": "20240314",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Fortinet": {
+                    "method": "blacklist",
+                    "engine_name": "Fortinet",
+                    "engine_version": "None",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "AVG": {
+                    "method": "blacklist",
+                    "engine_name": "AVG",
+                    "engine_version": "23.9.8494.0",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Panda": {
+                    "method": "blacklist",
+                    "engine_name": "Panda",
+                    "engine_version": "4.6.4.2",
+                    "engine_update": "20240307",
+                    "category": "undetected",
+                    "result": null
+                },
+                "Avast-Mobile": {
+                    "method": "blacklist",
+                    "engine_name": "Avast-Mobile",
+                    "engine_version": "240307-02",
+                    "engine_update": "20240307",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SymantecMobileInsight": {
+                    "method": "blacklist",
+                    "engine_name": "SymantecMobileInsight",
+                    "engine_version": "2.0",
+                    "engine_update": "20240103",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "BitDefenderFalx": {
+                    "method": "blacklist",
+                    "engine_name": "BitDefenderFalx",
+                    "engine_version": "2.0.936",
+                    "engine_update": "20240128",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "tehtris": {
+                    "method": "blacklist",
+                    "engine_name": "tehtris",
+                    "engine_version": null,
+                    "engine_update": "20240308",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "DeepInstinct": {
+                    "method": "blacklist",
+                    "engine_name": "DeepInstinct",
+                    "engine_version": "5.0.0.8",
+                    "engine_update": "20240306",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Webroot": {
+                    "method": "blacklist",
+                    "engine_name": "Webroot",
+                    "engine_version": "1.0.0.403",
+                    "engine_update": "20240308",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "APEX": {
+                    "method": "blacklist",
+                    "engine_name": "APEX",
+                    "engine_version": "6.508",
+                    "engine_update": "20240307",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Paloalto": {
+                    "method": "blacklist",
+                    "engine_name": "Paloalto",
+                    "engine_version": "0.9.0.1003",
+                    "engine_update": "20240308",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Alibaba": {
+                    "method": "blacklist",
+                    "engine_name": "Alibaba",
+                    "engine_version": "0.3.0.5",
+                    "engine_update": "20190527",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Trapmine": {
+                    "method": "blacklist",
+                    "engine_name": "Trapmine",
+                    "engine_version": "4.0.16.96",
+                    "engine_update": "20240223",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cylance": {
+                    "method": "blacklist",
+                    "engine_name": "Cylance",
+                    "engine_version": "2.0.0.0",
+                    "engine_update": "20240307",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "SentinelOne": {
+                    "method": "blacklist",
+                    "engine_name": "SentinelOne",
+                    "engine_version": "24.1.0.5",
+                    "engine_update": "20240129",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Trustlook": {
+                    "method": "blacklist",
+                    "engine_name": "Trustlook",
+                    "engine_version": "1.0",
+                    "engine_update": "20240308",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Cybereason": {
+                    "method": "blacklist",
+                    "engine_name": "Cybereason",
+                    "engine_version": "1.2.449",
+                    "engine_update": "20240304",
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "CrowdStrike": {
+                    "method": "blacklist",
+                    "engine_name": "CrowdStrike",
+                    "engine_version": "1.0",
+                    "engine_update": null,
+                    "category": "type-unsupported",
+                    "result": null
+                },
+                "Elastic": {
+                    "method": "blacklist",
+                    "engine_name": "Elastic",
+                    "engine_version": "4.0.132",
+                    "engine_update": "20240223",
+                    "category": "type-unsupported",
+                    "result": null
+                }
+            },
+            "md5": "7871e45b3dc369cbdb0b7615d98836ba",
+            "names": [
+                "mgtv-mango-6.4.16.dmg"
+            ],
+            "crowdsourced_ids_stats": {
+                "high": 0,
+                "medium": 1,
+                "low": 12,
+                "info": 0
+            },
+            "type_description": "Macintosh Disk Image",
+            "last_analysis_stats": {
+                "malicious": 0,
+                "suspicious": 0,
+                "undetected": 59,
+                "harmless": 0,
+                "timeout": 0,
+                "confirmed-timeout": 0,
+                "failure": 0,
+                "type-unsupported": 16
+            },
+            "tags": [
+                "dmg"
+            ],
+            "total_votes": {
+                "harmless": 0,
+                "malicious": 0
+            },
+            "sha1": "00a0ff41e402bd92ee34aa2be9d7db48fa4e2f88",
+            "type_tag": "dmg",
+            "type_tags": [
+                "executable",
+                "mac",
+                "dmg"
+            ],
+            "vhash": "114ccdf89b9c450809bb8f54c946387d",
+            "last_modification_date": 1710464633,
+            "ssdeep": "786432:fR0AUm5jnZ7ZFPxcizDcJDe6VVk7haBF2KglTdCgeRgas:WmzZ9eizSe6VVWhar2Kgmg",
+            "trid": [
+                {
+                    "file_type": "Macintosh Disk image (BZlib compressed)",
+                    "probability": 97.6
+                },
+                {
+                    "file_type": "ZLIB compressed data (var. 4)",
+                    "probability": 2.3
+                }
+            ],
+            "size": 34034812
+        }
+    }
+}
